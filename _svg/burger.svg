@@ -1,0 +1,5 @@
+<svg class="burger" xmlns="http://www.w3.org/2000/svg" width="30" height="16" viewBox="0 0 30 16">
+  <rect fill="#050505" width="30" height="2"/>
+  <rect fill="#050505" y="7" width="30" height="2"/>
+  <rect fill="#050505" y="14" width="30" height="2"/>
+</svg>
