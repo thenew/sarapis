@@ -134,3 +134,83 @@ a:hover {
   width: 100%;
   height: 100%;
 }
+
+/* UI */
+
+.checkbox-boxes {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.checkbox-box {
+  position: relative;
+  width: 25px;
+  height: 16px;
+}
+
+.checkbox-box .label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.checkbox-box .label-initial {
+  user-select: none;
+}
+
+.checkbox-box.dark .label-initial {
+  color: #fff;
+}
+
+.checkbox-box .checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  appearance: none;
+  opacity: 0;
+  z-index: -1;
+}
+
+.checkbox-box .checkbox:checked ~ .label {
+  outline: 1px solid #0000ff;
+}
+
+.checkbox-box .checkbox:checked ~ .label::after {
+  content: '^';
+  display: block;
+  position: absolute;
+  top: calc(100% + 1px);
+  right: 0;
+  left: 0;
+  color: #0000ff;
+  text-align: center;
+  font-size: 8px;
+  transform: scaleX(2.5);
+}
+
+/* Home */
+.filters {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.filters .fieldset {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  border-right: 1px solid #0000ff;
+}
+
+.fieldset-label {
+  margin-right: 10px;
+}

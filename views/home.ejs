@@ -1,10 +1,45 @@
 <%- include('_header', {title: ''}) %>
   <div>
-    <div class="filters">
-      <form action="">
+    <form action="" class="filters">
+      <fieldset class="fieldset">
+        <div class="fieldset-label">Colors</div>
+
+        <ul class="checkbox-boxes">
+          <li class="checkbox-box" style="background-color: #fff;">
+            <input type="checkbox" id="white" class="checkbox">
+            <label for="white" class="label">
+              <span class="sr-only">White</span>
+              <div class="label-initial">W</div>
+            </label>
+          </li>
+          <li class="checkbox-box" style="background-color: #ffff00;">
+            <input type="checkbox" id="yellow" class="checkbox">
+            <label for="yellow" class="label">
+              <span class="sr-only">yellow</span>
+              <div class="label-initial">Y</div>
+            </label>
+          </li>
+          <li class="checkbox-box dark" style="background-color: #0000ff;">
+            <input type="checkbox" id="blue" class="checkbox">
+            <label for="blue" class="label">
+              <span class="sr-only">blue</span>
+              <div class="label-initial">B</div>
+            </label>
+          </li>
+          <li class="checkbox-box" style="background-color: #00ff00;">
+            <input type="checkbox" id="green" class="checkbox">
+            <label for="green" class="label">
+              <span class="sr-only">green</span>
+              <div class="label-initial">G</div>
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="fieldset">
+        <div class="fieldset-label">View</div>
         <input class="filters-grid-size" type="range" min="10" max="50" value="25">
-      </form>
-    </div>
+      </fieldset>
+    </form>
     <div class="grid">
       <% Object.keys(data.flags).forEach(function(key){ %>
         <% if (data.flags[key].src) { %>
