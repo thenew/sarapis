@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 120" title="Tango flag">
+	<path d="M0,0h50V120h-50z" fill="#f00"/>
+	<path d="M50,0h50V120h-50z" fill="#fff"/>
+	<path d="M100,0h50V120h-50z" fill="#039"/>
+</svg>

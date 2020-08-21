@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 120" title="All alphabet maritime flags" id="sarapis-maritime-wire">
+    <style>#sarapis-maritime-wire { fill: none; stroke-linejoin: bevel; }</style>
+	<!-- Alpha flag -->
+	<path d="M0,0H75V120H0Z" stroke="#fff"/>
+	<path d="M150,0H75V120H150L100,60z" stroke="#003298"/>
+	<!-- Bravo flag -->
+	<path d="M150,0H0V120H150L100,60z" stroke="#f00"/>
+	<!-- Charlie flag -->
+	<path d="M0,0H150V24H0z" stroke="#039"/>
+	<path d="M0,24H150V48H0z" stroke="#fff"/>
+	<path d="M0,48H150V72H0z" stroke="#f00"/>
+	<path d="M0,72H150V96H0z" stroke="#fff"/>
+	<path d="M0,96H150V120H0z" stroke="#039"/>
+	<!-- Delta flag -->
+	<path d="M0,0H150V24H0z" stroke="#fbfc01"/>
+	<path d="M0,24H150V96H0z" stroke="#003298"/>
+	<path d="M0,96H150V120H0z" stroke="#fbfc01"/>
+	<!-- Echo flag -->
+	<path d="M0,0H150V60H0z" stroke="#039"/>
+	<path d="M0,60H150V120H0z" stroke="#f00"/>
+	<!-- Foxtrot flag -->
+	<path d="M0,0H150V120H0z" stroke="#fff"/>
+	<path d="M 75,0 L 0,60 L 75,120 L 150,60" stroke="#f00"/>
+	<!-- Golf flag -->
+	<path d="M0,0H30V120H0z" stroke="#ff0"/>
+	<path d="M30,0h30V120h-30z" stroke="#039"/>
+	<path d="M60,0h30V120h-30z" stroke="#ff0"/>
+	<path d="M90,0h30V120h-30z" stroke="#039"/>
+	<path d="M120,0h30V120h-30z" stroke="#ff0"/>
+	<!-- Hotel flag -->
+	<path d="M0,0H75V120H0z" stroke="#fff"/>
+	<path d="M75,0h75V120h-75z" stroke="#f00"/>
+	<!-- India flag -->
+	<path d="M0,0H150V120H0z" stroke="#ff0"/>
+	<circle cx="75" cy="60" r="40" stroke="#000"/>
+	<!-- Juliet flag -->
+	<path d="M0,0H150v40H0z" stroke="#039"/>
+	<path d="M0,40H150v40H0z" stroke="#fff"/>
+	<path d="M0,80H150v40H0z" stroke="#039"/>
+	<!-- Kilo flag -->
+	<path d="M0,0h75V120h-75z" stroke="#ff0"/>
+	<path d="M75,0h75V120h-75z" stroke="#039"/>
+	<!-- Lima flag -->
+	<path d="M0,0h75v60h-75z" stroke="#ff0"/>
+	<path d="M75,0h75v60h-75z" stroke="#000"/>
+	<path d="M0,60h75v60h-75z" stroke="#000"/>
+	<path d="M75,60h75v60h-75z" stroke="#ff0"/>
+	<!-- Mike flag -->
+	<mask id="sarapis-mike-mask">
+		<path d="M-0.1,-0.1H150.1V120.1H-0.1z" fill="#fff"/>
+	</mask>
+	<path d="M0,0H150V120H0z" fill="#039"/>
+	<path d="M 0,0 L 150,120 M 0,120 L 150,0" stroke="#fff" stroke-width="25" stroke-linejoin="bevel" mask="url(#sarapis-mike-mask)"/>
+	<!-- November flag -->
+	<path d="M0,0H150V120H0z" stroke="#fff"/>
+	<path d="M0,0h37.5v30h-37.5z M75,0h37.5v30h-37.5z M37.5,30h37.5v30h-37.5z M112.5,30h37.5v30h-37.5z M0,60h37.5v30h-37.5z M75,60h37.5v30h-37.5z M37.5,90h37.5v30h-37.5z M112.5,90h37.5v30h-37.5z" stroke="#039"/>
+	<!-- Oscar flag -->
+	<path d="M0,0L150,120V0z" stroke="#f00"/>
+	<path d="M0,0L150,120H0z" stroke="#ff0"/>
+	<!-- Papa flag -->
+	<path d="M0,0H150V120H0z" stroke="#039"/>
+	<path d="M30,24h90v72h-90z" stroke="#fff"/>
+	<!-- Quebec flag -->
+	<path d="M0,0H150V120H0z" stroke="#ff0"/>
+	<!-- Romeo flag -->
+	<path d="M0,0H150V120H0z" stroke="#f00"/>
+	<path d="M75,0V120M0,60H150" stroke="#ff0" stroke-width="1"/>
+	<!-- Sierra flag -->
+	<path d="M0,0H150V120H0z" stroke="#fff"/>
+	<path d="M30,24h90v72h-90z" stroke="#039"/>
+	<!-- Tango flag -->
+	<path d="M0,0h50V120h-50z" stroke="#f00"/>
+	<path d="M50,0h50V120h-50z" stroke="#fff"/>
+	<path d="M100,0h50V120h-50z" stroke="#039"/>
+	<!-- Uniform flag -->
+	<path d="M0,0h75v60h-75z" stroke="#f00"/>
+	<path d="M75,0h75v60h-75z" stroke="#fff"/>
+	<path d="M0,60h75v60h-75z" stroke="#fff"/>
+	<path d="M75,60h75v60h-75z" stroke="#f00"/>
+	<!-- Victor flag -->
+	<path d="M0,0H150V120H0z" stroke="#fff"/>
+	<path d="M 0,0 L 150,120 M 0,120 L 150,0" stroke="#f00" stroke-width="1"/>
+	<!-- Whiskey flag -->
+	<path d="M0,0H150V120H0z" stroke="#039"/>
+	<path d="M30,24h90v72h-90z" stroke="#fff"/>
+	<path d="M60,48h30v24h-30z" stroke="#f00"/>
+	<!-- Xray flag -->
+	<path d="M0,0H150V120H0z" stroke="#fff"/>
+	<path d="M75,0V120M0,60H150" stroke="#039" stroke-width="1"/>
+	<!-- Yankee flag -->
+	<mask id="sarapis-yankee-mask">
+		<path d="M0,0H150V120H0z" fill="#fff"/>
+	</mask>
+	<path d="M0,0H150V120H0z" stroke="#f00"/>
+	<path d="m0,0 150,120" stroke-dasharray="1, 30" stroke="#ff0" stroke-width="200"  mask="url(#sarapis-yankee-mask)"/>
+	<!-- Zulu flag -->
+	<path d="M0,0H150L75,60z" stroke="#ff0"/>
+	<path d="M0,0V120L75,60z" stroke="#000"/>
+	<path d="M150,0V120L75,60z" stroke="#039"/>
+	<path d="M0,120H150L75,60z" stroke="#f00"/>
+</svg>

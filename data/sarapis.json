@@ -1,0 +1,37 @@
+{
+  "fr": {
+    "title": "France",
+    "src": "./../flags-svg/countries/fr.svg",
+    "countryCode": "fr",
+    "ratios": [""],
+    "colors": ["#002395", "#ffffff", "#f00316"],
+    "shapes": ["stripes", "vertical"],
+    "authors": [""],
+    "creationDate": "",
+    "source": ["https://www.gouvernement.fr/drapeau-francais", "https://fr.wikipedia.org/wiki/Drapeau_de_la_France"],
+    "otherTitles": ["le drapeau tricolore"]
+  },
+  "fr-dark": {
+    "title": "France dark alternative",
+    "src": "./../flags-svg/countries/fr_dark.svg",
+    "countryCode": "fr",
+    "ratios": [""],
+    "colors": ["#002654", "#ffffff", "#ce1126"],
+    "shapes": ["stripes", "vertical"],
+    "authors": [""],
+    "creationDate": "",
+    "source": ["https://www.gouvernement.fr/drapeau-francais", "https://fr.wikipedia.org/wiki/Drapeau_de_la_France"],
+    "otherTitles": ["le drapeau tricolore"]
+  },
+  "nl": {
+    "title": "Nederland",
+    "countryCode": "nl",
+    "ratios": [""],
+    "colors": ["#21468b", "#ffffff", "#ae1c28"],
+    "shapes": ["stripes", "horizontal"],
+    "authors": [""],
+    "creationDate": "",
+    "source": [""],
+    "otherTitles": [""]
+  }
+}

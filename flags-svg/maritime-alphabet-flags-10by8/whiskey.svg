@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 120" title="Whiskey flag">
+	<path d="M0,0H150V120H0z" fill="#039"/>
+	<path d="M30,24h90v72h-90z" fill="#fff"/>
+	<path d="M60,48h30v24h-30z" fill="#f00"/>
+</svg>

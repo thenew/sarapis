@@ -1,0 +1,44 @@
+<%- include('_header', {title: ''}) %>
+  <div>
+    <div class="filters">
+      <form action="">
+        <input class="filters-grid-size" type="range" min="10" max="50" value="25">
+      </form>
+    </div>
+    <div class="grid">
+      <% Object.keys(data.flags).forEach(function(key){ %>
+        <% if (data.flags[key].src) { %>
+          <div class="grid-item">
+            <div class="ratio-box">
+              <div class="ratio-box-inner">
+                <a class="list-link" href="/<%= key %>">
+                  <div><%- include(data.flags[key].src) %></div>
+                  <div><%- data.flags[key].title %></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        <% } %>
+      <% }); %>
+    </div>
+  </div>
+  <script>
+    const gridItems = document.querySelectorAll('.grid-item');
+    const gridSizeInput = document.querySelector('.filters-grid-size');
+
+    // init
+    gridSize(gridSizeInput.value);
+
+    gridSizeInput.oninput = function(event) { 
+      gridSize(this.value);
+    }
+
+    function gridSize(value) {
+      var index = 0, length = gridItems.length;
+      for ( ; index < length; index++) {
+        gridItems[index].style.flexBasis = value+'%'
+        gridItems[index].style.fontSize = value/10+'vw'
+      }
+    }
+  </script>
+<%- include _footer %>

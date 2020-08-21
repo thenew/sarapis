@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20" title="France flag">
+    <path d="M0,0H10V20H0Z" style="fill:#0055a4"/>
+    <path d="M10,0h10v20h-10Z" style="fill:#fff"/>
+    <path d="M20,0h10v20h-10Z" style="fill:#ef4135"/>
+</svg>

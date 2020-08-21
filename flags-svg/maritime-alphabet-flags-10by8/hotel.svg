@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 120" title="Hotel flag">
+	<path d="M0,0H75V120H0z" fill="#fff"/>
+	<path d="M75,0h75V120h-75z" fill="#f00"/>
+</svg>

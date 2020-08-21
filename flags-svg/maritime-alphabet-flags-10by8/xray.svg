@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 120" title="xray flag">
+	<path d="M0,0H150V120H0z" fill="#fff"/>
+	<path d="M75,0V120M0,60H150" stroke="#039" stroke-width="25"/>
+</svg>

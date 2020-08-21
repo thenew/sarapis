@@ -1,0 +1,32 @@
+<%- include('_header', {title: data.title, image: data.src, favicon: data.src}) %>
+<% if (data.title) { %>
+  <h1 class="text">
+    <%- data.title %>
+  </h1>
+<% } %>
+<% if (data.src) { %>
+  <div class="item-src">
+    <%- include(data.src) %>
+  </div>
+  <div class="sbox code">
+    <header class="sbox-header">SVG code</header>
+    <div class="sbox-content">
+      <pre>
+        <code><%= include(data.src) %></code>
+      </pre>
+    </div>
+  </div>
+<% } %>
+
+<div class="sbox">
+  <header class="sbox-header">Specs</header>
+  <div class="sbox-content">
+    <ul>
+      <li><span class="spec-title">ratio</span><span class="spec-value"><%- data.ratio %></span></li>
+      <li><span class="spec-title">colors</span><span class="spec-value">
+        <%= data.colors.join(", "); %>
+      </span></li>
+    </ul>
+  </div>
+</div>
+<%- include _footer %>

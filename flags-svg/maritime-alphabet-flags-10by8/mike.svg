@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 120" title="Mike flag">
+	<mask id="sarapis-mike-mask">
+		<path d="M-0.1,-0.1H150.1V120.1H-0.1z" fill="#fff"/>
+	</mask>
+	<path d="M0,0H150V120H0z" fill="#039"/>
+	<path d="M 0,0 L 150,120 M 0,120 L 150,0" stroke="#fff" stroke-width="25" stroke-linejoin="bevel" mask="url(#sarapis-mike-mask)"/>
+</svg>
