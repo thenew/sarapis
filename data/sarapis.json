@@ -33,5 +33,281 @@
     "creationDate": "",
     "source": [""],
     "otherTitles": [""]
+  },
+  "ad": {
+    "title": "Andorra",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "ae": {
+    "title": "United Arab Emirates",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "af": {
+    "title": "Afghanistan",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "ag": {
+    "title": "Antigua and Barbuda",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "ai": {
+    "title": "Anguilla",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "al": {
+    "title": "Albania",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "am": {
+    "title": "Armenia",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "ao": {
+    "title": "Angola",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "aq": {
+    "title": "Antarctica",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "ar": {
+    "title": "Argentina",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "as": {
+    "title": "American Samoa",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "at": {
+    "title": "Austria",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "au": {
+    "title": "Australia",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "aw": {
+    "title": "Aruba",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "ax": {
+    "title": "Åland",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "az": {
+    "title": "Azerbaijan",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "ba": {
+    "title": "Bosnia and Herzegovina",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "bb": {
+    "title": "Barbados",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "bd": {
+    "title": "Bangladesh",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "be": {
+    "title": "Belgium",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "bf": {
+    "title": "Burkina Faso",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "bg": {
+    "title": "Bulgaria",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "bh": {
+    "title": "Bahrain",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "bi": {
+    "title": "Burundi",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "bj": {
+    "title": "Benin",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "bl": {
+    "title": "Saint Barthélemy",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "bm": {
+    "title": "Bermuda",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "bn": {
+    "title": "Brunei",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "bo": {
+    "title": "Bolivia",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "bq": {
+    "title": "Bonaire",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "br": {
+    "title": "Brazil",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "bs": {
+    "title": "Bahamas",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "bt": {
+    "title": "Bhutan",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "bv": {
+    "title": "Bouvet Island",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "bw": {
+    "title": "Botswana",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "by": {
+    "title": "Belarus",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "bz": {
+    "title": "Belize",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "ca": {
+    "title": "Canada",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "cc": {
+    "title": "Cocos [Keeling] Islands",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "cd": {
+    "title": "Democratic Republic of the Congo",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "cf": {
+    "title": "Central African Republic",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "cg": {
+    "title": "Republic of the Congo",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "ch": {
+    "title": "Switzerland",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "ci": {
+    "title": "Ivory Coast",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "ck": {
+    "title": "Cook Islands",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "cl": {
+    "title": "Chile",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "cm": {
+    "title": "Cameroon",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "cn": {
+    "title": "China",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "co": {
+    "title": "Colombia",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "cr": {
+    "title": "Costa Rica",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "cu": {
+    "title": "Cuba",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "cv": {
+    "title": "Cape Verde",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "cw": {
+    "title": "Curacao",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "cx": {
+    "title": "Christmas Island",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "cy": {
+    "title": "Cyprus",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "cz": {
+    "title": "Czech Republic",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "de": {
+    "title": "Germany",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "dj": {
+    "title": "Djibouti",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "dk": {
+    "title": "Denmark",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "dm": {
+    "title": "Dominica",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "do": {
+    "title": "Dominican Republic",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "dz": {
+    "title": "Algeria",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "ec": {
+    "title": "Ecuador",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "ee": {
+    "title": "Estonia",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "eg": {
+    "title": "Egypt",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "eh": {
+    "title": "Western Sahara",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "er": {
+    "title": "Eritrea",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "es": {
+    "title": "Spain",
+    "src": "./../flags-svg/others/chequered.svg"
+  },
+  "et": {
+    "title": "Ethiopia",
+    "src": "./../flags-svg/others/chequered.svg"
   }
 }

@@ -26,3 +26,18 @@ export const slugify = (text) =>
     .replace(/ù|ú|û|ü/g, "u")
     .replace(/ý|ÿ/g, "y")
     .replace(/ž|ź/g, "z");
+
+
+export const colorsNames = {
+  white: ['#fff'],
+  black: ['#000'],
+  red: ['#f00'],
+  green: ['#0f0'],
+  blue: ['#00f', '#039'],
+  yellow: ['#ff0'],
+}
+
+// export const colorsNormalize = (name) => {
+//   const colors = []
+//   return colors
+// }

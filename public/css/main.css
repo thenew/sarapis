@@ -1,4 +1,5 @@
 @import 'base.css';
+@import 'ui.css';
 
 @font-face {
   font-family: Idlewild;
@@ -10,10 +11,11 @@
 }
 
 :root {
-  --color1: #ffed90;
-  --color1rgb: 255, 237, 144;
-  --color2: #d7acf3;
-  --colorCopy: #333;
+  --color1: #00f;
+  --color1Dark: #000080;
+  --color2: #4FFF19;
+  --color3: #910DFF;
+  --colorCopy: #111;
 
   --ease: cubic-bezier(.17,.67,.83,.67);
 
@@ -43,7 +45,7 @@
   font-family: Idlewild, monospace;
   font-size: 20px;
   color: var(--colorCopy);
-  background-color:#fff;
+  background-color:#eee;
   cursor: url(../images/cursor.svg) 5 5, default;
   cursor: -webkit-image-set(url(../images/cursor.svg) 1x,
     url(../images/cursor.svg) 2x) 5 5, default;
@@ -62,14 +64,15 @@ a:hover {
 
 .header {
   display: flex;
+  justify-content: center;
   align-items: center;
   min-height: 100px;
   padding: var(--paddingHalf) var(--padding);
-  border-bottom: 1px solid #0000ff;
+  /* border-bottom: 1px solid var(--color1); */
 }
 
 .footer {
-  /* border-top: 1px solid #0000ff; */
+  /* border-top: 1px solid var(--color1); */
   display: flex;
   align-items: center;
   padding: var(--paddingHalf) var(--padding);
@@ -109,16 +112,20 @@ a:hover {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  border-top: .5px solid #0000ff;
-  border-bottom: .5px solid #0000ff;
+  width: calc(100% - 1px);
 }
 
 .grid-item {
   flex-grow: 1;
   flex-basis: 25%;
-  padding: 1vw;
+  /* border: 1px solid var(--color1); */
+  box-shadow: 
+    1px 0 0 0 var(--color1), 
+    0 1px 0 0 var(--color1), 
+    1px 1px 0 0 var(--color1),   /* Just to fix the corner */
+    1px 0 0 0 var(--color1) inset, 
+    0 1px 0 0 var(--color1) inset;
   background-color: #E5E5E5;
-  border: .5px solid #0000ff;
 }
 
 .ratio-box {
@@ -145,8 +152,12 @@ a:hover {
 
 .checkbox-box {
   position: relative;
-  width: 25px;
+  min-width: 25px;
   height: 16px;
+}
+
+.checkbox-boxes.colors .checkbox-box {
+  width: 25px;
 }
 
 .checkbox-box .label {
@@ -155,8 +166,19 @@ a:hover {
   align-items: center;
   width: 100%;
   height: 100%;
+  padding: 1px 5px;
   font-size: 10px;
   cursor: pointer;
+  outline: 1px solid var(--color1);
+}
+
+.checkbox-boxes.colors .checkbox-box .label {
+  outline: none;
+}
+
+.checkbox-boxes.colors .checkbox-box .label:focus,
+.checkbox-boxes.colors .checkbox-box .label:hover {
+  outline: 1px solid var(--color1);
 }
 
 .checkbox-box .label-initial {
@@ -180,7 +202,14 @@ a:hover {
 }
 
 .checkbox-box .checkbox:checked ~ .label {
-  outline: 1px solid #0000ff;
+  outline: 1px solid var(--color1);
+  color: #fff;
+  background-color: var(--color1);
+}
+
+.checkbox-boxes.colors .checkbox-box .checkbox:checked ~ .label {
+  color: initial;
+  background-color: initial;
 }
 
 .checkbox-box .checkbox:checked ~ .label::after {
@@ -190,27 +219,75 @@ a:hover {
   top: calc(100% + 1px);
   right: 0;
   left: 0;
-  color: #0000ff;
+  color: var(--color1);
   text-align: center;
   font-size: 8px;
   transform: scaleX(2.5);
 }
 
 /* Home */
+
 .filters {
+  width: 100%;
+  box-shadow: 
+    -1px 0 0 0 var(--color1) inset, 
+    0 1px 0 0 var(--color1) inset;
+}
+
+.filters-form {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
+  width: 100%;
 }
 
 .filters .fieldset {
+  /* flex: 1 1 auto; */
   display: flex;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
+  height: 36px;
   padding: 10px;
-  border-right: 1px solid #0000ff;
+  /* border-right: 1px solid var(--color1);
+  border-bottom: 1px solid var(--color1); */
+  box-shadow: 
+    1px 0 0 0 var(--color1), 
+    0 1px 0 0 var(--color1), 
+    1px 1px 0 0 var(--color1),   /* Just to fix the corner */
+    1px 0 0 0 var(--color1) inset, 
+    0 1px 0 0 var(--color1) inset;
 }
 
 .fieldset-label {
+  font-size: 10px;
   margin-right: 10px;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  padding: 20px 30px 30px 30px;
+}
+
+.item-image {
+  width: 100%;
+  border: 0 solid black;
+  transition: border .1s var(--ease);
+}
+
+.item:focus .item-image,
+.item:hover .item-image {
+  border-width: 8px;
+
+}
+
+.item-title {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
 }

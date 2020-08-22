@@ -17,14 +17,14 @@
     "title": "Charlie",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/charlie.svg",
     "ratios": ["10:8"],
-    "colors": ["#039", "#fff", "#f00", "#fff", "#039"],
+    "colors": ["#039", "#fff", "#f00"],
     "shapes": [""]
   },
   "d": {
     "title": "Delta",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/delta.svg",
     "ratios": ["10:8"],
-    "colors": ["#fbfc01", "#003298", "#fbfc01"],
+    "colors": ["#fbfc01", "#003298"],
     "shapes": [""]
   },
   "e": {
@@ -45,7 +45,7 @@
     "title": "Golf",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/golf.svg",
     "ratios": ["10:8"],
-    "colors": ["#ff0", "#039", "#ff0", "#039", "#ff0"],
+    "colors": ["#ff0", "#039", "#ff0"],
     "shapes": [""]
   },
   "h": {
@@ -66,7 +66,7 @@
     "title": "Juliet",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/juliet.svg",
     "ratios": ["10:8"],
-    "colors": ["#039", "#fff", "#039"],
+    "colors": ["#039", "#fff"],
     "shapes": [""]
   },
   "k": {
@@ -80,7 +80,7 @@
     "title": "Lima",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/lima.svg",
     "ratios": ["10:8"],
-    "colors": ["#ff0", "#000", "#000", "#ff0"],
+    "colors": ["#ff0", "#000"],
     "shapes": [""]
   },
   "m": {
@@ -143,7 +143,7 @@
     "title": "Uniform",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/uniform.svg",
     "ratios": ["10:8"],
-    "colors": ["#f00", "#fff", "#fff", "#f00"],
+    "colors": ["#f00", "#fff"],
     "shapes": [""]
   },
   "v": {

@@ -1,0 +1,71 @@
+<div class="filters">
+    <form action="" method="get" class="filters-form">
+        <%# fieldset can't be flexbox containers on Chrome %>
+        <div class="fieldset">
+            <div class="fieldset-label">Colors</div>
+
+            <ul class="checkbox-boxes colors">
+            <li class="checkbox-box" style="background-color: #fff;">
+                <%- include('../templates/checkbox.ejs', {
+                name: 'colors', id: 'white', label: 'White', checked: data.params.getAll('colors').includes('white')
+                }) %>
+            </li>
+            <li class="checkbox-box" style="background-color: #ff0;">
+                <%- include('../templates/checkbox.ejs', {
+                name: 'colors', id: 'yellow', label: 'Yellow', checked: data.params.getAll('colors').includes('yellow')
+                }) %>
+            </li>
+            <li class="checkbox-box dark" style="background-color: #00f;">
+                <%- include('../templates/checkbox.ejs', {
+                name: 'colors', id: 'blue', label: 'Blue', checked: data.params.getAll('colors').includes('blue')
+                }) %>
+            </li>
+            <li class="checkbox-box" style="background-color: #0f0;">
+                <%- include('../templates/checkbox.ejs', {
+                name: 'colors', id: 'green', label: 'Green', checked: data.params.getAll('colors').includes('green')
+                }) %>
+            </li>
+            </ul>
+        </div>
+        <div class="fieldset">
+            <div class="fieldset-label">Number of colors</div>
+            <ul class="checkbox-boxes">
+            <li class="checkbox-box">
+                <%- include('../templates/checkbox.ejs', {
+                name: 'number-colors', id: '1', label: '1', checked: data.params.getAll('number-colors').includes('1')
+                }) %>
+            </li>
+            <li class="checkbox-box">
+                <%- include('../templates/checkbox.ejs', {
+                name: 'number-colors', id: '2', label: '2', checked: data.params.getAll('number-colors').includes('2')
+                }) %>
+            </li>
+            <li class="checkbox-box">
+                <%- include('../templates/checkbox.ejs', {
+                name: 'number-colors', id: '3', label: '3', checked: data.params.getAll('number-colors').includes('3')
+                }) %>
+            </li>
+            <li class="checkbox-box">
+                <%- include('../templates/checkbox.ejs', {
+                name: 'number-colors', id: '4', label: '4', checked: data.params.getAll('number-colors').includes('4')
+                }) %>
+            </li>
+            <li class="checkbox-box">
+                <%- include('../templates/checkbox.ejs', {
+                name: 'number-colors', id: 'all', label: 'all', labelVisible: 'all', checked: data.params.getAll('number-colors').includes('all') || data.params.getAll('number-colors').length === 0 
+                }) %>
+            </li>
+            </ul>
+        </div>
+        <div class="fieldset">
+            <input class="filters-search search-input" type="text" name="search" value="<%= data.params.get('search') %>">
+        </div>
+        <div class="fieldset">
+            <div class="fieldset-label">View</div>
+            <input class="filters-grid-size input-range" type="range" name="grid-size" min="10" max="50" value="<%= data.params.get('grid-size') %>">
+        </div>
+        <!-- <div class="fieldset">
+            <button>ok</button>
+        </div> -->
+    </form>
+</div>

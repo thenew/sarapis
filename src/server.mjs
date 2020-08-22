@@ -43,7 +43,7 @@ const requestListener = (request, response) => {
     const flagsCountries = JSON.parse(fs.readFileSync(`${dataPath}/sarapis.json`))
     const flagsMaritime = JSON.parse(fs.readFileSync(`${dataPath}/flags-maritime.json`))
 
-    const flags = {...flagsCountries, ...flagsMaritime}
+    const flags = {...flagsMaritime, ...flagsCountries}
 
     let keyMatch = false;
 
@@ -63,7 +63,8 @@ const requestListener = (request, response) => {
 
     // 404
     else {
-      render("404", null, 404);
+      render("home", Home({request, items: flags}));
+      // render("404", null, 404);
     }
   });
 };

@@ -1,79 +1,73 @@
 <%- include('_header', {title: ''}) %>
-  <div>
-    <form action="" class="filters">
-      <fieldset class="fieldset">
-        <div class="fieldset-label">Colors</div>
-
-        <ul class="checkbox-boxes">
-          <li class="checkbox-box" style="background-color: #fff;">
-            <input type="checkbox" id="white" class="checkbox">
-            <label for="white" class="label">
-              <span class="sr-only">White</span>
-              <div class="label-initial">W</div>
-            </label>
-          </li>
-          <li class="checkbox-box" style="background-color: #ffff00;">
-            <input type="checkbox" id="yellow" class="checkbox">
-            <label for="yellow" class="label">
-              <span class="sr-only">yellow</span>
-              <div class="label-initial">Y</div>
-            </label>
-          </li>
-          <li class="checkbox-box dark" style="background-color: #0000ff;">
-            <input type="checkbox" id="blue" class="checkbox">
-            <label for="blue" class="label">
-              <span class="sr-only">blue</span>
-              <div class="label-initial">B</div>
-            </label>
-          </li>
-          <li class="checkbox-box" style="background-color: #00ff00;">
-            <input type="checkbox" id="green" class="checkbox">
-            <label for="green" class="label">
-              <span class="sr-only">green</span>
-              <div class="label-initial">G</div>
-            </label>
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset class="fieldset">
-        <div class="fieldset-label">View</div>
-        <input class="filters-grid-size" type="range" min="10" max="50" value="25">
-      </fieldset>
-    </form>
-    <div class="grid">
-      <% Object.keys(data.flags).forEach(function(key){ %>
-        <% if (data.flags[key].src) { %>
-          <div class="grid-item">
-            <div class="ratio-box">
-              <div class="ratio-box-inner">
-                <a class="list-link" href="/<%= key %>">
-                  <div><%- include(data.flags[key].src) %></div>
-                  <div><%- data.flags[key].title %></div>
-                </a>
-              </div>
-            </div>
-          </div>
-        <% } %>
-      <% }); %>
-    </div>
+<div>
+  <%- include('../templates/filters.ejs', {data}); %>
+  <div class="grid">
+    <% Object.keys(data.flags).forEach(function(key){ %>
+      <% if (data.flags[key].src) { %>
+        <%- include('../templates/gridItem.ejs', {key, flag: data.flags[key]}); %>
+      <% } %>
+    <% }); %>
   </div>
-  <script>
-    const gridItems = document.querySelectorAll('.grid-item');
-    const gridSizeInput = document.querySelector('.filters-grid-size');
+</div>
+<script>
+  const grid = document.querySelector('.grid');
+  const gridItems = document.querySelectorAll('.grid-item');
+  const form = document.querySelector('.filters');
+  const formCheckboxes = document.querySelectorAll('.filters input[type="checkbox"]');
+  const gridSizeInput = document.querySelector('.filters-grid-size');
+  const searchInput = document.querySelector('.search-input');
 
-    // init
-    gridSize(gridSizeInput.value);
+  // init
+  gridSize(gridSizeInput.value);
 
-    gridSizeInput.oninput = function(event) { 
-      gridSize(this.value);
+  gridSizeInput.oninput = function(event) { 
+    gridSize(this.value);
+  }
+
+
+  form.addEventListener('submit', function(event) {
+    // event.preventDefault();
+// construct a FormData object, which fires the formdata event
+    // const formData = new FormData(form);
+    // const searchParams = new URLSearchParams(formData);
+    // updateUrl(searchParams)
+    // const queryString = searchParams.toString();
+    // console.log('queryString: ', queryString)
+  })
+
+  // searchInput.addEventListener('keydown', function(event) {
+
+  // })
+
+  formCheckboxes.forEach(function(input) {
+    console.log('input: ', input)
+    input.addEventListener('change', function(event) { 
+      console.log('formCheckboxes event: ', event)
+      form.requestSubmit()
+    })
+  })
+
+  function gridSize(value) {
+    var index = 0, length = gridItems.length;
+    for ( ; index < length; index++) {
+      gridItems[index].style.flexBasis = value+'%'
+      gridItems[index].style.fontSize = value/10+'vw'
     }
+  }
 
-    function gridSize(value) {
-      var index = 0, length = gridItems.length;
-      for ( ; index < length; index++) {
-        gridItems[index].style.flexBasis = value+'%'
-        gridItems[index].style.fontSize = value/10+'vw'
-      }
-    }
-  </script>
+  function updateUrl(searchParams) {
+    // const params = new URLSearchParams(location.search);
+    // params.appendAll(searchParams);
+    window.history.replaceState({}, '', `${location.pathname}?${searchParams}`);
+
+    // const items = {}
+    // console.log('items: ', items)
+    // console.log('ejs: ', ejs)
+    // const people = ['geddy', 'neil', 'alex']
+    // const html = ejs.render('%= people.join(", "); %>', {people: people})
+  
+    // console.log('html: ', html)
+    // grid.innerHTML = `test`
+  }
+</script>
 <%- include _footer %>
