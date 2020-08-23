@@ -28,13 +28,43 @@ export const slugify = (text) =>
     .replace(/ž|ź/g, "z");
 
 
-export const colorsNames = {
-  white: ['#fff'],
-  black: ['#000'],
-  red: ['#f00'],
-  green: ['#0f0'],
-  blue: ['#00f', '#039'],
-  yellow: ['#ff0'],
+export const colorsObjects = {
+  white: {
+    label: 'White',
+    mainColorCode: '#fff',
+    dark: false,
+    colorsCodes: ['#fff']
+  },
+  black: {
+    label: 'Black',
+    mainColorCode: '#000',
+    dark: true,
+    colorsCodes: ['#000']
+  },
+  red: {
+    label: 'Red',
+    mainColorCode: '#f00',
+    dark: true,
+    colorsCodes: ['#f00', '#ef4135', '#CE1126']
+  },
+  green: {
+    label: 'Green',
+    mainColorCode: '#0f0',
+    dark: false,
+    colorsCodes: ['#0f0']
+  },
+  blue: {
+    label: 'Blue',
+    mainColorCode: '#00f',
+    dark: true,
+    colorsCodes: ['#00f', '#039', '#0055a4', '#002654']
+  },
+  yellow: {
+    label: 'Yellow',
+    mainColorCode: '#ff0',
+    dark: false,
+    colorsCodes: ['#ff0']
+  },
 }
 
 // export const colorsNormalize = (name) => {

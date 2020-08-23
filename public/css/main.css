@@ -154,6 +154,14 @@ a:hover {
   position: relative;
   min-width: 25px;
   height: 16px;
+
+  --border-shadow:
+    1px 0 0 0 var(--color1), 
+    0 1px 0 0 var(--color1), 
+    1px -1px 0 0 var(--color1),   /* Just to fix the corner */
+    1px 1px 0 0 var(--color1),   /* Just to fix the corner */
+    1px 0 0 0 var(--color1) inset, 
+    0 -1px 0 0 var(--color1);
 }
 
 .checkbox-boxes.colors .checkbox-box {
@@ -161,6 +169,7 @@ a:hover {
 }
 
 .checkbox-box .label {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -169,16 +178,41 @@ a:hover {
   padding: 1px 5px;
   font-size: 10px;
   cursor: pointer;
-  outline: 1px solid var(--color1);
+  box-shadow: var(--border-shadow);
+}
+
+.label::after {
+  content: '^';
+  display: block;
+  position: absolute;
+  top: calc(100% + 1px);
+  right: 0;
+  left: 0;
+  color: var(--color1);
+  text-align: center;
+  font-size: 8px;
+  transform: scaleX(2.5);
+  opacity: 0;
+}
+
+.checkbox-box .label:focus::after,
+.checkbox-box .label:hover::after {
+  opacity: 1;
 }
 
 .checkbox-boxes.colors .checkbox-box .label {
-  outline: none;
+  box-shadow: none;
+}
+
+.checkbox-boxes.colors .checkbox-box .checkbox:not(:checked) ~ .label:focus::after,
+.checkbox-boxes.colors .checkbox-box .checkbox:not(:checked) ~ .label:hover::after {
+  opacity: 0;
 }
 
 .checkbox-boxes.colors .checkbox-box .label:focus,
 .checkbox-boxes.colors .checkbox-box .label:hover {
-  outline: 1px solid var(--color1);
+  z-index: 2;
+  box-shadow: var(--border-shadow);
 }
 
 .checkbox-box .label-initial {
@@ -202,7 +236,7 @@ a:hover {
 }
 
 .checkbox-box .checkbox:checked ~ .label {
-  outline: 1px solid var(--color1);
+  box-shadow: var(--border-shadow);
   color: #fff;
   background-color: var(--color1);
 }
@@ -213,16 +247,7 @@ a:hover {
 }
 
 .checkbox-box .checkbox:checked ~ .label::after {
-  content: '^';
-  display: block;
-  position: absolute;
-  top: calc(100% + 1px);
-  right: 0;
-  left: 0;
-  color: var(--color1);
-  text-align: center;
-  font-size: 8px;
-  transform: scaleX(2.5);
+  opacity: 1;
 }
 
 /* Home */

@@ -4,7 +4,7 @@
     <style>#sarapis-maritime-wire path { mix-blend-mode: difference; stroke-linejoin: bevel; stroke-linecap: butt; }</style>
 	<!-- Alpha flag -->
 	<path d="M0,0H75V120H0Z" fill="#fff"/>
-	<path d="M150,0H75V120H150L100,60z" fill="#003298"/>
+	<path d="M150,0H75V120H150L100,60z" fill="#039"/>
 	<!-- Bravo flag -->
 	<path d="M150,0H0V120H150L100,60z" fill="#f00"/>
 	<!-- Charlie flag -->
@@ -14,9 +14,9 @@
 	<path d="M0,72H150V96H0z" fill="#fff"/>
 	<path d="M0,96H150V120H0z" fill="#039"/>
 	<!-- Delta flag -->
-	<path d="M0,0H150V24H0z" fill="#fbfc01"/>
-	<path d="M0,24H150V96H0z" fill="#003298"/>
-	<path d="M0,96H150V120H0z" fill="#fbfc01"/>
+	<path d="M0,0H150V24H0z" fill="#ff0"/>
+	<path d="M0,24H150V96H0z" fill="#039"/>
+	<path d="M0,96H150V120H0z" fill="#ff0"/>
 	<!-- Echo flag -->
 	<path d="M0,0H150V60H0z" fill="#039"/>
 	<path d="M0,60H150V120H0z" fill="#f00"/>

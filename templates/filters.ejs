@@ -3,58 +3,34 @@
         <%# fieldset can't be flexbox containers on Chrome %>
         <div class="fieldset">
             <div class="fieldset-label">Colors</div>
-
             <ul class="checkbox-boxes colors">
-            <li class="checkbox-box" style="background-color: #fff;">
-                <%- include('../templates/checkbox.ejs', {
-                name: 'colors', id: 'white', label: 'White', checked: data.params.getAll('colors').includes('white')
-                }) %>
-            </li>
-            <li class="checkbox-box" style="background-color: #ff0;">
-                <%- include('../templates/checkbox.ejs', {
-                name: 'colors', id: 'yellow', label: 'Yellow', checked: data.params.getAll('colors').includes('yellow')
-                }) %>
-            </li>
-            <li class="checkbox-box dark" style="background-color: #00f;">
-                <%- include('../templates/checkbox.ejs', {
-                name: 'colors', id: 'blue', label: 'Blue', checked: data.params.getAll('colors').includes('blue')
-                }) %>
-            </li>
-            <li class="checkbox-box" style="background-color: #0f0;">
-                <%- include('../templates/checkbox.ejs', {
-                name: 'colors', id: 'green', label: 'Green', checked: data.params.getAll('colors').includes('green')
-                }) %>
-            </li>
+                <% Object.keys(data.filtersValues.colors).forEach(color => { %>
+                    <% const {label = '', mainColorCode = '', dark = false} = data.filtersValues.colors[color] %>
+                        <li class="checkbox-box <% if(dark){ %>dark<% } %>" style="background-color: <%= mainColorCode %>;">
+                        <%- include('../templates/checkbox.ejs', {
+                            name: 'colors', id: color, label: label, checked: data.params.getAll('colors').includes(color)
+                        }) %>
+                    </li>
+                <% }) %>
             </ul>
         </div>
         <div class="fieldset">
             <div class="fieldset-label">Number of colors</div>
             <ul class="checkbox-boxes">
-            <li class="checkbox-box">
-                <%- include('../templates/checkbox.ejs', {
-                name: 'number-colors', id: '1', label: '1', checked: data.params.getAll('number-colors').includes('1')
-                }) %>
-            </li>
-            <li class="checkbox-box">
-                <%- include('../templates/checkbox.ejs', {
-                name: 'number-colors', id: '2', label: '2', checked: data.params.getAll('number-colors').includes('2')
-                }) %>
-            </li>
-            <li class="checkbox-box">
-                <%- include('../templates/checkbox.ejs', {
-                name: 'number-colors', id: '3', label: '3', checked: data.params.getAll('number-colors').includes('3')
-                }) %>
-            </li>
-            <li class="checkbox-box">
-                <%- include('../templates/checkbox.ejs', {
-                name: 'number-colors', id: '4', label: '4', checked: data.params.getAll('number-colors').includes('4')
-                }) %>
-            </li>
-            <li class="checkbox-box">
-                <%- include('../templates/checkbox.ejs', {
-                name: 'number-colors', id: 'all', label: 'all', labelVisible: 'all', checked: data.params.getAll('number-colors').includes('all') || data.params.getAll('number-colors').length === 0 
-                }) %>
-            </li>
+                <% const numberColors = data.params.getAll('number-colors') %>
+                <% data.filtersValues.numberColors.forEach(number => { %>
+                    <li class="checkbox-box">
+                        <%- include('../templates/checkbox.ejs', {
+                            name: 'number-colors', id: number, label: number, checked: numberColors.includes(number)
+                        }) %>
+                    </li>
+                <% }) %>
+                <li class="checkbox-box">
+                    <%- include('../templates/checkbox.ejs', {
+                        name: 'number-colors', id: 'all', label: 'all', labelVisible: 'all', 
+                        checked: (numberColors.includes('all') && numberColors.length === 1) || numberColors.length === 0 
+                    }) %>
+                </li>
             </ul>
         </div>
         <div class="fieldset">
