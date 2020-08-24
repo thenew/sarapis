@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 6" title="Rainbow flag">
+	<path d="M0,0H9v1H0Z" fill="#e40303"/>
+	<path d="M0,1H9v1H0Z" fill="#ff8c00"/>
+	<path d="M0,2H9v1H0Z" fill="#ffed00"/>
+	<path d="M0,3H9v1H0Z" fill="#008026"/>
+	<path d="M0,4H9v1H0Z" fill="#004dff"/>
+    <path d="M0,5H9v1H0Z" fill="#750787"/>
+</svg>

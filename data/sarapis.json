@@ -308,6 +308,8 @@
   },
   "et": {
     "title": "Ethiopia",
-    "src": "./../flags-svg/others/chequered.svg"
+    "src": "./../flags-svg/countries/et.svg",
+    "shapes": ["stripes", "horizontal"],
+    "colors": ["#da121a","#fcdd09","#078930"]
   }
 }

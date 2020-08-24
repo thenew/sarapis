@@ -40,11 +40,21 @@ const requestListener = (request, response) => {
   const serve = serveStatic(".");
 
   serve(request, response, () => {
+    
     const flagsCountries = JSON.parse(fs.readFileSync(`${dataPath}/sarapis.json`))
+    Object.keys(flagsCountries).forEach(key => {
+      flagsCountries[key].category = 'countries'
+    })
     const flagsMaritime = JSON.parse(fs.readFileSync(`${dataPath}/flags-maritime.json`))
+    Object.keys(flagsMaritime).forEach(key => {
+      flagsMaritime[key].category = 'maritime'
+    })
+    const flagsCommunities = JSON.parse(fs.readFileSync(`${dataPath}/flags-communities.json`))
+    Object.keys(flagsCommunities).forEach(key => {
+      flagsCommunities[key].category = 'communities'
+    })
 
-    const flags = {...flagsMaritime, ...flagsCountries}
-
+    const flags = {...flagsMaritime, ...flagsCommunities, ...flagsCountries}
     let keyMatch = false;
 
     /**

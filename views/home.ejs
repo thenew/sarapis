@@ -1,6 +1,11 @@
 <%- include('_header', {title: ''}) %>
 <div>
   <%- include('../templates/filters.ejs', {data}); %>
+  <% if(data.filtersValues.collectionTitle) { %>
+    <div class="page-title-box">
+      <h1 class="page-title"><%= data.filtersValues.collectionTitle %></h1>
+    </div>
+  <% } %>
   <div class="grid">
     <% Object.keys(data.flags).forEach(function(key){ %>
       <% if (data.flags[key].src) { %>
@@ -9,6 +14,8 @@
     <% }); %>
   </div>
 </div>
+
+
 <script>
   const grid = document.querySelector('.grid');
   const gridItems = document.querySelectorAll('.grid-item');

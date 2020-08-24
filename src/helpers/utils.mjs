@@ -27,7 +27,6 @@ export const slugify = (text) =>
     .replace(/ý|ÿ/g, "y")
     .replace(/ž|ź/g, "z");
 
-
 export const colorsObjects = {
   white: {
     label: 'White',
@@ -45,29 +44,51 @@ export const colorsObjects = {
     label: 'Red',
     mainColorCode: '#f00',
     dark: true,
-    colorsCodes: ['#f00', '#ef4135', '#CE1126']
+    colorsCodes: ['#f00', '#ef4135', '#CE1126', '#e40303', "#da121a"]
   },
-  green: {
-    label: 'Green',
-    mainColorCode: '#0f0',
+  orange: {
+    label: 'Orange',
+    mainColorCode: '#f70',
     dark: false,
-    colorsCodes: ['#0f0']
-  },
-  blue: {
-    label: 'Blue',
-    mainColorCode: '#00f',
-    dark: true,
-    colorsCodes: ['#00f', '#039', '#0055a4', '#002654']
+    colorsCodes: ['#ff8c00']
   },
   yellow: {
     label: 'Yellow',
     mainColorCode: '#ff0',
     dark: false,
-    colorsCodes: ['#ff0']
+    colorsCodes: ['#ff0', "#ffed00", "#fcdd09"]
+  },
+  green: {
+    label: 'Green',
+    mainColorCode: '#0f0',
+    dark: false,
+    colorsCodes: ['#0f0', "#008026", "#078930"]
+  },
+  blue: {
+    label: 'Blue',
+    mainColorCode: '#00f',
+    dark: true,
+    colorsCodes: ['#00f', '#039', '#0055a4', '#002654', "#004dff"]
+  },
+  violet: {
+    label: 'Violet',
+    mainColorCode: '#707',
+    dark: true,
+    colorsCodes: ["#750787"]
   },
 }
 
-// export const colorsNormalize = (name) => {
-//   const colors = []
-//   return colors
-// }
+export const collectionTitles = {
+  black: `Back to black`,
+  blue: `Blue Monday`,
+  red: `Red`,
+  yellow: `Yellow lemon`,
+  maritime: `Maritime flags`,
+  communities: `Communities flags`,
+  countries: `Sovereign states flags`,
+  1: `Monochrome`,
+  2: `2 colors`,
+  3: `3 colors`,
+  4: `4 colors`,
+  5: `5 colors`,
+}

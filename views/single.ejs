@@ -1,25 +1,21 @@
 <%- include('_header', {title: data.title, image: data.src, favicon: data.src}) %>
 <% if (data.title) { %>
-  <h1 class="text">
-    <%- data.title %>
-  </h1>
+  <div class="page-title-box">
+    <h1 class="page-title"><%= data.title %></h1>
+  </div>
 <% } %>
 <% if (data.src) { %>
-  <div class="item-src">
-    <%- include(data.src) %>
-  </div>
-  <div class="sbox code">
-    <header class="sbox-header">SVG code</header>
-    <div class="sbox-content">
-      <pre>
-        <code><%= include(data.src) %></code>
-      </pre>
+  <div class="single-layout">
+    <%- include('../templates/gridItem.ejs', {key: ``, flag: data}); %>
+    <div class="srp-box code">
+      <header class="srp-box-header"><div class="text">SVG code</div></header>
+      <pre class="srp-box-content"><code><%= include(data.src) %></code></pre>
     </div>
   </div>
 <% } %>
 
 <div class="sbox">
-  <header class="sbox-header">Specs</header>
+  <header class="sbox-header"><div class="text">Specs</div></header>
   <div class="sbox-content">
     <ul>
       <li><span class="spec-title">ratio</span><span class="spec-value"><%- data.ratio %></span></li>

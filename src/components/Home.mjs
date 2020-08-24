@@ -1,10 +1,10 @@
 import fs from "fs";
 import path from "path";
 import parseUrl from "parseUrl";
-import { colorsObjects } from "../helpers/utils.mjs";
+import { colorsObjects, collectionTitles } from "../helpers/utils.mjs";
 import {} from "../helpers/config.mjs";
 
-const Home = ({ request, items }) => {
+const Home = ({ request, items: allFlags }) => {
   const search = parseUrl(request).search;
   let data = {};
   let flags = {};
@@ -17,68 +17,123 @@ const Home = ({ request, items }) => {
 
   // building filters
   const filtersValues = {
+    collectionTitle: ``,
     colors: [],
     numberColors: [],
+    categories: []
   }
 
   // get params
+  const filtersCategories = params.getAll("categories");
   const filtersColorsNames = params.getAll("colors");
+  const filtersSearch = params.get("search");
   const filtersNumberColors = params.getAll("number-colors").filter(function (number) {
-    console.log('typeof number: ', typeof number)
     return !isNaN(number)
   });
-  const filtersSearch = params.get("search");
+  const hasFilters = filtersCategories.length || filtersColorsNames.length || filtersNumberColors.length || filtersSearch
+  if(filtersColorsNames.length === 1 && ! filtersCategories.length && ! filtersNumberColors.length && ! filtersSearch) {
+    filtersValues.collectionTitle = collectionTitles[filtersColorsNames[0]] || filtersColorsNames[0]
 
-  if (search) {
-    // get hexacodes colors
-    let filtersColorsCodes = [];
-    filtersColorsNames.forEach((colorName) => {
-      filtersColorsCodes = filtersColorsCodes.concat(colorsObjects[colorName].colorsCodes);
-    });
+  } else if (filtersCategories.length === 1 && ! filtersColorsNames.length && ! filtersNumberColors.length && ! filtersSearch) {
+    filtersValues.collectionTitle = collectionTitles[filtersCategories[0]] || filtersCategories[0]
 
-    // filter colors
-    Object.keys(items).forEach(function (key) {
-      const flag = items[key];
-      const { colors: flagColors = [], title: flagTitle = `` } = flag;
-      const flagNumberColors = flagColors.length.toString()
-
-      const hasColors = filtersColorsNames.length ? flagColors.filter((flagColors) => filtersColorsCodes.includes(flagColors)).length > 0 : true;
-      const hasNumberColors = filtersNumberColors.length ? filtersNumberColors.includes(flagNumberColors) : true;
-      const hasTitle = filtersSearch ? flagTitle.match(new RegExp(filtersSearch, "i")) : true;
-
-      // add
-      if (hasColors && hasNumberColors && hasTitle) {
-        
-        flags[key] = flag;
-
-        // add values to filters
-        // colors
-        flagColors.forEach(function(flagColor) {
-          // get filter name of the color
-          Object.keys(colorsObjects).forEach(function(name) {
-            const colorObject = colorsObjects[name]
-            const {colorsCodes = []} = colorObject
-            if(colorsCodes.includes(flagColor) 
-            && ! Object.keys(filtersValues.colors).includes(name) ) {
-              filtersValues.colors[name] = colorObject
-            }
-          })
-        })
-
-        // number of colors
-        if( ! filtersValues.numberColors.includes(flagNumberColors) ) {
-          filtersValues.numberColors.push(flagNumberColors)
-        }
-      }
-    });
-  } else {
-    flags = items;
+  } else if (filtersNumberColors.length === 1 && ! filtersCategories.length && ! filtersColorsNames.length && ! filtersSearch) {
+    filtersValues.collectionTitle = collectionTitles[filtersNumberColors[0]] || filtersNumberColors[0]
   }
 
-  // clean filters values
-  filtersValues.numberColors.sort()
-  data.filtersValues = filtersValues;
+  // get hexacodes colors
+  let filtersColorsCodes = [];
+  filtersColorsNames.forEach((colorName) => {
+    const {colorsCodes = []} = colorsObjects[colorName] || {}
+    filtersColorsCodes = filtersColorsCodes.concat(colorsCodes)
+  })
 
+  Object.keys(allFlags).forEach(function (key) {
+    const flag = allFlags[key];
+    const {
+      colors: flagColors = [],
+      title: flagTitle = ``,
+      category: flagCategory = ``
+    } = flag;
+    const flagNumberColors = flagColors.length.toString()
+    
+    if (hasFilters) {
+
+      const hasCategory = filtersCategories.length ? filtersCategories.includes(flagCategory) : true
+      const hasColors = filtersColorsCodes.length ? flagColors.filter((flagColors) => filtersColorsCodes.includes(flagColors)).length > 0 : true
+      const hasNumberColors = filtersNumberColors.length ? filtersNumberColors.includes(flagNumberColors) : true
+      const hasTitle = filtersSearch ? flagTitle.match(new RegExp(filtersSearch, "i")) : true
+
+      // console.log('hasCategory: ', hasCategory)
+      // console.log('hasColors: ', hasColors)
+      // console.log('hasNumberColors: ', hasNumberColors)
+
+      // add
+      if (hasCategory && hasColors && hasNumberColors && hasTitle) {
+        // console.log('add flag key: ', key)
+        flags[key] = flag
+      }
+    } else {
+      flags[key] = flag
+    }
+    
+    // Add all categories in the filters
+    if( ! filtersValues.categories.includes(flagCategory) ) {
+      filtersValues.categories.push(flagCategory)
+    }
+
+  })
+
+
+  // build smart filters
+  Object.keys(flags).forEach(key => {
+    const flag = flags[key]
+    const {
+      colors: flagColors = [],
+      category: flagCategory = ``
+    } = flag;
+    const flagNumberColors = flagColors.length.toString()
+
+    // categories
+    // if( ! filtersValues.categories.includes(flagCategory) ) {
+    //   filtersValues.categories.push(flagCategory)
+    // }
+
+    // colors
+    flagColors.forEach(function(flagColor) {
+      // get filter name of the color
+      Object.keys(colorsObjects).forEach(function(name) {
+        const colorObject = colorsObjects[name]
+        const {colorsCodes = []} = colorObject
+        if(colorsCodes.includes(flagColor) 
+        && ! Object.keys(filtersValues.colors).includes(name) ) {
+          filtersValues.colors[name] = colorObject
+        }
+      })
+    })
+
+    // number of colors
+    if( ! filtersValues.numberColors.includes(flagNumberColors) ) {
+      filtersValues.numberColors.push(flagNumberColors)
+    }
+  }) 
+
+  // sort filters colors values
+  const unSortedFiltersValuesColors = filtersValues.colors
+  const filtersValuesColors = []
+  Object.keys(colorsObjects).forEach(key => {
+    Object.keys(unSortedFiltersValuesColors).forEach(k => {
+      if(k == key) {
+        filtersValuesColors[k] = unSortedFiltersValuesColors[k]
+      }
+    })
+  })
+  filtersValues.colors = filtersValuesColors
+
+  // sort number of colors
+  filtersValues.numberColors.sort()
+
+  data.filtersValues = filtersValues;
 
   data.flags = flags;
   return data;

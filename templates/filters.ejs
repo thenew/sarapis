@@ -2,13 +2,26 @@
     <form action="" method="get" class="filters-form">
         <%# fieldset can't be flexbox containers on Chrome %>
         <div class="fieldset">
+            <div class="fieldset-label">Categories</div>
+            <ul class="checkbox-boxes">
+                <% const categories = data.params.getAll('categories') %>
+                <% data.filtersValues.categories.forEach(category => { %>
+                    <li class="checkbox-box">
+                        <%- include('../templates/checkbox.ejs', {
+                            name: 'categories', id: category, label: category, checked: categories.includes(category)
+                        }) %>
+                    </li>
+                <% }) %>
+            </ul>
+        </div>
+        <div class="fieldset">
             <div class="fieldset-label">Colors</div>
             <ul class="checkbox-boxes colors">
-                <% Object.keys(data.filtersValues.colors).forEach(color => { %>
-                    <% const {label = '', mainColorCode = '', dark = false} = data.filtersValues.colors[color] %>
+                <% Object.keys(data.filtersValues.colors).forEach(colorName => { %>
+                    <% const {label = '', mainColorCode = '', dark = false} = data.filtersValues.colors[colorName] %>
                         <li class="checkbox-box <% if(dark){ %>dark<% } %>" style="background-color: <%= mainColorCode %>;">
                         <%- include('../templates/checkbox.ejs', {
-                            name: 'colors', id: color, label: label, checked: data.params.getAll('colors').includes(color)
+                            name: 'colors', id: colorName, label: label, checked: data.params.getAll('colors').includes(colorName)
                         }) %>
                     </li>
                 <% }) %>
@@ -25,20 +38,21 @@
                         }) %>
                     </li>
                 <% }) %>
-                <li class="checkbox-box">
+                <!-- <li class="checkbox-box">
                     <%- include('../templates/checkbox.ejs', {
                         name: 'number-colors', id: 'all', label: 'all', labelVisible: 'all', 
                         checked: (numberColors.includes('all') && numberColors.length === 1) || numberColors.length === 0 
                     }) %>
-                </li>
+                </li> -->
             </ul>
         </div>
         <div class="fieldset">
             <input class="filters-search search-input" type="text" name="search" value="<%= data.params.get('search') %>">
         </div>
         <div class="fieldset">
+            <% const gridSize = data.params.get('grid-size') || 25 %>
             <div class="fieldset-label">View</div>
-            <input class="filters-grid-size input-range" type="range" name="grid-size" min="10" max="50" value="<%= data.params.get('grid-size') %>">
+            <input class="filters-grid-size input-range" type="range" name="grid-size" min="10" max="50" value="<%= gridSize %>">
         </div>
         <!-- <div class="fieldset">
             <button>ok</button>

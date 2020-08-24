@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20" title="France dark flag">
-    <path d="M0,0H10V20H0Z" style="fill:#002654"/>
-    <path d="M10,0h10v20h-10Z" style="fill:#fff"/>
-    <path d="M20,0h10v20h-10Z" style="fill:#CE1126"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20" title="Flag of France">
+    <path d="M0,0H10V20H0Z" fill="#002654"/>
+    <path d="M10,0h10v20h-10Z" fill="#fff"/>
+    <path d="M20,0h10v20h-10Z" fill="#CE1126"/>
 </svg>
