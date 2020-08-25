@@ -47,6 +47,19 @@
             </ul>
         </div>
         <div class="fieldset">
+            <div class="fieldset-label">Ratios</div>
+            <ul class="checkbox-boxes">
+                <% const ratios = data.params.getAll('ratios') %>
+                <% data.filtersValues.ratios.forEach(ratio => { %>
+                    <li class="checkbox-box">
+                        <%- include('../templates/checkbox.ejs', {
+                            name: 'ratios', id: ratio, label: ratio, labelVisible: ratio, checked: ratios.includes(ratio)
+                        }) %>
+                    </li>
+                <% }) %>
+            </ul>
+        </div>
+        <div class="fieldset">
             <input class="filters-search search-input" type="text" name="search" value="<%= data.params.get('search') %>">
         </div>
         <div class="fieldset">

@@ -17,28 +17,33 @@ const Home = ({ request, items: allFlags }) => {
 
   // building filters
   const filtersValues = {
-    collectionTitle: ``,
+    categories: [],
     colors: [],
     numberColors: [],
-    categories: []
+    ratios: [],
+    collectionTitle: ``,
   }
 
   // get params
   const filtersCategories = params.getAll("categories");
   const filtersColorsNames = params.getAll("colors");
+  const filtersRatios = params.getAll("ratios");
   const filtersSearch = params.get("search");
   const filtersNumberColors = params.getAll("number-colors").filter(function (number) {
     return !isNaN(number)
   });
-  const hasFilters = filtersCategories.length || filtersColorsNames.length || filtersNumberColors.length || filtersSearch
-  if(filtersColorsNames.length === 1 && ! filtersCategories.length && ! filtersNumberColors.length && ! filtersSearch) {
+  const hasFilters = filtersCategories.length || filtersColorsNames.length || filtersRatios.length || filtersNumberColors.length || filtersSearch
+  if(filtersColorsNames.length === 1 && ! filtersCategories.length && ! filtersNumberColors.length && ! filtersRatios.length && ! filtersSearch) {
     filtersValues.collectionTitle = collectionTitles[filtersColorsNames[0]] || filtersColorsNames[0]
 
-  } else if (filtersCategories.length === 1 && ! filtersColorsNames.length && ! filtersNumberColors.length && ! filtersSearch) {
+  } else if (filtersCategories.length === 1 && ! filtersColorsNames.length && ! filtersNumberColors.length && ! filtersRatios.length && ! filtersSearch) {
     filtersValues.collectionTitle = collectionTitles[filtersCategories[0]] || filtersCategories[0]
 
-  } else if (filtersNumberColors.length === 1 && ! filtersCategories.length && ! filtersColorsNames.length && ! filtersSearch) {
+  } else if (filtersNumberColors.length === 1 && ! filtersCategories.length && ! filtersColorsNames.length && ! filtersRatios.length && ! filtersSearch) {
     filtersValues.collectionTitle = collectionTitles[filtersNumberColors[0]] || filtersNumberColors[0]
+  
+  } else if ( filtersRatios.length === 1 && ! filtersNumberColors.length && ! filtersCategories.length && ! filtersColorsNames.length && ! filtersSearch) {
+    filtersValues.collectionTitle = collectionTitles[filtersRatios[0]] || filtersRatios[0]
   }
 
   // get hexacodes colors
@@ -53,14 +58,16 @@ const Home = ({ request, items: allFlags }) => {
     const {
       colors: flagColors = [],
       title: flagTitle = ``,
-      category: flagCategory = ``
+      category: flagCategory = ``,
+      ratios: flagRatios = []
     } = flag;
     const flagNumberColors = flagColors.length.toString()
-    
+
     if (hasFilters) {
 
       const hasCategory = filtersCategories.length ? filtersCategories.includes(flagCategory) : true
-      const hasColors = filtersColorsCodes.length ? flagColors.filter((flagColors) => filtersColorsCodes.includes(flagColors)).length > 0 : true
+      const hasColors = filtersColorsCodes.length ? flagColors.filter((flagColor) => filtersColorsCodes.includes(flagColor)).length > 0 : true
+      const hasRatios = filtersRatios.length ? flagRatios.filter((flagRatio) => filtersRatios.includes(flagRatio)).length > 0 : true
       const hasNumberColors = filtersNumberColors.length ? filtersNumberColors.includes(flagNumberColors) : true
       const hasTitle = filtersSearch ? flagTitle.match(new RegExp(filtersSearch, "i")) : true
 
@@ -69,7 +76,7 @@ const Home = ({ request, items: allFlags }) => {
       // console.log('hasNumberColors: ', hasNumberColors)
 
       // add
-      if (hasCategory && hasColors && hasNumberColors && hasTitle) {
+      if (hasCategory && hasColors && hasNumberColors && hasRatios && hasTitle) {
         // console.log('add flag key: ', key)
         flags[key] = flag
       }
@@ -89,15 +96,11 @@ const Home = ({ request, items: allFlags }) => {
   Object.keys(flags).forEach(key => {
     const flag = flags[key]
     const {
+      category: flagCategory = ``,
       colors: flagColors = [],
-      category: flagCategory = ``
+      ratios: flagRatios = []
     } = flag;
     const flagNumberColors = flagColors.length.toString()
-
-    // categories
-    // if( ! filtersValues.categories.includes(flagCategory) ) {
-    //   filtersValues.categories.push(flagCategory)
-    // }
 
     // colors
     flagColors.forEach(function(flagColor) {
@@ -116,6 +119,13 @@ const Home = ({ request, items: allFlags }) => {
     if( ! filtersValues.numberColors.includes(flagNumberColors) ) {
       filtersValues.numberColors.push(flagNumberColors)
     }
+
+    // ratios
+    flagRatios.forEach(function(flagRatio) {
+      if( ! filtersValues.ratios.includes(flagRatio) ) {
+        filtersValues.ratios.push(flagRatio)
+      }
+    })
   }) 
 
   // sort filters colors values

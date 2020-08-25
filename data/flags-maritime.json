@@ -2,182 +2,182 @@
   "a": {
     "title": "Alpha",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/alpha.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#fff", "#003298"],
     "shapes": [""]
   },
   "b": {
     "title": "Bravo",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/bravo.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#f00"],
     "shapes": [""]
   },
   "c": {
     "title": "Charlie",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/charlie.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#039", "#fff", "#f00"],
     "shapes": [""]
   },
   "d": {
     "title": "Delta",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/delta.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#fbfc01", "#003298"],
     "shapes": [""]
   },
   "e": {
     "title": "Echo",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/echo.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#039", "#f00"],
     "shapes": [""]
   },
   "f": {
     "title": "Foxtrot",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/foxtrot.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#fff", "#f00"],
     "shapes": [""]
   },
   "g": {
     "title": "Golf",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/golf.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#ff0", "#039", "#ff0"],
     "shapes": [""]
   },
   "h": {
     "title": "Hotel",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/hotel.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#fff", "#f00"],
     "shapes": [""]
   },
   "i": {
     "title": "India",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/india.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#ff0", "#000"],
     "shapes": [""]
   },
   "j": {
     "title": "Juliet",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/juliet.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#039", "#fff"],
     "shapes": [""]
   },
   "k": {
     "title": "Kilo",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/kilo.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#ff0", "#039"],
     "shapes": [""]
   },
   "l": {
     "title": "Lima",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/lima.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#ff0", "#000"],
     "shapes": [""]
   },
   "m": {
     "title": "Mike",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/mike.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#039", "#fff"],
     "shapes": [""]
   },
   "n": {
     "title": "November",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/november.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#fff", "#039"],
     "shapes": [""]
   },
   "o": {
     "title": "Oscar",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/oscar.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#f00", "#ff0"],
     "shapes": [""]
   },
   "p": {
     "title": "Papa",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/papa.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#039", "#fff"],
     "shapes": [""]
   },
   "q": {
     "title": "Quebec",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/quebec.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#ff0"],
     "shapes": [""]
   },
   "r": {
     "title": "Romeo",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/romeo.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#f00", "#ff0"],
     "shapes": [""]
   },
   "s": {
     "title": "Sierra",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/sierra.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#fff", "#039"],
     "shapes": [""]
   },
   "t": {
     "title": "Tango",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/tango.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#f00", "#fff", "#039"],
     "shapes": [""]
   },
   "u": {
     "title": "Uniform",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/uniform.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#f00", "#fff"],
     "shapes": [""]
   },
   "v": {
     "title": "Victor",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/victor.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#fff", "#f00"],
     "shapes": [""]
   },
   "w": {
     "title": "Whiskey",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/whiskey.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#039", "#fff", "#f00"],
     "shapes": [""]
   },
   "x": {
     "title": "Xray",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/xray.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#fff", "#039"],
     "shapes": [""]
   },
   "y": {
     "title": "Yankee",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/yankee.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#f00", "#ff0"],
     "shapes": [""]
   },
   "z": {
     "title": "Zulu",
     "src": "./../flags-svg/maritime-alphabet-flags-10by8/zulu.svg",
-    "ratios": ["10:8"],
+    "ratios": ["8:10"],
     "colors": ["#ff0", "#000", "#039", "#f00"],
     "shapes": [""]
   }

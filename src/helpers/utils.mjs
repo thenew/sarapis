@@ -79,10 +79,14 @@ export const colorsObjects = {
 }
 
 export const collectionTitles = {
+  white: `No war White flag`,
   black: `Back to black`,
-  blue: `Blue Monday`,
-  red: `Red`,
+  red: `Red flag law`,
+  orange: `Orange box`,
   yellow: `Yellow lemon`,
+  green: `Super green`,
+  blue: `Blue Monday`,
+  violet: `Violet Rain`,
   maritime: `Maritime flags`,
   communities: `Communities flags`,
   countries: `Sovereign states flags`,

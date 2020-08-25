@@ -2,7 +2,7 @@
   "rainbow": {
     "title": "Rainbow",
     "src": "./../flags-svg/communities/rainbow.svg",
-    "ratios": ["3:2"],
+    "ratios": ["2:3"],
     "colors": ["#750787","#004dff","#008026","#ffed00","#ff8c00","#e40303"],
     "shapes": ["stripes"],
     "otherTitles": ["Gay pride", "LGBT pride", "Pride"]

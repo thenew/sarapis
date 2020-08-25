@@ -41,7 +41,7 @@ const requestListener = (request, response) => {
 
   serve(request, response, () => {
     
-    const flagsCountries = JSON.parse(fs.readFileSync(`${dataPath}/sarapis.json`))
+    const flagsCountries = JSON.parse(fs.readFileSync(`${dataPath}/flags-countries.json`))
     Object.keys(flagsCountries).forEach(key => {
       flagsCountries[key].category = 'countries'
     })
