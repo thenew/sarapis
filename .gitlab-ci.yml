@@ -1,0 +1,25 @@
+image: node:10.14.1
+
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  - apt-get update -qq && apt-get install -y -qq sshpass
+
+deploy_production:
+  stage: deploy
+  environment: production
+  only:
+    - master
+  script:
+    - yarn install --prod
+    - yarn build
+    - rm -rf node_modules/
+    - yarn add universal-analytics
+    - sshpass -V
+    - export SSHPASS=$GIT_PASS
+    - sshpass -e scp -o stricthostkeychecking=no -r node_modules git@piouf.com:/var/www/sarapis
+    - sshpass -e scp -o stricthostkeychecking=no -r public git@piouf.com:/var/www/sarapis
+    - sshpass -e scp -o stricthostkeychecking=no -r views git@piouf.com:/var/www/sarapis
+    - sshpass -e scp -o stricthostkeychecking=no -r dist git@piouf.com:/var/www/sarapis
