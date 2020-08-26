@@ -8,7 +8,7 @@
                 <% data.filtersValues.categories.forEach(category => { %>
                     <li class="checkbox-box">
                         <%- include('../templates/checkbox.ejs', {
-                            name: 'categories', id: category, label: category, checked: categories.includes(category)
+                            name: 'categories', id: category, label: category, labelVisible: category, checked: categories.includes(category)
                         }) %>
                     </li>
                 <% }) %>
@@ -59,16 +59,13 @@
                 <% }) %>
             </ul>
         </div>
-        <div class="fieldset">
-            <input class="filters-search search-input" type="text" name="search" value="<%= data.params.get('search') %>">
+        <div class="fieldset fieldset-search">
+            <input class="search-input" type="text" title="Search a name" id="search" name="search" placeholder="Search" value="<%= data.params.get('search') %>">
         </div>
         <div class="fieldset">
             <% const gridSize = data.params.get('grid-size') || 25 %>
             <div class="fieldset-label">View</div>
-            <input class="filters-grid-size input-range" type="range" name="grid-size" min="10" max="50" value="<%= gridSize %>">
+            <input class="filters-grid-size input-range" type="range" name="grid-size" min="10" max="50" value="<%= gridSize %>" title="Change the size of the grid">
         </div>
-        <!-- <div class="fieldset">
-            <button>ok</button>
-        </div> -->
     </form>
 </div>

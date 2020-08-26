@@ -44,6 +44,9 @@ const Home = ({ request, items: allFlags }) => {
   
   } else if ( filtersRatios.length === 1 && ! filtersNumberColors.length && ! filtersCategories.length && ! filtersColorsNames.length && ! filtersSearch) {
     filtersValues.collectionTitle = collectionTitles[filtersRatios[0]] || filtersRatios[0]
+
+  } else if ( filtersSearch && ! filtersRatios.length && ! filtersNumberColors.length && ! filtersCategories.length && ! filtersColorsNames.length) {
+    filtersValues.collectionTitle = collectionTitles[filtersSearch] || filtersSearch
   }
 
   // get hexacodes colors

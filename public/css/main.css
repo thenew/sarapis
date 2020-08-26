@@ -117,7 +117,6 @@ a:hover {
 .app-content {
   flex-grow: 1;
   width: 100%;
-  height: 100%;
 }
 
 
@@ -132,7 +131,6 @@ a:hover {
 }
 
 .grid-item {
-  flex-grow: 1;
   flex-basis: 25%;
   /* border: 1px solid var(--color1); */
   box-shadow: 
@@ -142,6 +140,10 @@ a:hover {
     1px 0 0 0 var(--color1) inset, 
     0 1px 0 0 var(--color1) inset;
   background-color: #E5E5E5;
+}
+
+.grid.grow .grid-item {
+  flex-grow: 1;
 }
 
 .ratio-box {
@@ -288,15 +290,12 @@ a:hover {
 }
 
 .filters .fieldset {
-  /* flex: 1 1 auto; */
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
   height: 36px;
   padding: 10px;
-  /* border-right: 1px solid var(--color1);
-  border-bottom: 1px solid var(--color1); */
   box-shadow: 
     1px 0 0 0 var(--color1), 
     0 1px 0 0 var(--color1), 
@@ -305,9 +304,36 @@ a:hover {
     0 1px 0 0 var(--color1) inset;
 }
 
+.filters .fieldset-search {
+  padding: 0;
+}
+
 .fieldset-label {
   font-size: 10px;
   margin-right: 10px;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 20vw;
+  height: 100%;
+  padding: 10px;
+  background-color: transparent;
+  transition: background .1s var(--ease);
+  transform: translateY(1px);
+}
+
+@media (min-width: 1400px) {
+  .search-input {
+    max-width: 200px;
+  }  
+}
+
+.search-input:focus,
+.search-input:hover {
+  outline: 0;
+  color: #fff;
+  background-color: var(--color1);
 }
 
 .item {
