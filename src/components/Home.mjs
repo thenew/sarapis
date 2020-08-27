@@ -1,18 +1,14 @@
-import fs from "fs";
-import path from "path";
-import parseUrl from "parseUrl";
 import { colorsObjects, collectionTitles } from "../helpers/utils.mjs";
 import {} from "../helpers/config.mjs";
 
-const Home = ({ request, items: allFlags }) => {
-  const search = parseUrl(request).search;
+const Home = ({ query, items: allFlags }) => {
   let data = {};
   let flags = {};
 
   data.pageClass = "home";
 
   // filters
-  const params = new URLSearchParams(search);
+  const params = new URLSearchParams(query);
   data.params = params;
 
   // building filters

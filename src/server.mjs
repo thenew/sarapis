@@ -2,86 +2,89 @@
  * Create a HTTP server with Node.js
  */
 
-import http from "http";
+import express from 'express'
+import ExpressGA from 'express-universal-analytics'
 import fs from "fs";
-import serveStatic from "serve-static";
-import ejs from "ejs";
-import ua from "universal-analytics";
 import { domain, dataPath } from "./helpers/config.mjs";
 
 import Home from "./components/Home.mjs";
 import Single from "./components/Single.mjs";
 
-const visitor = ua("UA-164644-X");
+const app = express()
+const port = 4200
 
-const tracking = (url) => {
-  visitor.pageview(domain + url).send();
-};
+app.set('view engine', 'ejs')
 
-// Handle client request and send server response
-const requestListener = (request, response) => {
-  const url = request.url;
+app.use(ExpressGA('UA-164644-X'));
 
-  /**
-   * Controller renders the view
-   * @param  {string} view Template filename
-   * @param  {} component
-   */
-  const render = (view, component = null, code = 200) => {
-    tracking(url);
-    ejs.renderFile(`./views/${view}.ejs`, { data: component, domain: domain }, {}, (error, str) => {
-      if (error) console.log(error);
-      response.writeHead(code, { "Content-Type": "text/html" });
-      response.end(str);
-    });
-  };
+// get Flags
+const flagsCountries = JSON.parse(fs.readFileSync(`${dataPath}/flags-countries.json`))
+Object.keys(flagsCountries).forEach(key => {
+  flagsCountries[key].category = 'countries'
+})
+const flagsMaritime = JSON.parse(fs.readFileSync(`${dataPath}/flags-maritime.json`))
+Object.keys(flagsMaritime).forEach(key => {
+  flagsMaritime[key].category = 'maritime'
+})
+const flagsCommunities = JSON.parse(fs.readFileSync(`${dataPath}/flags-communities.json`))
+Object.keys(flagsCommunities).forEach(key => {
+  flagsCommunities[key].category = 'communities'
+})
+const flags = {...flagsMaritime, ...flagsCommunities, ...flagsCountries}
 
-  // Serve up static files
-  const serve = serveStatic(".");
+function rend(component) {
+  return { data: component, domain: domain }
+}
 
-  serve(request, response, () => {
-    
-    const flagsCountries = JSON.parse(fs.readFileSync(`${dataPath}/flags-countries.json`))
-    Object.keys(flagsCountries).forEach(key => {
-      flagsCountries[key].category = 'countries'
-    })
-    const flagsMaritime = JSON.parse(fs.readFileSync(`${dataPath}/flags-maritime.json`))
-    Object.keys(flagsMaritime).forEach(key => {
-      flagsMaritime[key].category = 'maritime'
-    })
-    const flagsCommunities = JSON.parse(fs.readFileSync(`${dataPath}/flags-communities.json`))
-    Object.keys(flagsCommunities).forEach(key => {
-      flagsCommunities[key].category = 'communities'
-    })
+// Routes
 
-    const flags = {...flagsMaritime, ...flagsCommunities, ...flagsCountries}
-    let keyMatch = false;
+app.get('/', function (req, res) {
+  res.render('home', rend(Home({
+    query: req.url.substring(1), // remove slash
+    items: flags
+  })))
+})
 
-    /**
-     * Routes
-     */
+app.get('/communities', function (req, res) {
+  res.render('home', rend(Home({
+    query: `?categories=communities`,
+    items: flags
+  })))
+})
 
-    // home
-    if (url === "/") {
-      render("home", Home({request, items: flags}));
-    }
+app.get('/maritime', function (req, res) {
+  res.render('home', rend(Home({
+    query: `?categories=maritime`,
+    items: flags
+  })))
+})
 
-    // single
-    else if ((keyMatch = Object.keys(flags).find((slug) => `/${slug}` == url))) {
-      render("single", Single({request, item: flags[keyMatch]}));
-    }
+app.get('/countries', function (req, res) {
+  res.render('home', rend(Home({
+    query: `?categories=countries`,
+    items: flags
+  })))
+})
 
-    // 404
-    else {
-      render("home", Home({request, items: flags}));
-      // render("404", null, 404);
-    }
-  });
-};
+// single
+Object.keys(flags).find(slug => {
+  app.get(`/${slug}`, function (req, res) {
+    res.render('single', rend(Single({
+      query: req.query,
+      item: flags[slug]
+    })))
+  })
+})
 
-const server = http.createServer(requestListener);
+// Statics
 
-server.listen(process.env.PORT || 4200, (error) => {
-  if (error) console.log(error);
-  console.log(`Server running on PORT ${server.address().port}`);
-});
+app.use(express.static('flags-svg/maritime-alphabet-flags-10by8'))
+app.use(express.static('flags-svg/communities'))
+app.use(express.static('flags-svg/countries'))
+app.use(express.static('flags-svg/others'))
+
+app.use('/public', express.static('public')) // assets
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})

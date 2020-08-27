@@ -32,3 +32,4 @@ pre {
   border: 0;
 }
 
+:focus:not(:focus-visible) { outline: none }
