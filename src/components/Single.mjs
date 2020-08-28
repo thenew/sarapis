@@ -1,8 +1,5 @@
-import fs from 'fs'
-import path from 'path'
-import { domain } from '../helpers/config.mjs'
 
-const Single = ({request, item}) => {
+const Single = ({query, item}) => {
   let data = item
 
   return data
