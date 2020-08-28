@@ -7,7 +7,7 @@
                 <% const categories = data.params.getAll('categories') %>
                 <% data.filtersValues.categories.forEach(category => { %>
                     <li class="checkbox-box">
-                        <%- include('../templates/checkbox.ejs', {
+                        <%- include('checkbox.ejs', {
                             name: 'categories', id: category, label: category, labelVisible: category, checked: categories.includes(category)
                         }) %>
                     </li>
@@ -20,7 +20,7 @@
                 <% Object.keys(data.filtersValues.colors).forEach(colorName => { %>
                     <% const {label = '', mainColorCode = '', dark = false} = data.filtersValues.colors[colorName] %>
                         <li class="checkbox-box <% if(dark){ %>dark<% } %>" style="background-color: <%= mainColorCode %>;">
-                        <%- include('../templates/checkbox.ejs', {
+                        <%- include('checkbox.ejs', {
                             name: 'colors', id: colorName, label: label, checked: data.params.getAll('colors').includes(colorName)
                         }) %>
                     </li>
@@ -33,13 +33,13 @@
                 <% const numberColors = data.params.getAll('number-colors') %>
                 <% data.filtersValues.numberColors.forEach(number => { %>
                     <li class="checkbox-box">
-                        <%- include('../templates/checkbox.ejs', {
+                        <%- include('checkbox.ejs', {
                             name: 'number-colors', id: number, label: number, checked: numberColors.includes(number)
                         }) %>
                     </li>
                 <% }) %>
                 <!-- <li class="checkbox-box">
-                    <%- include('../templates/checkbox.ejs', {
+                    <%- include('checkbox.ejs', {
                         name: 'number-colors', id: 'all', label: 'all', labelVisible: 'all', 
                         checked: (numberColors.includes('all') && numberColors.length === 1) || numberColors.length === 0 
                     }) %>
@@ -52,7 +52,7 @@
                 <% const ratios = data.params.getAll('ratios') %>
                 <% data.filtersValues.ratios.forEach(ratio => { %>
                     <li class="checkbox-box">
-                        <%- include('../templates/checkbox.ejs', {
+                        <%- include('checkbox.ejs', {
                             name: 'ratios', id: ratio, label: ratio, labelVisible: ratio, checked: ratios.includes(ratio)
                         }) %>
                     </li>

@@ -1,6 +1,6 @@
-<%- include('_header', {title: ''}) %>
+<%- include('partials/header', {title: ''}) %>
 <div>
-  <%- include('../templates/filters.ejs', {data}); %>
+  <%- include('partials/filters.ejs', {data}); %>
   <% if(data.filtersValues.collectionTitle) { %>
     <div class="page-title-box">
       <h1 class="page-title"><%= data.filtersValues.collectionTitle %></h1>
@@ -9,7 +9,7 @@
   <div class="grid <% if(Object.keys(data.flags).length > 4) { %>grow<% } %>">
     <% Object.keys(data.flags).forEach(function(key){ %>
       <% if (data.flags[key].src) { %>
-        <%- include('../templates/gridItem.ejs', {key, flag: data.flags[key]}); %>
+        <%- include('partials/gridItem.ejs', {key, flag: data.flags[key]}); %>
       <% } %>
     <% }); %>
   </div>
@@ -77,4 +77,4 @@
     // grid.innerHTML = `test`
   }
 </script>
-<%- include ('_footer') %>
+<%- include('partials/footer') %>
