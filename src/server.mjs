@@ -78,10 +78,10 @@ Object.keys(flags).find(slug => {
 
 // Statics
 
-app.use(express.static('flags-svg/maritime-alphabet-flags-10by8'))
-app.use(express.static('flags-svg/communities'))
-app.use(express.static('flags-svg/countries'))
-app.use(express.static('flags-svg/others'))
+app.use('/', express.static('public/flags-svg/maritime-alphabet-flags-10by8'))
+app.use('/', express.static('public/flags-svg/communities'))
+app.use('/', express.static('public/flags-svg/countries'))
+app.use('/', express.static('public/flags-svg/others'))
 
 app.use('/public', express.static('public')) // assets
 

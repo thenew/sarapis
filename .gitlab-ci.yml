@@ -16,7 +16,6 @@ deploy_production:
     - yarn install --prod
     - yarn build
     - rm -rf node_modules/
-    - yarn add universal-analytics
     - sshpass -V
     - export SSHPASS=$GIT_PASS
     - sshpass -e scp -o stricthostkeychecking=no -r node_modules git@piouf.com:/var/www/sarapis

@@ -2,5 +2,4 @@
  * Configuration variables
  */
 export const domain = ''
-export const dataPath = './data'
-export const dataFile = './data/sarapis.json'
+export const dataPath = './public/data'
