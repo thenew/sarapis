@@ -3,7 +3,6 @@
  */
 
 import express from 'express'
-import ExpressGA from 'express-universal-analytics'
 import fs from "fs";
 import { domain, dataPath } from "./helpers/config.mjs";
 
@@ -14,8 +13,6 @@ const app = express()
 const port = 4200
 
 app.set('view engine', 'ejs')
-
-app.use(ExpressGA('UA-164644-X'));
 
 // get Flags
 const flagsCountries = JSON.parse(fs.readFileSync(`${dataPath}/flags-countries.json`))

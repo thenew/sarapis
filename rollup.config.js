@@ -1,3 +1,8 @@
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import json from '@rollup/plugin-json';
+import nodePolyfills from 'rollup-plugin-node-polyfills';
+
 module.exports = [
   {
     input: 'src/server.mjs',
@@ -6,6 +11,16 @@ module.exports = [
       format: 'cjs', // for Node.jS
       name: 'sarapis'
     },
-    external: ['fs', 'express', 'express-universal-analytics']
+    plugins: [
+      nodeResolve({
+        preferBuiltins: false,
+      }),
+      commonjs({
+        include: 'node_modules/**'
+      }),
+      json(),
+      nodePolyfills()
+    ],
+    external: ['express', 'fs']
   }
 ]

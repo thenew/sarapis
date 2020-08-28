@@ -13,9 +13,10 @@ deploy_production:
   only:
     - master
   script:
-    - yarn install --prod
+    - yarn install
     - yarn build
     - rm -rf node_modules/
+    - yarn install --prod
     - sshpass -V
     - export SSHPASS=$GIT_PASS
     - sshpass -e scp -o stricthostkeychecking=no -r node_modules git@piouf.com:/var/www/sarapis
