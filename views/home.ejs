@@ -1,8 +1,20 @@
 <%- include('partials/header', {title: ''}) %>
+<% if( ! data.hasFilters ) { %>
+  <%- include('partials/marquee') %>
+<% } %>
 <div>
   <%- include('partials/filters.ejs', {data}); %>
   <% if(data.filtersValues.collectionTitle) { %>
     <div class="page-title-box">
+      <div class="page-title-flag">
+        <div class="flags-all">
+          <% data.flagsWire.forEach(function(flag){ %>
+            <div class="flag">
+              <%- flag %>
+            </div>
+          <% }) %>  
+        </div>
+      </div>
       <h1 class="page-title"><%= data.filtersValues.collectionTitle %></h1>
     </div>
   <% } %>
@@ -11,7 +23,7 @@
       <% if (data.flags[key].src) { %>
         <%- include('partials/gridItem.ejs', {key, flag: data.flags[key]}); %>
       <% } %>
-    <% }); %>
+    <% }) %>
   </div>
 </div>
 
@@ -47,7 +59,6 @@
   // })
 
   formCheckboxes.forEach(function(input) {
-    console.log('input: ', input)
     input.addEventListener('change', function(event) { 
       console.log('formCheckboxes event: ', event)
       form.requestSubmit()

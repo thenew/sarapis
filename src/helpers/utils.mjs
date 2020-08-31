@@ -38,7 +38,13 @@ export const colorsObjects = {
     label: 'Black',
     mainColorCode: '#000',
     dark: true,
-    colorsCodes: ['#000']
+    colorsCodes: ['#000', "#2d2d2d"]
+  },
+  pink: {
+    label: 'Pink',
+    mainColorCode: '#f7f',
+    dark: false,
+    colorsCodes: ['#f5a9b8']
   },
   red: {
     label: 'Red',
@@ -56,7 +62,7 @@ export const colorsObjects = {
     label: 'Yellow',
     mainColorCode: '#ff0',
     dark: false,
-    colorsCodes: ['#ff0', "#ffed00", "#fcdd09"]
+    colorsCodes: ['#ff0', "#ffed00", "#fcdd09", "#ffd800", "#fff433"]
   },
   green: {
     label: 'Green',
@@ -68,13 +74,13 @@ export const colorsObjects = {
     label: 'Blue',
     mainColorCode: '#00f',
     dark: true,
-    colorsCodes: ['#00f', '#039', '#0055a4', '#002654', "#004dff"]
+    colorsCodes: ['#00f', '#039', '#0055a4', '#002654', "#004dff", "#5bcefa"]
   },
   violet: {
     label: 'Violet',
     mainColorCode: '#707',
     dark: true,
-    colorsCodes: ["#750787"]
+    colorsCodes: ["#750787", "#7902aa", "#9b59d0"]
   },
 }
 

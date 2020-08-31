@@ -1,3 +1,4 @@
+import fs from "fs";
 import { colorsObjects, collectionTitles } from "../helpers/utils.mjs";
 import {} from "../helpers/config.mjs";
 
@@ -145,6 +146,17 @@ const Home = ({ query, items: allFlags }) => {
   data.filtersValues = filtersValues;
 
   data.flags = flags;
+
+  // all flags
+  data.flagsWire = []
+  Object.keys(data.flags).forEach(key => {
+    let flagSvg = fs.readFileSync(data.flags[key].src.replace('../', './')).toString()
+    console.log('flagSvg: ', flagSvg)
+    flagSvg = flagSvg.replace(/fill=/gi, 'stroke=')
+    data.flagsWire.push(flagSvg)
+  })
+
+  data.hasFilters = hasFilters;
   return data;
 };
 

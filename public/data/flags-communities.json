@@ -6,5 +6,31 @@
     "colors": ["#750787","#004dff","#008026","#ffed00","#ff8c00","#e40303"],
     "shapes": ["stripes"],
     "otherTitles": ["Gay pride", "LGBT pride", "Pride"]
+  },
+  "transgender": {
+    "title": "Transgender",
+    "src": "../public/flags-svg/communities/transgender.svg",
+    "ratios": ["2:3"],
+    "colors": ["#5bcefa", "#f5a9b8", "#fff"],
+    "shapes": ["stripes"],
+    "otherTitles": []
+  },
+  "nonbinary": {
+    "title": "Non binary",
+    "src": "../public/flags-svg/communities/nonbinary.svg",
+    "ratios": ["2:3"],
+    "colors": ["#fff433", "#9b59d0", "#2d2d2d", "#fff"],
+    "shapes": ["stripes"],
+    "otherTitles": [""]
+  },
+  "intersex": {
+    "title": "Intersex",
+    "src": "../public/flags-svg/communities/intersex.svg",
+    "ratios": ["2:3"],
+    "colors": ["#ffd800", "#7902aa"],
+    "shapes": ["stripes"],
+    "otherTitles": [""],
+    "description": "The flag was designed by Morgan Carpenter.",
+    "source": "https://ihra.org.au/22773/an-intersex-flag/"
   }
 }
