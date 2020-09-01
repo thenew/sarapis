@@ -27,6 +27,8 @@
   --padding: 60px;
   --paddingHalf: 15px;
   --paddingDouble: 60px;
+
+  --mobileButtonHeight: 35px;
 }
 
 @media (max-width: 1320px) {
@@ -147,6 +149,12 @@ a:hover {
   background-color: #E5E5E5;
 }
 
+@media (max-width: 768px) {
+  .grid-item {
+    flex-basis: 50%;
+  }
+}
+
 .grid.grow .grid-item {
   flex-grow: 1;
 }
@@ -163,118 +171,6 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-/* UI */
-
-.checkbox-boxes {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.checkbox-box {
-  position: relative;
-  min-width: 25px;
-  height: 16px;
-
-  --border-shadow:
-    1px 0 0 0 var(--color1), 
-    0 1px 0 0 var(--color1), 
-    1px -1px 0 0 var(--color1),   /* Just to fix the corner */
-    1px 1px 0 0 var(--color1),   /* Just to fix the corner */
-    1px 0 0 0 var(--color1) inset, 
-    0 -1px 0 0 var(--color1);
-}
-
-.checkbox-boxes.colors .checkbox-box {
-  width: 25px;
-}
-
-.checkbox-box .label {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  padding: 1px 5px;
-  font-size: 10px;
-  cursor: pointer;
-  box-shadow: var(--border-shadow);
-}
-
-.label::after {
-  content: '^';
-  display: block;
-  position: absolute;
-  top: calc(100% + 1px);
-  right: 0;
-  left: 0;
-  color: var(--color1);
-  text-align: center;
-  font-size: 8px;
-  transform: scaleX(2.5);
-  opacity: 0;
-}
-
-.checkbox-box .checkbox:focus ~ .label::after,
-.checkbox-box .label:focus::after,
-.checkbox-box .label:hover::after {
-  opacity: 1;
-}
-
-.checkbox-boxes.colors .checkbox-box .label {
-  box-shadow: none;
-}
-
-.checkbox-boxes.colors .checkbox-box .checkbox:not(:checked):focus ~ .label::after,
-.checkbox-boxes.colors .checkbox-box .checkbox:not(:checked) ~ .label:focus::after,
-.checkbox-boxes.colors .checkbox-box .checkbox:not(:checked) ~ .label:hover::after {
-  opacity: 0;
-}
-
-.checkbox-boxes.colors .checkbox-box .checkbox:focus ~ .label,
-.checkbox-boxes.colors .checkbox-box .label:focus,
-.checkbox-boxes.colors .checkbox-box .label:hover {
-  z-index: 2;
-  box-shadow: var(--border-shadow);
-}
-
-.checkbox-box .label-initial {
-  user-select: none;
-}
-
-.checkbox-box.dark .label-initial {
-  color: #fff;
-}
-
-.checkbox-box .checkbox {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-  appearance: none;
-  opacity: 0;
-  z-index: -1;
-}
-
-.checkbox-box .checkbox:checked ~ .label {
-  z-index: 2;
-  box-shadow: var(--border-shadow);
-  color: #fff;
-  background-color: var(--color1);
-}
-
-.checkbox-boxes.colors .checkbox-box .checkbox:checked ~ .label {
-  color: initial;
-  background-color: initial;
-}
-
-.checkbox-box .checkbox:checked ~ .label::after {
-  opacity: 1;
 }
 
 /* Home */
@@ -309,6 +205,16 @@ a:hover {
     0 1px 0 0 var(--color1) inset;
 }
 
+@media (max-width: 768px) {
+  .filters .fieldset {
+    min-height: var(--mobileButtonHeight);
+    height: auto;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+
 .filters .fieldset-search {
   padding: 0;
 }
@@ -318,14 +224,62 @@ a:hover {
   margin-right: 10px;
 }
 
+.fieldset-search {
+  position: relative;
+}
+
+.fieldset-search .search-submit {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: var(--mobileButtonHeight);
+  height: var(--mobileButtonHeight);
+  padding: 15px 10px 15px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fieldset-search .icon-search {
+  width: 100%;
+  height: 100%;
+}
+
+.fieldset-search .icon-search circle,
+.fieldset-search .icon-search line {
+  stroke: #00f;
+}
+
 .search-input {
   width: 100%;
   max-width: 20vw;
   height: 100%;
   padding: 10px;
   background-color: transparent;
-  transition: background .1s var(--ease);
   transform: translateY(1px);
+}
+
+.search-submit,
+.search-input {
+  transition: background .1s var(--ease);
+}
+
+@media (max-width: 768px) {
+  .fieldset-search {
+    width: 100%;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: calc(100% - var(--mobileButtonHeight) - 20px);
+    height: calc( var(--mobileButtonHeight) + 20px);
+  }
+
+  .fieldset-search .search-submit {
+    width: calc( var(--mobileButtonHeight) + 20px);
+    height: calc( var(--mobileButtonHeight) + 20px);
+  }
 }
 
 @media (min-width: 1400px) {
@@ -339,6 +293,20 @@ a:hover {
   outline: 0;
   color: #fff;
   background-color: var(--color1);
+}
+
+.search-input:focus ~ .search-submit,
+.search-input:hover ~ .search-submit {
+  background-color: var(--color1);
+}  
+
+@media (max-width: 768px) {
+  .search-input:focus ~ .search-submit circle,
+  .search-input:focus ~ .search-submit line,
+  .search-input:hover ~ .search-submit circle,
+  .search-input:hover ~ .search-submit line {
+    stroke: #fff;
+  }  
 }
 
 .item {
@@ -510,5 +478,5 @@ a:hover {
 .flags-all circle,
 .flags-all path {
   fill: transparent;
-  stroke-width: 1px;
+  stroke-width: 1%;
 }

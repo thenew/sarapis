@@ -33,3 +33,13 @@ pre {
 }
 
 :focus:not(:focus-visible) { outline: none }
+
+button {
+  font: inherit;
+  color: inherit;
+  line-height: normal;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+}

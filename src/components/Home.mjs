@@ -150,9 +150,16 @@ const Home = ({ query, items: allFlags }) => {
   // all flags
   data.flagsWire = []
   Object.keys(data.flags).forEach(key => {
-    let flagSvg = fs.readFileSync(data.flags[key].src.replace('../', './')).toString()
+
+    let {src:flagSrc = ``} = data.flags[key]
+    if(!flagSrc) return false
+    flagSrc = flagSrc.replace('../', './')
+    let flagSvg = fs.readFileSync(flagSrc).toString() || ``
     console.log('flagSvg: ', flagSvg)
-    flagSvg = flagSvg.replace(/fill=/gi, 'stroke=')
+
+    // stroked it
+    flagSvg = flagSvg.replace(/fill="#/gi, 'stroke="#')
+
     data.flagsWire.push(flagSvg)
   })
 
