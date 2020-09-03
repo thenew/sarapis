@@ -15,7 +15,7 @@
   --colorBg: #eee;
 
   --titleFont: Idlewild, monospace;
-  --bodyFont: Roboto, sans-serif;
+  --bodyFont: 'Noto Serif', sans-serif;
 
   --ease: cubic-bezier(.17,.67,.83,.67);
 
@@ -50,6 +50,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   width: calc(100% - 1px);
+  font-family: var(--titleFont);
 }
 
 .grid-item {
@@ -141,6 +142,7 @@
 }
 
 .page-title-box {
+  font-family: var(--titleFont);
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -178,6 +180,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  font-family: var(--titleFont);
 }
 
 .single-layout .grid-item {
@@ -200,6 +203,7 @@
 }
 
 .srp-box-header {
+  font-family: var(--titleFont);
   line-height: 1;
   padding: 10px;
   box-shadow: 
