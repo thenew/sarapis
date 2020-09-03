@@ -1,0 +1,126 @@
+.filters {
+  width: 100%;
+  box-shadow: -1px 0 0 0 var(--color1) inset, 0 1px 0 0 var(--color1) inset;
+}
+
+.filters-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.filters .fieldset {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 36px;
+  padding: 10px;
+  box-shadow: 1px 0 0 0 var(--color1), 0 1px 0 0 var(--color1), 1px 1px 0 0 var(--color1), /* Just to fix the corner */ 1px 0 0 0 var(--color1) inset, 0 1px 0 0 var(--color1) inset;
+}
+
+@media (max-width: 768px) {
+  .filters .fieldset {
+    min-height: var(--mobileButtonHeight);
+    height: auto;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+
+.filters .fieldset-search {
+  padding: 0;
+}
+
+.fieldset-label {
+  font-size: 10px;
+  margin-right: 10px;
+}
+
+.fieldset-search {
+  position: relative;
+}
+
+.fieldset-search .search-submit {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: var(--mobileButtonHeight);
+  height: var(--mobileButtonHeight);
+  padding: 15px 10px 15px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fieldset-search .icon-search {
+  width: 100%;
+  height: 100%;
+}
+
+.fieldset-search .icon-search circle,
+.fieldset-search .icon-search line {
+  stroke: #00f;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 20vw;
+  height: 100%;
+  padding: 10px;
+  background-color: transparent;
+  transform: translateY(1px);
+}
+
+.search-submit,
+.search-input {
+  transition: background 0.1s var(--ease);
+}
+
+@media (max-width: 768px) {
+  .fieldset-search {
+    width: 100%;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: calc(100% - var(--mobileButtonHeight) - 20px);
+    height: calc(var(--mobileButtonHeight) + 20px);
+  }
+
+  .fieldset-search .search-submit {
+    width: calc(var(--mobileButtonHeight) + 20px);
+    height: calc(var(--mobileButtonHeight) + 20px);
+  }
+}
+
+@media (min-width: 1400px) {
+  .search-input {
+    max-width: 200px;
+  }
+}
+
+.search-input:focus,
+.search-input:hover {
+  outline: 0;
+  color: #fff;
+  background-color: var(--color1);
+}
+
+.search-input:focus ~ .search-submit,
+.search-input:hover ~ .search-submit {
+  background-color: var(--color1);
+}
+
+@media (max-width: 768px) {
+  .search-input:focus ~ .search-submit circle,
+  .search-input:focus ~ .search-submit line,
+  .search-input:hover ~ .search-submit circle,
+  .search-input:hover ~ .search-submit line {
+    stroke: #fff;
+  }
+}

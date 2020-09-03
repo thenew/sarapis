@@ -155,7 +155,6 @@ const Home = ({ query, items: allFlags }) => {
     if(!flagSrc) return false
     flagSrc = flagSrc.replace('../', './')
     let flagSvg = fs.readFileSync(flagSrc).toString() || ``
-    console.log('flagSvg: ', flagSvg)
 
     // stroked it
     flagSvg = flagSvg.replace(/fill="#/gi, 'stroke="#')

@@ -29,6 +29,10 @@
 
 
 <script>
+  function clamp(num, min, max) {
+    return num <= min ? min : num >= max ? max : num;
+  }
+
   const isMobile = !!window.matchMedia('(max-width: 768px)').matches
 
   const grid = document.querySelector('.grid');
@@ -75,7 +79,7 @@
     var index = 0, length = gridItems.length;
     for ( ; index < length; index++) {
       gridItems[index].style.flexBasis = value+'%'
-      gridItems[index].style.fontSize = value/10+'vw'
+      gridItems[index].style.fontSize = clamp(value/10, .2, 2)+'vw'
     }
   }
 
