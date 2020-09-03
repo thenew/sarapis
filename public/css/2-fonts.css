@@ -1,29 +1,5 @@
 /* Idlewild */
-@font-face {
-    font-family: Idlewild;
-    src: local('Idlewild'),
-      url('../fonts/Idlewild-Medium.otf') format('otf');
-    /* unicode-range: U+000-5FF; Latin glyphs */
-    font-display: swap;
-}
-
-@font-face {
-    font-family: Idlewild;
-    src: local('Idlewild'),
-      url('../fonts/Idlewild-Bold.otf') format('otf');
-    /* unicode-range: U+000-5FF; Latin glyphs */
-    font-display: swap;
-    font-weight: 700;
-}
-
-@font-face {
-    font-family: Idlewild;
-    src: local('Idlewild'),
-      url('../fonts/Idlewild-Light.otf') format('otf');
-    /* unicode-range: U+000-5FF; Latin glyphs */
-    font-display: swap;
-    font-weight: 100;
-}
+/* font-family: "Idlewild SSm A", "Idlewild SSm B"; */
 
 /* Noto Serif */
 @font-face {

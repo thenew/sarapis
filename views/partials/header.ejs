@@ -1,4 +1,5 @@
-<html lang="en-US">
+<!DOCTYPE html>
+<html lang="en">
   <title>Sarapis <%= title %></title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,14 +21,14 @@
   <meta name="apple-mobile-web-app-status-bar-style" content=" black-translucent" />
   <meta name="msapplication-TileColor" content="#848D95" />
   <meta name="theme-color" content="#848D95" />
+  <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6617898/7632612/css/fonts.css" />
   <link href="./public/css/0-main.css" rel="stylesheet" />
-  <link rel="preload" href="./public/fonts/Idlewild-Bold.otf" as="font">
-  <link rel="preload" href="./public/fonts/Idlewild-Medium.otf" as="font">
-  <link rel="preload" href="./public/fonts/Idlewild-Light.otf" as="font">
+  <link rel="preload" href="./public/fonts/noto-serif-v8-latin-regular.woff2" as="font">
   <body>
     <div class="app page ">
-      <div class="header">
-        <a href="/">
+      <a class="skip-link" href="#maincontent">Skip to main</a>
+      <header class="header">
+        <a class="header-link" href="/">
           <span class="sr-only">Sarapis</span>
           <svg width="175" height="16" viewBox="0 0 175 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0" width="25" height="16" fill="#0D8CFF"/>
@@ -39,5 +40,5 @@
             <rect x="150" width="25" height="16" fill="#0000FF"/>
           </svg>
         </a>
-      </div>
+      </header>
       <div class="app-content">

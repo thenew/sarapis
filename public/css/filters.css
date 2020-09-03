@@ -38,6 +38,7 @@
 
 .fieldset-label {
   font-size: 10px;
+  font-weight: var(--titleFontBold);
   margin-right: 10px;
 }
 

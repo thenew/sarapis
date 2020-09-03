@@ -18,13 +18,15 @@
       <h1 class="page-title"><%= data.filtersValues.collectionTitle %></h1>
     </div>
   <% } %>
-  <div class="grid <% if(Object.keys(data.flags).length > 4) { %>grow<% } %>">
-    <% Object.keys(data.flags).forEach(function(key){ %>
-      <% if (data.flags[key].src) { %>
-        <%- include('partials/gridItem.ejs', {key, flag: data.flags[key]}); %>
-      <% } %>
-    <% }) %>
-  </div>
+  <main id="maincontent">
+    <div class="grid <% if(Object.keys(data.flags).length > 4) { %>grow<% } %>">
+      <% Object.keys(data.flags).forEach(function(key){ %>
+        <% if (data.flags[key].src) { %>
+          <%- include('partials/gridItem.ejs', {key, flag: data.flags[key]}); %>
+        <% } %>
+      <% }) %>
+    </div>
+  </main>
 </div>
 
 
