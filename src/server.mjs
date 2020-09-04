@@ -79,6 +79,7 @@ app.use('/', express.static('public/flags-svg/maritime-alphabet-flags-10by8'))
 app.use('/', express.static('public/flags-svg/communities'))
 app.use('/', express.static('public/flags-svg/countries'))
 app.use('/', express.static('public/flags-svg/others'))
+app.use('/manifest.webmanifest', express.static('public/manifest.webmanifest'))
 
 app.use('/public', express.static('public')) // assets
 

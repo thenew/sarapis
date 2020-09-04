@@ -2,27 +2,29 @@
 <html lang="en">
   <title>Sarapis <%= title %></title>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="The best SVG flags" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@remybarthez" />
-  <meta name="twitter:creator" content="@remybarthez" />
-  <meta name="twitter:title" content="thenew" />
-  <meta name="twitter:description" content="The best SVG flags" />
-  <meta property="og:title" content="Sarapis" />
-  <meta property="og:description" content="The best SVG flags" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Sarapis" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The best SVG flags">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@remybarthez">
+  <meta name="twitter:creator" content="@remybarthez">
+  <meta name="twitter:title" content="thenew">
+  <meta name="twitter:description" content="The best SVG flags">
+  <meta property="og:title" content="Sarapis">
+  <meta property="og:description" content="The best SVG flags">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Sarapis">
   <meta property="og:image" content="<%= typeof image != 'undefined' ? image : 'http://' + domain + '/public/app-icons/favicon.svg' %>">
   <meta property="og:url" content="http://<%= domain %>">
-  <link rel="icon" href=<%= typeof favicon != 'undefined' ? favicon : './public/app-icons/favicon.svg' %> />
-  <link rel="logo" type="image/svg+xml" href="./public/app-icons/favicon.svg" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content=" black-translucent" />
-  <meta name="msapplication-TileColor" content="#848D95" />
-  <meta name="theme-color" content="#848D95" />
-  <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6617898/7632612/css/fonts.css" />
-  <link href="./public/css/0-main.css" rel="stylesheet" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content=" black-translucent">
+  <meta name="msapplication-TileColor" content="#00f">
+  <meta name="theme-color" content="#00f">
+  <link rel="icon" href=<%= typeof favicon != 'undefined' ? favicon : './public/app-icons/favicon.svg' %>>
+  <link rel="apple-touch-icon" href=<%= typeof favicon != 'undefined' ? favicon : './public/app-icons/favicon.svg' %>>
+  <link rel="logo" type="image/svg+xml" href="./public/app-icons/favicon.svg">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6617898/7632612/css/fonts.css">
+  <link href="./public/css/0-main.css" rel="stylesheet">
   <link rel="preload" href="./public/fonts/noto-serif-v8-latin-regular.woff2" as="font">
   <body>
     <div class="app page ">

@@ -1,0 +1,30 @@
+{
+  "short_name": "Sarapis",
+  "name": "Sarapis: SVG library",
+  "description": "Accurate, lightweigth, handmade and accessible SVG Flags",
+  "icons": [
+    {
+      "src": "/public/app-icons/favicon.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/public/app-icons/favicon.svg",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#eee",
+  "display": "minimal-ui",
+  "scope": "/",
+  "theme_color": "#00f",
+  "shortcuts": [
+    {
+      "name": "Countries flags",
+      "short_name": "Countries",
+      "description": "Countries flags",
+      "url": "/?categories=countries",
+      "icons": [{ "src": "/public/app-icons/favicon.svg" }]
+    }
+  ]
+}
