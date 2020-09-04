@@ -4,7 +4,7 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,pre,a,abbr,acronym,address,
 }
 input,fieldset{margin:0; border:0;font-family: inherit;}
 form{margin:0}
-html{min-height:100%}
+body,html{min-height:100%;height:100%;}
 body{position:relative;min-height:100%;font-family:sans-serif;font-size:62.5%;line-height:1.4;color:#222;background-color:#fff;-webkit-text-size-adjust:none}
 img,video{max-width:100%}
 svg{display:inline-block;max-height:100%;max-width:100%}
@@ -32,6 +32,7 @@ pre {
   border: 0;
 }
 
+:focus { outline: 4px solid var(--color2) }
 :focus:not(:focus-visible) { outline: none }
 
 button {

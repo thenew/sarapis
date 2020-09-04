@@ -43,8 +43,7 @@
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  padding: var(--paddingHalf) var(--padding);
-  font-family: var(--titleFont);
+  padding: var(--padding) var(--padding) var(--paddingHalf);
   font-size: 0;
 }
 /* 
@@ -62,14 +61,14 @@
 
 .footer-link,
 .footer-item::before {
+  color: var(--grey);
   font-size: 14px;
-  opacity: 0.2;
-  transition: opacity 0.2s var(--ease);
+  transition: color 0.1s var(--ease);
 }
 
 .footer-link:focus,
 .footer-link:hover {
-  opacity: 1;
+  color: var(--color3);
   text-decoration: underline;
 }
 

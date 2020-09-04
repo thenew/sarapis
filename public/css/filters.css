@@ -1,7 +1,7 @@
 .filters {
   width: 100%;
   font-family: var(--titleFont);
-  box-shadow: -1px 0 0 0 var(--color1) inset, 0 1px 0 0 var(--color1) inset;
+  /* box-shadow: -1px 0 0 0 var(--color1) inset, 0 1px 0 0 var(--color1) inset; */
 }
 
 .filters-form {
@@ -17,9 +17,13 @@
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
-  height: 36px;
+  flex-grow: 1;
+  height: var(--fieldsetHeight);
   padding: 10px;
-  box-shadow: 1px 0 0 0 var(--color1), 0 1px 0 0 var(--color1), 1px 1px 0 0 var(--color1), /* Just to fix the corner */ 1px 0 0 0 var(--color1) inset, 0 1px 0 0 var(--color1) inset;
+  box-shadow: 1px 0 0 0 var(--color1),
+              0 1px 0 0 var(--color1),
+              1px 1px 0 0 var(--color1), /* Just to fix the corner */ 
+              0 1px 0 0 var(--color1) inset;
 }
 
 @media (max-width: 768px) {
@@ -51,12 +55,20 @@
   z-index: 1;
   top: 0;
   right: 0;
-  width: var(--mobileButtonHeight);
-  height: var(--mobileButtonHeight);
-  padding: 15px 10px 15px 5px;
+  width: var(--fieldsetHeight);
+  height: var(--fieldsetHeight);
+  padding: 10px 10px 10px 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .fieldset-search .search-submit {
+    width: var(--mobileButtonHeight);
+    height: var(--mobileButtonHeight);
+    padding: 15px 10px 15px 5px;
+  }
 }
 
 .fieldset-search .icon-search {
@@ -71,11 +83,47 @@
 
 .search-input {
   width: 100%;
-  max-width: 20vw;
+  /* max-width: 20vw; */
+  max-width: calc(100% - var(--fieldsetHeight));
+  font-weight: var(--titleFontNormal);
   height: 100%;
   padding: 10px;
   background-color: transparent;
   transform: translateY(1px);
+}
+
+.search-input::placeholder {
+  color: var(--color1);
+}
+
+.search-input::placeholder {
+  color: var(--color1);
+}
+
+.search-input:focus::placeholder,
+.search-input:hover::placeholder,
+.search-input:focus,
+.search-input:hover {
+  color: #fff;
+}
+
+.search-input:focus,
+.search-input:hover {
+  outline: 0;
+}
+
+.search-input:focus,
+.search-input:hover,
+.search-input:focus ~ .search-submit,
+.search-input:hover ~ .search-submit {
+  background-color: var(--color1);
+}
+
+.search-input:focus ~ .search-submit circle,
+.search-input:focus ~ .search-submit line,
+.search-input:hover ~ .search-submit circle,
+.search-input:hover ~ .search-submit line {
+  stroke: #fff;
 }
 
 .search-submit,
@@ -103,26 +151,5 @@
 @media (min-width: 1400px) {
   .search-input {
     max-width: 200px;
-  }
-}
-
-.search-input:focus,
-.search-input:hover {
-  outline: 0;
-  color: #fff;
-  background-color: var(--color1);
-}
-
-.search-input:focus ~ .search-submit,
-.search-input:hover ~ .search-submit {
-  background-color: var(--color1);
-}
-
-@media (max-width: 768px) {
-  .search-input:focus ~ .search-submit circle,
-  .search-input:focus ~ .search-submit line,
-  .search-input:hover ~ .search-submit circle,
-  .search-input:hover ~ .search-submit line {
-    stroke: #fff;
   }
 }
