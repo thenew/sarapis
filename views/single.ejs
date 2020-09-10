@@ -9,7 +9,10 @@
     <div class="singe-sidebar">
 
       <div class="srp-box code">
-        <header class="srp-box-header"><div class="text">SVG code</div></header>
+        <header class="srp-box-header">
+          <div class="text">SVG code</div>
+          <a class="side link" href="<%= data.src %>">> SVG file</a>
+        </header>
         <pre class="srp-box-content pre"><code><%= include(data.src) %></code></pre>
       </div>
 
@@ -23,13 +26,25 @@
               <% data.colors.forEach(color => { %>
                 <li>
                   <div class="color" style="border-color: <%= color %>;">
-                    <a href="/?colors=<%= color %>"  class="color-swatch" style="background-color: <%= color %>;"></a>
+                    <a href="/?colors=<%= color %>" class="color-swatch" style="background-color: <%= color %>;"></a>
                     <div class="color-label"><%= color %></div>
                   </div>
                 </li>
               <% }) %>
             </ul>
           </span></li>
+          <% if(data.sources && data.sources.length) { %>
+            <li><span class="spec-title">sources</span><span class="spec-value">
+              <ul>
+                <% data.sources.forEach((source, index) => { %>
+                  <li>
+                    <a class="link" href="<%= source %>" target="_blank" rel="noopener noreferrer"><%= source %></a>
+                  </li>
+                  <% if(index) {%>,<% } %>
+                <% }) %>
+              </ul>
+            </span></li>
+          <% } %>
         </ul>
       </div>
     </div>

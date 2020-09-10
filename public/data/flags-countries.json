@@ -1,4 +1,54 @@
 {
+  "eu": {
+    "title": "Europe",
+    "src": "../public/flags-svg/countries/eu.svg",
+    "countryCode": "eu",
+    "ratios": ["2:3"],
+    "colors": ["#074EA2", "#FFF200"],
+    "sources": ["https://europa.eu/european-union/about-eu/symbols/flag_en"],
+    "note": "From the official eps file."
+  },
+  "pt": {
+    "title": "Portugal",
+    "src": "../public/flags-svg/countries/pt.svg",
+    "countryCode": "pt",
+    "ratios": ["2:3"],
+    "colors": ["#ED192D", "#00613C", "#FBDF21"],
+    "sources": ["http://jorgesampaio.arquivo.presidencia.pt/pt/republica/simbolos/bandeiras/"],
+    "note": "Based on the official eps file. Fixed little visuals glitches in the sphere. Fixed the dimensions."
+  },
+  "it": {
+    "title": "Italy",
+    "src": "../public/flags-svg/countries/it.svg",
+    "countryCode": "it",
+    "ratios": ["2:3"],
+    "colors": ["#008C45", "#F4F5F0", "#CD212A"],
+    "shapes": ["stripes", "vertical"],
+    "groups": ["French tricolour revolution"],
+    "sources": ["http://presidenza.governo.it/ufficio_cerimoniale/cerimoniale/bandiera.html", "http://presidenza.governo.it/ufficio_cerimoniale/normativa/dpcm_20060414_precedenze.pdf"],
+    "note": "Created from the official guidelines."
+  },
+  "be": {
+    "title": "Belgium",
+    "src": "../public/flags-svg/countries/be.svg",
+    "countryCode": "be",
+    "ratios": ["13:13"],
+    "colors": ["#000000", "#FDDA24", "#EF3340"],
+    "shapes": ["stripes", "vertical"],
+    "groups": ["French tricolour revolution"],
+    "sources": ["https://www.jurisquare.be/fr/book/9789089771902/"],
+    "note": "Created from the official guidelines."
+  },
+  "lu": {
+    "title": "Luxembourg",
+    "src": "../public/flags-svg/countries/lu.svg",
+    "countryCode": "lu",
+    "ratios": ["3:5"],
+    "colors": ["#EF3340", "#FFFFFF", "#00A3E0"],
+    "shapes": ["stripes", "horizontal"],
+    "sources": ["http://legilux.public.lu/eli/etat/leg/rgd/1993/07/27/n2/jo"],
+    "note": "Created from the official guidelines."
+  },
   "fr": {
     "title": "France",
     "src": "../public/flags-svg/countries/fr.svg",
@@ -6,9 +56,10 @@
     "ratios": ["2:3"],
     "colors": ["#002395", "#fff", "#f00316"],
     "shapes": ["stripes", "vertical"],
+    "groups": ["French tricolour revolution"],
     "authors": [""],
     "creationDate": "",
-    "source": ["https://www.gouvernement.fr/drapeau-francais", "https://fr.wikipedia.org/wiki/Drapeau_de_la_France"],
+    "sources": ["https://www.gouvernement.fr/drapeau-francais", "https://fr.wikipedia.org/wiki/Drapeau_de_la_France"],
     "otherTitles": ["le drapeau tricolore"]
   },
   "fr-dark": {
@@ -20,8 +71,14 @@
     "shapes": ["stripes", "vertical"],
     "authors": [""],
     "creationDate": "",
-    "source": ["https://www.gouvernement.fr/drapeau-francais", "https://fr.wikipedia.org/wiki/Drapeau_de_la_France"],
+    "sources": ["https://www.gouvernement.fr/drapeau-francais", "https://fr.wikipedia.org/wiki/Drapeau_de_la_France"],
     "otherTitles": ["le drapeau tricolore"]
+  },
+  "et": {
+    "title": "Ethiopia",
+    "src": "../public/flags-svg/countries/et.svg",
+    "shapes": ["stripes", "horizontal"],
+    "colors": ["#da121a","#fcdd09","#078930"]
   },
   "nl": {
     "title": "Nederland",
@@ -31,296 +88,208 @@
     "shapes": ["stripes", "horizontal"],
     "authors": [""],
     "creationDate": "",
-    "source": [""],
-    "otherTitles": [""]
-  },
-  "eu": {
-    "title": "Europe",
-    "countryCode": "eu",
-    "ratios": ["2:3"],
-    "colors": [""],
-    "shapes": [""],
-    "authors": [""],
-    "creationDate": "",
-    "source": [""],
+    "sources": [""],
     "otherTitles": [""]
   },
   "ad": {
-    "title": "Andorra",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Andorra"
   },
   "ae": {
-    "title": "United Arab Emirates",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "United Arab Emirates"
   },
   "af": {
-    "title": "Afghanistan",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Afghanistan"
   },
   "ag": {
-    "title": "Antigua and Barbuda",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Antigua and Barbuda"
   },
   "ai": {
-    "title": "Anguilla",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Anguilla"
   },
   "al": {
-    "title": "Albania",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Albania"
   },
   "am": {
-    "title": "Armenia",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Armenia"
   },
   "ao": {
-    "title": "Angola",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Angola"
   },
   "aq": {
-    "title": "Antarctica",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Antarctica"
   },
   "ar": {
-    "title": "Argentina",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Argentina"
   },
   "as": {
-    "title": "American Samoa",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "American Samoa"
   },
   "at": {
-    "title": "Austria",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Austria"
   },
   "au": {
-    "title": "Australia",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Australia"
   },
   "aw": {
-    "title": "Aruba",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Aruba"
   },
   "ax": {
-    "title": "Åland",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Åland"
   },
   "az": {
-    "title": "Azerbaijan",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Azerbaijan"
   },
   "ba": {
-    "title": "Bosnia and Herzegovina",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Bosnia and Herzegovina"
   },
   "bb": {
-    "title": "Barbados",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Barbados"
   },
   "bd": {
-    "title": "Bangladesh",
-    "src": "../public/flags-svg/others/chequered.svg"
-  },
-  "be": {
-    "title": "Belgium",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Bangladesh"
   },
   "bf": {
-    "title": "Burkina Faso",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Burkina Faso"
   },
   "bg": {
-    "title": "Bulgaria",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Bulgaria"
   },
   "bh": {
-    "title": "Bahrain",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Bahrain"
   },
   "bi": {
-    "title": "Burundi",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Burundi"
   },
   "bj": {
-    "title": "Benin",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Benin"
   },
   "bl": {
-    "title": "Saint Barthélemy",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Saint Barthélemy"
   },
   "bm": {
-    "title": "Bermuda",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Bermuda"
   },
   "bn": {
-    "title": "Brunei",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Brunei"
   },
   "bo": {
-    "title": "Bolivia",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Bolivia"
   },
   "bq": {
-    "title": "Bonaire",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Bonaire"
   },
   "br": {
-    "title": "Brazil",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Brazil"
   },
   "bs": {
-    "title": "Bahamas",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Bahamas"
   },
   "bt": {
-    "title": "Bhutan",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Bhutan"
   },
   "bv": {
-    "title": "Bouvet Island",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Bouvet Island"
   },
   "bw": {
-    "title": "Botswana",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Botswana"
   },
   "by": {
-    "title": "Belarus",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Belarus"
   },
   "bz": {
-    "title": "Belize",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Belize"
   },
   "ca": {
-    "title": "Canada",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Canada"
   },
   "cc": {
-    "title": "Cocos [Keeling] Islands",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Cocos [Keeling] Islands"
   },
   "cd": {
-    "title": "Democratic Republic of the Congo",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Democratic Republic of the Congo"
   },
   "cf": {
-    "title": "Central African Republic",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Central African Republic"
   },
   "cg": {
-    "title": "Republic of the Congo",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Republic of the Congo"
   },
   "ch": {
-    "title": "Switzerland",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Switzerland"
   },
   "ci": {
-    "title": "Ivory Coast",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Ivory Coast"
   },
   "ck": {
-    "title": "Cook Islands",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Cook Islands"
   },
   "cl": {
-    "title": "Chile",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Chile"
   },
   "cm": {
-    "title": "Cameroon",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Cameroon"
   },
   "cn": {
-    "title": "China",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "China"
   },
   "co": {
-    "title": "Colombia",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Colombia"
   },
   "cr": {
-    "title": "Costa Rica",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Costa Rica"
   },
   "cu": {
-    "title": "Cuba",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Cuba"
   },
   "cv": {
-    "title": "Cape Verde",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Cape Verde"
   },
   "cw": {
-    "title": "Curacao",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Curacao"
   },
   "cx": {
-    "title": "Christmas Island",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Christmas Island"
   },
   "cy": {
-    "title": "Cyprus",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Cyprus"
   },
   "cz": {
-    "title": "Czech Republic",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Czech Republic"
   },
   "de": {
-    "title": "Germany",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Germany"
   },
   "dj": {
-    "title": "Djibouti",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Djibouti"
   },
   "dk": {
-    "title": "Denmark",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Denmark"
   },
   "dm": {
-    "title": "Dominica",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Dominica"
   },
   "do": {
-    "title": "Dominican Republic",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Dominican Republic"
   },
   "dz": {
-    "title": "Algeria",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Algeria"
   },
   "ec": {
-    "title": "Ecuador",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Ecuador"
   },
   "ee": {
-    "title": "Estonia",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Estonia"
   },
   "eg": {
-    "title": "Egypt",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Egypt"
   },
   "eh": {
-    "title": "Western Sahara",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Western Sahara"
   },
   "er": {
-    "title": "Eritrea",
-    "src": "../public/flags-svg/others/chequered.svg"
+    "title": "Eritrea"
   },
   "es": {
-    "title": "Spain",
-    "src": "../public/flags-svg/others/chequered.svg"
-  },
-  "et": {
-    "title": "Ethiopia",
-    "src": "../public/flags-svg/countries/et.svg",
-    "shapes": ["stripes", "horizontal"],
-    "colors": ["#da121a","#fcdd09","#078930"]
+    "title": "Spain"
   }
 }

@@ -32,13 +32,13 @@ export const colorsObjects = {
     label: 'White',
     mainColorCode: '#fff',
     dark: false,
-    colorsCodes: ['#fff']
+    colorsCodes: ['#fff', '#F4F5F0']
   },
   black: {
     label: 'Black',
     mainColorCode: '#000',
     dark: true,
-    colorsCodes: ['#000', "#2d2d2d"]
+    colorsCodes: ['#000', '#000000', '#2d2d2d']
   },
   pink: {
     label: 'Pink',
@@ -50,7 +50,7 @@ export const colorsObjects = {
     label: 'Red',
     mainColorCode: '#f00',
     dark: true,
-    colorsCodes: ['#f00', '#ef4135', '#CE1126', '#e40303', "#da121a"]
+    colorsCodes: ['#f00', '#ef4135', '#CE1126', '#e40303', '#da121a', '#ED192D', '#EF3340', '#CD212A']
   },
   orange: {
     label: 'Orange',
@@ -62,32 +62,32 @@ export const colorsObjects = {
     label: 'Yellow',
     mainColorCode: '#ff0',
     dark: false,
-    colorsCodes: ['#ff0', "#ffed00", "#fcdd09", "#ffd800", "#fff433"]
+    colorsCodes: ['#ff0', '#ffed00', '#fcdd09', '#ffd800', '#fff433', '#FBDF21', '#FFF200', '#FDDA24']
   },
   green: {
     label: 'Green',
     mainColorCode: '#0f0',
     dark: false,
-    colorsCodes: ['#0f0', "#008026", "#078930"]
+    colorsCodes: ['#0f0', '#008026', '#078930', '#00613C', '#008C45']
   },
   blue: {
     label: 'Blue',
     mainColorCode: '#00f',
     dark: true,
-    colorsCodes: ['#00f', '#039', '#0055a4', '#002654', "#004dff", "#5bcefa"]
+    colorsCodes: ['#00f', '#039', '#0055a4', '#002654', '#004dff', '#5bcefa', '#074EA2']
   },
   violet: {
     label: 'Violet',
     mainColorCode: '#707',
     dark: true,
-    colorsCodes: ["#750787", "#7902aa", "#9b59d0"]
+    colorsCodes: ['#750787', '#7902aa', '#9b59d0']
   },
 }
 
 export const collectionTitles = {
   white: `No war White flag`,
-  black: `Back to black`,
-  red: `Red flag law`,
+  black: `Back to black flag`,
+  red: `Red flag!`,
   orange: `Orange box`,
   yellow: `Yellow lemon`,
   green: `Super green`,
