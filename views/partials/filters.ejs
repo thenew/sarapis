@@ -14,6 +14,36 @@
                 <% }) %>
             </ul>
         </div>
+        <% if(data.filtersValues.continents) { %>
+            <div class="fieldset">
+                <div class="fieldset-label">Continents</div>
+                <ul class="checkbox-boxes">
+                    <% const continents = data.params.getAll('continents') %>
+                    <% data.filtersValues.continents.forEach(continent => { %>
+                        <li class="checkbox-box">
+                            <%- include('checkbox.ejs', {
+                                name: 'continents', id: continent, label: continent, labelVisible: continent, checked: continents.includes(continent)
+                            }) %>
+                        </li>
+                    <% }) %>
+                </ul>
+            </div>
+        <% } %>
+        <% if(data.filtersValues.groups) { %>
+            <div class="fieldset">
+                <div class="fieldset-label">Groups</div>
+                <ul class="checkbox-boxes">
+                    <% const groups = data.params.getAll('groups') %>
+                    <% data.filtersValues.groups.forEach(group => { %>
+                        <li class="checkbox-box">
+                            <%- include('checkbox.ejs', {
+                                name: 'groups', id: group, label: group, labelVisible: group, checked: groups.includes(group)
+                            }) %>
+                        </li>
+                    <% }) %>
+                </ul>
+            </div>
+        <% } %>
         <div class="fieldset">
             <div class="fieldset-label">Colors</div>
             <ul class="checkbox-boxes colors">

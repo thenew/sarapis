@@ -74,7 +74,7 @@ export const colorsObjects = {
     label: 'Blue',
     mainColorCode: '#00f',
     dark: true,
-    colorsCodes: ['#00f', '#039', '#0055a4', '#002654', '#004dff', '#5bcefa', '#074EA2']
+    colorsCodes: ['#00f', '#039', '#0055a4', '#002654', '#004dff', '#5bcefa', '#074EA2', '#0F47AF']
   },
   violet: {
     label: 'Violet',

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 18" title="Flag of Greece">
+    <g class="srp-stripes">
+        <path d="M0,0H27v2H0Z" fill="#00f"/>
+        <path d="M0,2H27v2H0Z" fill="#fff"/>
+        <path d="M0,4H27v2H0Z" fill="#00f"/>
+        <path d="M0,6H27v2H0Z" fill="#fff"/>
+        <path d="M0,8H27v2H0Z" fill="#00f"/>
+        <path d="M0,10H27v2H0Z" fill="#fff"/>
+        <path d="M0,12H27v2H0Z" fill="#00f"/>
+        <path d="M0,14H27v2H0Z" fill="#fff"/>
+        <path d="M0,16H27v2H0Z" fill="#00f"/>
+    </g>
+    <g class="srp-canton">
+        <path d="M0,0h10v10H0Z" fill="#00f"/>
+        <path d="M4,0h2v10h-2V0Z" fill="#fff"/>
+        <path d="M0,4v2h10v-2H0Z" fill="#fff"/>
+    </g>
+</svg>

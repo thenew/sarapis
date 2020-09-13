@@ -1,15 +1,21 @@
 /* Layout */
 .app {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  height: 100%;
+  min-height: 100%;
   font-family: var(--bodyFont);
   font-weight: var(--titleFontNormal);
   font-size: 20px;
   color: var(--colorCopy);
   background-color: var(--colorBg);
+}
+
+@media (min-width: 769px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+  }
 }
 
 ::selection {

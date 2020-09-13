@@ -23,7 +23,7 @@
     </div>
   <% } %>
   <main id="maincontent">
-    <% if(Object.keys(data.flags).length > 1) { %>
+    <% if(Object.keys(data.flags).length > 0) { %>
       <div class="grid <% if(Object.keys(data.flags).length > 4) { %>grow<% } %>">
         <% Object.keys(data.flags).forEach(function(key){ %>
           <% if (data.flags[key].src) { %>
@@ -36,7 +36,6 @@
     <% } %>
   </main>
 </div>
-
 
 <script>
   function clamp(num, min, max) {
@@ -76,7 +75,6 @@
 
   formCheckboxes.forEach(function(input) {
     input.addEventListener('change', function(event) { 
-      console.log('formCheckboxes event: ', event)
       form.requestSubmit()
     })
   })

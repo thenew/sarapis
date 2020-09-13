@@ -19,20 +19,20 @@
   <meta name="apple-mobile-web-app-status-bar-style" content=" black-translucent">
   <meta name="msapplication-TileColor" content="#00f">
   <meta name="theme-color" content="#00f">
-  <link rel="icon" href=<%= typeof favicon != 'undefined' ? favicon : './public/app-icons/favicon.svg' %>>
-  <link rel="apple-touch-icon" href=<%= typeof favicon != 'undefined' ? favicon : './public/app-icons/favicon.svg' %>>
-  <link rel="logo" type="image/svg+xml" href="./public/app-icons/favicon.svg">
+  <link rel="icon" href=<%= typeof favicon != 'undefined' ? favicon : '/public/app-icons/favicon.svg' %>>
+  <link rel="apple-touch-icon" href=<%= typeof favicon != 'undefined' ? favicon : '/public/app-icons/favicon.svg' %>>
+  <link rel="logo" type="image/svg+xml" href="/public/app-icons/favicon.svg">
   <link rel="manifest" href="/manifest.webmanifest">
   <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6617898/7632612/css/fonts.css">
-  <link href="./public/css/0-main.css" rel="stylesheet">
-  <link rel="preload" href="./public/fonts/noto-serif-v8-latin-regular.woff2" as="font">
+  <link href="/public/css/0-main.css" rel="stylesheet">
+  <link rel="preload" href="/public/fonts/noto-serif-v8-latin-regular.woff2" as="font">
   <body>
     <a class="skip-link" href="#maincontent">Skip to main</a>
-    <div class="app page ">
+    <div class="app page <%= pageClass %>">
       <header class="header">
         <a class="header-link" href="/">
           <span class="sr-only">Sarapis</span>
-          <svg width="175" height="16" viewBox="0 0 175 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="logo" width="175" height="16" viewBox="0 0 175 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0" width="25" height="16" fill="#0D8CFF"/>
             <rect x="25" width="25" height="16" fill="#0C46E8"/>
             <rect x="50" width="25" height="16" fill="#0000FF"/>

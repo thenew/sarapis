@@ -5,8 +5,19 @@
     "countryCode": "eu",
     "ratios": ["2:3"],
     "colors": ["#074EA2", "#FFF200"],
+    "continent": "eu",
     "sources": ["https://europa.eu/european-union/about-eu/symbols/flag_en"],
     "note": "From the official eps file."
+  },
+  "es": {
+    "title": "Spain",
+    "src": "../public/flags-svg/countries/es.svg",
+    "countryCode": "es",
+    "ratios": ["2:3"],
+    "colors": ["#AA151B", "#F1BF00"],
+    "continent": "eu",
+    "sources": ["https://web.ua.es/en/protocolo/rules-doc/documents-and-legislation.html"],
+    "note": ""
   },
   "pt": {
     "title": "Portugal",
@@ -14,6 +25,7 @@
     "countryCode": "pt",
     "ratios": ["2:3"],
     "colors": ["#ED192D", "#00613C", "#FBDF21"],
+    "continent": "eu",
     "sources": ["http://jorgesampaio.arquivo.presidencia.pt/pt/republica/simbolos/bandeiras/"],
     "note": "Based on the official eps file. Fixed little visuals glitches in the sphere. Fixed the dimensions."
   },
@@ -25,6 +37,7 @@
     "colors": ["#008C45", "#F4F5F0", "#CD212A"],
     "shapes": ["stripes", "vertical"],
     "groups": ["French tricolour revolution"],
+    "continent": "eu",
     "sources": ["http://presidenza.governo.it/ufficio_cerimoniale/cerimoniale/bandiera.html", "http://presidenza.governo.it/ufficio_cerimoniale/normativa/dpcm_20060414_precedenze.pdf"],
     "note": "Created from the official guidelines."
   },
@@ -32,10 +45,11 @@
     "title": "Belgium",
     "src": "../public/flags-svg/countries/be.svg",
     "countryCode": "be",
-    "ratios": ["13:13"],
+    "ratios": ["13:15"],
     "colors": ["#000000", "#FDDA24", "#EF3340"],
     "shapes": ["stripes", "vertical"],
     "groups": ["French tricolour revolution"],
+    "continent": "eu",
     "sources": ["https://www.jurisquare.be/fr/book/9789089771902/"],
     "note": "Created from the official guidelines."
   },
@@ -46,7 +60,45 @@
     "ratios": ["3:5"],
     "colors": ["#EF3340", "#FFFFFF", "#00A3E0"],
     "shapes": ["stripes", "horizontal"],
+    "continent": "eu",
     "sources": ["http://legilux.public.lu/eli/etat/leg/rgd/1993/07/27/n2/jo"],
+    "note": "Created from the official guidelines."
+  },
+  "dk": {
+    "title": "Danemark",
+    "src": "../public/flags-svg/countries/dk.svg",
+    "countryCode": "dk",
+    "ratios": ["3:5"],
+    "colors": ["#c8102e", "#FFFFFF"],
+    "shapes": ["cross"],
+    "groups": ["Scandinavian cross"],
+    "continent": "eu",
+    "sources": [""],
+    "trivia": "It is the oldest continuously used national flag.",
+    "note": "Created from the official guidelines."
+  },
+  "gr": {
+    "title": "Greece",
+    "src": "../public/flags-svg/countries/gr.svg",
+    "countryCode": "gr",
+    "ratios": ["3:5"],
+    "colors": ["#00f", "#FFFFFF"],
+    "shapes": ["cross", "stripes", "horizontal"],
+    "continent": "eu",
+    "sources": [""],
+    "note": "Created from the official guidelines.",
+    "trivia": "The blue is just blue so you can pick any shade.",
+    "tags": ["no-official-color"]
+  },
+  "ie": {
+    "title": "Ireland",
+    "src": "../public/flags-svg/countries/ie.svg",
+    "countryCode": "ie",
+    "ratios": ["1:2"],
+    "colors": ["#169B62", "#FFFFFF", "#FF883E"],
+    "shapes": ["stripes", "vertical"],
+    "continent": "eu",
+    "sources": ["https://www.gov.ie/en/publication/adc448-the-national-flag/"],
     "note": "Created from the official guidelines."
   },
   "fr": {
@@ -57,8 +109,7 @@
     "colors": ["#002395", "#fff", "#f00316"],
     "shapes": ["stripes", "vertical"],
     "groups": ["French tricolour revolution"],
-    "authors": [""],
-    "creationDate": "",
+    "continent": "eu",
     "sources": ["https://www.gouvernement.fr/drapeau-francais", "https://fr.wikipedia.org/wiki/Drapeau_de_la_France"],
     "otherTitles": ["le drapeau tricolore"]
   },
@@ -69,27 +120,54 @@
     "ratios": ["2:3"],
     "colors": ["#002654", "#fff", "#ce1126"],
     "shapes": ["stripes", "vertical"],
-    "authors": [""],
-    "creationDate": "",
+    "continent": "eu",
     "sources": ["https://www.gouvernement.fr/drapeau-francais", "https://fr.wikipedia.org/wiki/Drapeau_de_la_France"],
     "otherTitles": ["le drapeau tricolore"]
   },
   "et": {
     "title": "Ethiopia",
     "src": "../public/flags-svg/countries/et.svg",
+    "countryCode": "et",
     "shapes": ["stripes", "horizontal"],
-    "colors": ["#da121a","#fcdd09","#078930"]
+    "colors": ["#da121a","#fcdd09","#078930", "#0F47AF"],
+    "ratios": ["1:2"],
+    "groups": ["Pan-African colours"],
+    "continent": "af",
+    "sources": ["https://chilot.files.wordpress.com/2011/01/flag.pdf", "http://www.investethiopia.gov.et/why-ethiopia/ethiopia-at-a-glance"],
+    "trivia": "The colors shall be bright and basic."
+  },
+  "et-srp": {
+    "title": "Ethiopia",
+    "src": "../public/flags-svg/countries/et-srp.svg",
+    "countryCode": "et",
+    "shapes": ["stripes", "horizontal"],
+    "colors": ["#da121a","#fcdd09","#078930", "#0F47AF"],
+    "ratios": ["1:2"],
+    "groups": ["Pan-African colours"],
+    "continent": "af",
+    "sources": ["https://chilot.files.wordpress.com/2011/01/flag.pdf", "http://www.investethiopia.gov.et/why-ethiopia/ethiopia-at-a-glance"],
+    "trivia": "The colors shall be bright and basic."
+  },
+  "jp": {
+    "title": "Japan",
+    "src": "../public/flags-svg/countries/jp.svg",
+    "countryCode": "jp",
+    "shapes": ["circle"],
+    "colors": ["#b0313f","#fff"],
+    "ratios": ["7:10"],
+    "continent": "as",
+    "sources": [""],
+    "trivia": ""
   },
   "nl": {
-    "title": "Nederland",
+    "title": "Netherlands",
+    "src": "../public/flags-svg/countries/nl.svg",
     "countryCode": "nl",
     "ratios": ["2:3"],
-    "colors": ["#21468b", "#fff", "#ae1c28"],
+    "colors": ["#AE1C28", "#fff", "#21468B"],
     "shapes": ["stripes", "horizontal"],
-    "authors": [""],
-    "creationDate": "",
-    "sources": [""],
-    "otherTitles": [""]
+    "continent": "eu",
+    "sources": ["https://puc.overheid.nl/mp-bundels/doc/PUC_41859_10/1/#7185c358-2968-4439-a34a-297f8a2565a3", "https://www.nen.nl/web/file?uuid=38b1aa24-c836-496a-8907-169419760b56&owner=d66d121a-91af-4036-b24e-304f0ca16197"]
   },
   "ad": {
     "title": "Andorra"
@@ -262,9 +340,6 @@
   "dj": {
     "title": "Djibouti"
   },
-  "dk": {
-    "title": "Denmark"
-  },
   "dm": {
     "title": "Dominica"
   },
@@ -288,8 +363,5 @@
   },
   "er": {
     "title": "Eritrea"
-  },
-  "es": {
-    "title": "Spain"
   }
 }

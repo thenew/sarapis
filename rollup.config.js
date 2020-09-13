@@ -4,6 +4,14 @@ import json from '@rollup/plugin-json';
 import nodePolyfills from 'rollup-plugin-node-polyfills';
 
 module.exports = [
+  // {
+  //   input: 'public/js/client.js',
+  //   output: {
+  //     file: 'public/js/client.min.js',
+  //     format: 'iife' // for browsers
+  //   },
+  //   plugins: []
+  // },
   {
     input: 'src/server.mjs',
     output: {

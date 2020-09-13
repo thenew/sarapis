@@ -1,0 +1,35 @@
+<%- include('partials/header', {title: 'About', image: data.src, favicon: data.src, pageClass: 'page-about'}) %>
+<div class="page-title-box">
+  <h1 class="page-title">About</h1>
+</div>
+<main id="maincontent" class="page-layout">
+  <div class="srp-box">
+    <header class="srp-box-header"><div class="text">Why?</div></header>
+    <div class="srp-box-content">
+      <p>Philosophy:</p>
+      <p>No fancy SVG features to have the best compatibility possible. Only path elements when possible. Every stripes, every emblems in their own group or elements to be able to animate them easily.</p>
+      <p>I don’t want to document everything about flags, there are better sites for this: wikipedia, fotw. I’m not a vexiloge and will only share some fun trivia.</p>
+    </div>
+  </div>
+  <div class="srp-box">
+    <header class="srp-box-header"><div class="text">Roadmap</div></header>
+    <div class="srp-box-content">
+      <p>Test</p>
+      <ul class="todo-list">
+        <li class="todo-item done">Add EEC flags</li>
+        <li class="todo-item">Add EU flags</li>
+        <li class="todo-item">Add North America flags</li>
+        <li class="todo-item">Add Africa flags</li>
+        <li class="todo-item">Add South America flags</li>
+        <li class="todo-item">Add Asia flags</li>
+      </ul>
+    </div>
+  </div>
+</main>
+<script type="module">
+  import { pick } from "/public/js/thenew-utils.js";
+
+  const colors = [...document.querySelectorAll('.logo rect')].map(item => item.getAttribute('fill'))
+  document.querySelector('.page-about').style.backgroundColor = pick(colors)
+</script>
+<%- include('partials/footer') %>

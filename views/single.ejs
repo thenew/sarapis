@@ -6,7 +6,7 @@
 <% } %>
 <main id="maincontent" class="single-layout">
     <%- include('partials/gridItem.ejs', {key: ``, flag: data}); %>
-    <div class="singe-sidebar">
+    <div class="single-sidebar">
 
       <div class="srp-box code">
         <header class="srp-box-header">
@@ -20,7 +20,9 @@
       <header class="srp-box-header"><div class="text">Specs</div></header>
       <div class="srp-box-content">
         <ul>
-          <li><span class="spec-title">ratio</span><span class="spec-value"><%- data.ratios.join(',') %></span></li>
+          <% if(data.ratios && data.ratios.length) { %>
+            <li><span class="spec-title">ratio</span><span class="spec-value"><%- data.ratios.join(',') %></span></li>
+          <% } %>
           <li><span class="spec-title">colors</span><span class="spec-value">
             <ul class="colors">
               <% data.colors.forEach(color => { %>
@@ -37,10 +39,10 @@
             <li><span class="spec-title">sources</span><span class="spec-value">
               <ul>
                 <% data.sources.forEach((source, index) => { %>
+                  <% if(index) {%>,<% } %>
                   <li>
                     <a class="link" href="<%= source %>" target="_blank" rel="noopener noreferrer"><%= source %></a>
                   </li>
-                  <% if(index) {%>,<% } %>
                 <% }) %>
               </ul>
             </span></li>
@@ -48,6 +50,36 @@
         </ul>
       </div>
     </div>
+    <% if(data.note) { %>
+      <div class="srp-box">
+        <header class="srp-box-header"><div class="text">Note</div></header>
+        <div class="srp-box-content">
+          <p><%= data.note %></p>
+        </div>
+      </div>
+    <% } %>
+    <% if(data.trivia) { %>
+      <div class="srp-box">
+        <header class="srp-box-header"><div class="text">Trivia</div></header>
+        <div class="srp-box-content">
+          <p><%= data.trivia %></p>
+        </div>
+      </div>
+    <% } %>
   </div>
 </main>
+<script>
+  const color = '<%= data.colorAccents[0] %>';
+  if(color) {
+    document.documentElement.style.setProperty('--color1', color);
+
+    setTimeout(() => {
+      document.documentElement.style.setProperty('--color1', '<%= data.colorAccents[1] %>');
+    }, 600);
+  }
+
+  setTimeout(() => {
+    document.documentElement.classList.add('js-ready')
+  }, 10);
+</script>
 <%- include('partials/footer') %>

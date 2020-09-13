@@ -7,6 +7,7 @@ import fs from "fs";
 import { domain, dataPath } from "./helpers/config.mjs";
 
 import Home from "./components/Home.mjs";
+import About from "./components/About.mjs";
 import Single from "./components/Single.mjs";
 
 const app = express()
@@ -29,8 +30,10 @@ Object.keys(flagsCommunities).forEach(key => {
 })
 const flags = {...flagsMaritime, ...flagsCommunities, ...flagsCountries}
 
+const continents = JSON.parse(fs.readFileSync(`${dataPath}/continents.json`))
+
 function rend(component) {
-  return { data: component, domain: domain }
+  return { data: component, domain: domain, pageClass: '' }
 }
 
 // Routes
@@ -38,7 +41,8 @@ function rend(component) {
 app.get('/', function (req, res) {
   res.render('home', rend(Home({
     query: req.url.substring(1), // remove slash
-    items: flags
+    items: flags,
+    continents: continents,
   })))
 })
 
@@ -60,6 +64,14 @@ app.get('/countries', function (req, res) {
   res.render('home', rend(Home({
     query: `?categories=countries`,
     items: flags
+  })))
+})
+
+// Page
+// About
+app.get(`/page/about`, function (req, res) {
+  res.render('about', rend(About({
+    query: req.query,
   })))
 })
 

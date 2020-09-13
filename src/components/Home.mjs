@@ -2,7 +2,7 @@ import fs from "fs";
 import { colorsObjects, collectionTitles } from "../helpers/utils.mjs";
 import {} from "../helpers/config.mjs";
 
-const Home = ({ query, items: allFlags }) => {
+const Home = ({ query, items: allFlags, continents = [] }) => {
   let data = {};
   let flags = {};
 
@@ -29,6 +29,11 @@ const Home = ({ query, items: allFlags }) => {
   const filtersNumberColors = params.getAll("number-colors").filter(function (number) {
     return !isNaN(number)
   });
+
+  // conditional filters
+  const filtersContinents = params.getAll("continents");
+  const filtersGroups = params.getAll("groups");
+
   const hasFilters = filtersCategories.length || filtersColorsNames.length || filtersRatios.length || filtersNumberColors.length || filtersSearch
   if(filtersColorsNames.length === 1 && ! filtersCategories.length && ! filtersNumberColors.length && ! filtersRatios.length && ! filtersSearch) {
     filtersValues.collectionTitle = collectionTitles[filtersColorsNames[0]] || filtersColorsNames[0]
@@ -53,30 +58,35 @@ const Home = ({ query, items: allFlags }) => {
     filtersColorsCodes = filtersColorsCodes.concat(colorsCodes)
   })
 
+  // filters the flags items
   Object.keys(allFlags).forEach(function (key) {
     const flag = allFlags[key];
     const {
       colors: flagColors = [],
       title: flagTitle = ``,
       category: flagCategory = ``,
-      ratios: flagRatios = []
+      ratios: flagRatios = [],
+      continent: flagContinent = ``,
+      groups: flagGroups = []
     } = flag;
     const flagNumberColors = flagColors.length.toString()
 
     if (hasFilters) {
 
-      const hasCategory = filtersCategories.length ? filtersCategories.includes(flagCategory) : true
-      const hasColors = filtersColorsCodes.length ? flagColors.filter((flagColor) => filtersColorsCodes.includes(flagColor)).length > 0 : true
-      const hasRatios = filtersRatios.length ? flagRatios.filter((flagRatio) => filtersRatios.includes(flagRatio)).length > 0 : true
-      const hasNumberColors = filtersNumberColors.length ? filtersNumberColors.includes(flagNumberColors) : true
-      const hasTitle = filtersSearch ? flagTitle.match(new RegExp(filtersSearch, "i")) : true
+      const matchCategories = filtersCategories.length ? filtersCategories.includes(flagCategory) : true
+      const matchColors = filtersColorsCodes.length ? flagColors.filter((flagColor) => filtersColorsCodes.includes(flagColor)).length > 0 : true
+      const matchRatios = filtersRatios.length ? flagRatios.filter((flagRatio) => filtersRatios.includes(flagRatio)).length > 0 : true
+      const matchNumberColors = filtersNumberColors.length ? filtersNumberColors.includes(flagNumberColors) : true
+      const matchTitle = filtersSearch ? flagTitle.match(new RegExp(filtersSearch, "i")) : true
+      const matchContinents = filtersContinents.length ? filtersContinents.includes(flagContinent) : true
+      const matchGroups = filtersGroups.length ? flagGroups.filter((flagGroup) => filtersGroups.includes(flagGroup)).length > 0 : true
+      // console.log('flagGroups: ', flagGroups)
+      // console.log('matchGroups: ', matchGroups)
 
-      // console.log('hasCategory: ', hasCategory)
-      // console.log('hasColors: ', hasColors)
-      // console.log('hasNumberColors: ', hasNumberColors)
-
+      const match = matchCategories && matchColors && matchRatios && matchNumberColors && matchTitle && matchContinents && matchGroups
+// console.log('match: ', match)
       // add
-      if (hasCategory && hasColors && hasNumberColors && hasRatios && hasTitle) {
+      if (match) {
         // console.log('add flag key: ', key)
         flags[key] = flag
       }
@@ -91,14 +101,15 @@ const Home = ({ query, items: allFlags }) => {
 
   })
 
-
   // build smart filters
   Object.keys(flags).forEach(key => {
     const flag = flags[key]
     const {
       category: flagCategory = ``,
       colors: flagColors = [],
-      ratios: flagRatios = []
+      ratios: flagRatios = [],
+      continent: flagContinent = ``,
+      groups: flagGroups = []
     } = flag;
     const flagNumberColors = flagColors.length.toString()
 
@@ -126,6 +137,35 @@ const Home = ({ query, items: allFlags }) => {
         filtersValues.ratios.push(flagRatio)
       }
     })
+
+    // conditional filters
+    if( filtersCategories.includes('countries') ) {
+
+      // populate the continents filters
+      if(flagContinent) {
+        if(typeof filtersValues.continents === `undefined`) {
+          filtersValues.continents = []
+        }
+        if( !filtersValues.continents.includes(flagContinent) ){
+          filtersValues.continents.push(flagContinent)
+        }
+      }
+
+      // populate the groups filters
+      flagGroups.forEach(function(flagGroup) {
+        if(typeof filtersValues.groups === `undefined`) {
+          filtersValues.groups = []
+        }
+        if( ! filtersValues.groups.includes(flagGroup) ) {
+          filtersValues.groups.push(flagGroup)
+        }
+      })
+    }
+
+    if( ! filtersValues.numberColors.includes(flagNumberColors) ) {
+      filtersValues.numberColors.push(flagNumberColors)
+    }
+
   }) 
 
   // sort filters colors values
