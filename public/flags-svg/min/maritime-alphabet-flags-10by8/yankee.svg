@@ -1,0 +1,1 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 120" title="Yankee flag"><mask id="a"><path d="M0 0h150v120H0z" fill="#fff"/></mask><path d="M0 0h150v120H0z" fill="red"/><path d="M0 0l150 120" stroke-dasharray="15" stroke="#ff0" stroke-width="200" mask="url(#a)"/></svg>

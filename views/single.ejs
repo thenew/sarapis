@@ -69,6 +69,7 @@
   </div>
 </main>
 <script>
+  // get colorAccents
   const color = '<%= data.colorAccents[0] %>';
   if(color) {
     document.documentElement.style.setProperty('--color1', color);
@@ -76,6 +77,71 @@
     setTimeout(() => {
       document.documentElement.style.setProperty('--color1', '<%= data.colorAccents[1] %>');
     }, 600);
+  }
+
+  // animate SVG
+  const svgContainer = document.querySelector('.flag-svg')
+  if(svgContainer) {
+
+    svgContainer.style.backgroundColor = '#ddd'
+    const emblemGroups = svgContainer.querySelectorAll('.srp-emblem')
+    let circles = svgContainer.querySelectorAll('circle')
+    let paths = svgContainer.querySelectorAll('path')
+    
+    paths = Array.from(paths).filter(path => !path.closest('.srp-emblem'))
+    
+    paths.forEach(path => {
+      const rect = path.getBoundingClientRect()
+      const isLandscape = rect.width > rect.height
+      const scale = isLandscape ? 'scaleX(0)' : 'scaleY(0)' 
+      path.style.opacity = 0
+      path.style.transform = scale
+    })
+
+    circles.forEach(item => {
+      item.style.opacity = 0
+      item.style.transform = 'scale(0)'
+    })
+
+    emblemGroups.forEach(item => {
+      item.style.opacity = 0
+    })
+
+    setTimeout(() => {
+      svgContainer.classList.add('js-animate')
+    }, 10);
+    
+    let index = 0
+    let eachDelay = 150
+    
+    paths.forEach((path, i) => {
+      index = i + 1
+      eachDelay -= eachDelay * .04
+      setTimeout(() => {
+        path.style.opacity = 1
+        path.style.transform = 'scale(1)'
+
+      }, eachDelay * index);
+    })
+    
+    circles.forEach(item => {
+      index++
+      eachDelay -= eachDelay * .04
+      setTimeout(() => {
+        item.style.opacity = 1
+        item.style.transform = 'scale(1)'
+
+
+      }, eachDelay * index);
+    })
+
+    emblemGroups.forEach(item => {
+      index++
+      eachDelay -= eachDelay * .04
+      setTimeout(() => {
+        item.style.opacity = 1
+      }, each * index);
+    })
   }
 
   setTimeout(() => {
