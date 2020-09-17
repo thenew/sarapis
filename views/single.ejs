@@ -70,13 +70,16 @@
 </main>
 <script>
   // get colorAccents
-  const color = '<%= data.colorAccents[0] %>';
-  if(color) {
-    document.documentElement.style.setProperty('--color1', color);
-
-    setTimeout(() => {
-      document.documentElement.style.setProperty('--color1', '<%= data.colorAccents[1] %>');
-    }, 600);
+  const colorAccents = <%- JSON.stringify(data.colorAccents) %>
+  if(colorAccents && colorAccents.length) {
+    document.documentElement.style.setProperty('--color1', colorAccents[0]);
+    colorAccents.forEach((color, i) => {
+      if(!i) return
+      setTimeout(() => {
+        console.log('color: ', color)
+        document.documentElement.style.setProperty('--color1', color);
+      }, 4000 * i)
+    })
   }
 
   // animate SVG

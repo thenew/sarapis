@@ -32,15 +32,42 @@
       <header class="header">
         <a class="header-link" href="/">
           <span class="sr-only">Sarapis</span>
-          <svg class="logo" width="175" height="16" viewBox="0 0 175 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" width="25" height="16" fill="#0D8CFF"/>
-            <rect x="25" width="25" height="16" fill="#0C46E8"/>
-            <rect x="50" width="25" height="16" fill="#0000FF"/>
-            <rect x="75" width="25" height="16" fill="#480CE8"/>
-            <rect x="100" width="25" height="16" fill="#910DFF"/>
-            <rect x="125" width="25" height="16" fill="#480CE8"/>
-            <rect x="150" width="25" height="16" fill="#0000FF"/>
+          <svg class="logo js-svg-dx" width="175" height="16" viewBox="0 0 175 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path style="transform: translateX(125px)" d="M00,00h25v16h-25z" fill="#0000FF"/>
+            <path style="transform: translateX(100px)" d="M00,00h25v16h-25z" fill="#480CE8"/>
+            <path style="transform: translateX(75px)"  d="M00,00h25v16h-25z" fill="#910DFF"/>
+            <path style="transform: translateX(50px)"  d="M00,00h25v16h-25z" fill="#480CE8"/>
+            <path style="transform: translateX(25px)"  d="M00,00h25v16h-25z" fill="#0000FF"/>
+            <path style="transform: translateX(0)"     d="M00,00h25v16h-25z" fill="#0D8CFF"/>
           </svg>
+          <script>
+            const svgDx = document.querySelector('.js-svg-dx')
+            svgDx.addEventListener('mouseover', () => {
+              console.log('%c mouseover ', 'background: #000; color: #ffff00; padding: 1px 0;')
+              let paths = [...svgDx.querySelectorAll('.js-svg-dx path')].reverse().forEach((path, index) => {
+
+                // TODO automate
+                // Mxx,00h25v16h-25z
+                // Mxx,00h50l-25,16h-25z
+                // Mxx,00h50v16h-50z
+                // M25,00h25v16h-50z
+                // M25,00h25v16h-25z
+
+                const d = path.getAttribute('d')
+                const d1 = d.replace('h25v16', 'h50l-25,16')
+                const d2 = d1.replace('l-25,16h-25', 'v16h-50')
+                const d3 = d2.replace('h50', 'h25').replace('M00', 'M25')
+                const d4 = d3.replace('h-50', 'h-25')
+                const d5 = d4.replace('M25', 'M00')
+                const delay = 200 + (index * 100)
+                setTimeout(() => { path.setAttribute('d', d1) }, delay);
+                setTimeout(() => { path.setAttribute('d', d2) }, delay * 2);
+                setTimeout(() => { path.setAttribute('d', d3) }, delay * 3);
+                setTimeout(() => { path.setAttribute('d', d4) }, delay * 4);
+                setTimeout(() => { path.setAttribute('d', d5) }, delay * 5);
+              })
+            })
+          </script>
         </a>
       </header>
       <div class="app-content">

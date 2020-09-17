@@ -32,7 +32,7 @@ export const colorsObjects = {
     label: 'White',
     mainColorCode: '#fff',
     dark: false,
-    colorsCodes: ['#fff', '#F4F5F0']
+    colorsCodes: ['#fff', '#ffffff', '#F4F5F0']
   },
   black: {
     label: 'Black',
@@ -62,7 +62,7 @@ export const colorsObjects = {
     label: 'Yellow',
     mainColorCode: '#ff0',
     dark: false,
-    colorsCodes: ['#ff0', '#ffed00', '#fcdd09', '#ffd800', '#fff433', '#FBDF21', '#FFF200', '#FDDA24']
+    colorsCodes: ['#ff0', '#ffff00', '#ffed00', '#fcdd09', '#ffd800', '#fff433', '#FBDF21', '#FFF200', '#FDDA24']
   },
   green: {
     label: 'Green',

@@ -54,7 +54,7 @@
 }
 
 .js-ready * {
-  transition: color 10s ease, box-shadow 10s ease;
+  transition: color 8s ease, box-shadow 8s ease;
 }
 
 .link {
