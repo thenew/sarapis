@@ -1,11 +1,11 @@
 <%- include('partials/header', {title: ''}) %>
-<% if( ! data.hasFilters ) { %>
+<!-- <% if( ! data.hasFilters ) { %>
   <%- include('partials/marquee') %>
-<% } %>
+<% } %> -->
 <div>
   <%- include('partials/filters.ejs', {data}); %>
   <% if(data.filtersValues.collectionTitle) { %>
-    <div class="page-title-box">
+    <div class="page-title-box <% if(data.flagsWire && data.flagsWire.length){ %> page-title-box-with-flags<% } %>">
       <div class="page-title-flag">
         <div class="flags-all">
           <% data.flagsWire.forEach(function(flag){ %>
@@ -27,9 +27,15 @@
       <div class="grid <% if(Object.keys(data.flags).length > 4) { %>grow<% } %>">
         <% Object.keys(data.flags).forEach(function(key){ %>
           <% if (data.flags[key].src) { %>
-            <%- include('partials/gridItem.ejs', {key, flag: data.flags[key]}); %>
+            <%- include('partials/gridItem.ejs', {url: key, flag: data.flags[key]}) %>
           <% } %>
         <% }) %>
+        <div class="grid-item hidden"></div>
+        <div class="grid-item hidden"></div>
+        <div class="grid-item hidden"></div>
+        <div class="grid-item hidden"></div>
+        <div class="grid-item hidden"></div>
+        <div class="grid-item hidden"></div>
       </div>
     <% } else { %>
       <div class="no-content">( ノ ゜□ ゜)ノ ︵ ┻━━┻</div>

@@ -28,7 +28,11 @@ const flagsCommunities = JSON.parse(fs.readFileSync(`${dataPath}/flags-communiti
 Object.keys(flagsCommunities).forEach(key => {
   flagsCommunities[key].category = 'communities'
 })
-const flags = {...flagsMaritime, ...flagsCommunities, ...flagsCountries}
+const flagsUnordered = {...flagsMaritime, ...flagsCommunities, ...flagsCountries}
+const flags = {};
+Object.keys(flagsUnordered).sort().forEach(function(key) {
+  flags[key] = flagsUnordered[key];
+});
 
 const continents = JSON.parse(fs.readFileSync(`${dataPath}/continents.json`))
 
@@ -78,9 +82,34 @@ app.get(`/page/about`, function (req, res) {
 // single
 Object.keys(flags).find(slug => {
   app.get(`/${slug}`, function (req, res) {
+
+    const flag = flags[slug]
+    const {variants = [], variantOf: parentSlug = ``} = flag
+
+    if(variants && variants.length) {
+      flag.variants = variants.map(variant => {
+
+        // if variants is still just the slug, add the full variant object
+        if(typeof variant === 'string') {
+          const variantSlug = variant
+          const item = flags[variantSlug]
+          item.slug = variantSlug
+          return item
+        } else {
+          return variant
+        }
+      })
+    }
+
+    // add parent flag to variants for single flag
+    if(parentSlug) {
+      const item = flags[parentSlug]
+      item.slug = parentSlug
+      flag.variants = [item]
+    }
     res.render('single', rend(Single({
       query: req.query,
-      item: flags[slug]
+      item: flag
     })))
   })
 })

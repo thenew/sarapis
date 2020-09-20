@@ -29,7 +29,7 @@
 <script type="module">
   import { pick } from "/public/js/thenew-utils.js";
 
-  const colors = [...document.querySelectorAll('.logo rect')].map(item => item.getAttribute('fill'))
+  const colors = [...document.querySelectorAll('.logo path')].map(item => item.getAttribute('fill'))
   document.querySelector('.page-about').style.backgroundColor = pick(colors)
 </script>
 <%- include('partials/footer') %>

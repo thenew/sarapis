@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20" title="Flag of Belgium">
+    <path d="M0,0H10V20H0Z" fill="#000"/>
+    <path d="M10,0h10v20h-10Z" fill="#FDDA24"/>
+    <path d="M20,0h10v20h-10Z" fill="#EF3340"/>
+</svg>

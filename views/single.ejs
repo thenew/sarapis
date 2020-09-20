@@ -5,7 +5,7 @@
   </div>
 <% } %>
 <main id="maincontent" class="single-layout">
-    <%- include('partials/gridItem.ejs', {key: ``, flag: data}); %>
+    <%- include('partials/gridItem.ejs', {flag: data}); %>
     <div class="single-sidebar">
 
       <div class="srp-box code">
@@ -18,15 +18,15 @@
 
     <div class="srp-box">
       <header class="srp-box-header"><div class="text">Specs</div></header>
-      <div class="srp-box-content">
+      <div class="srp-box-content srp-box-content-specs">
         <ul>
           <% if(data.ratios && data.ratios.length) { %>
-            <li><span class="spec-title">ratio</span><span class="spec-value"><%- data.ratios.join(',') %></span></li>
+            <li class="spec-item"><span class="spec-title">Ratio</span><span class="spec-value"><%- data.ratios.join(',') %></span></li>
           <% } %>
-          <li><span class="spec-title">colors</span><span class="spec-value">
-            <ul class="colors">
+          <li class="spec-item"><span class="spec-title">Colors</span><span class="spec-value">
+            <ul class="colors-list">
               <% data.colors.forEach(color => { %>
-                <li>
+                <li class="colors-item">
                   <div class="color" style="border-color: <%= color %>;">
                     <a href="/?colors=<%= color %>" class="color-swatch" style="background-color: <%= color %>;"></a>
                     <div class="color-label"><%= color %></div>
@@ -36,7 +36,7 @@
             </ul>
           </span></li>
           <% if(data.sources && data.sources.length) { %>
-            <li><span class="spec-title">sources</span><span class="spec-value">
+            <li class="spec-item"><span class="spec-title">Sources</span><span class="spec-value">
               <ul>
                 <% data.sources.forEach((source, index) => { %>
                   <% if(index) {%>,<% } %>
@@ -50,10 +50,34 @@
         </ul>
       </div>
     </div>
+
+    <% if(data.variants && data.variants.length) { %>
+      <div class="srp-box">
+        <header class="srp-box-header"><div class="text">Variants</div></header>
+        <div class="srp-box-content srp-box-content-variants">
+          <ul class="variants-list">
+            <% data.variants.forEach(function(item) { %>
+              <% if (item.src) { %>
+                <%- include('partials/gridItem.ejs', {url: item.slug, flag: item}) %>
+              <% } %>
+            <% }) %>
+          </ul>
+        </div>
+      </div>
+    <% } %>
+
+    <% if(data.meaning) { %>
+      <div class="srp-box">
+        <header class="srp-box-header"><div class="text">Meaning</div></header>
+        <div class="srp-box-content srp-box-content-copy">
+          <p><%= data.meaning %></p>
+        </div>
+      </div>
+    <% } %>
     <% if(data.note) { %>
       <div class="srp-box">
         <header class="srp-box-header"><div class="text">Note</div></header>
-        <div class="srp-box-content">
+        <div class="srp-box-content srp-box-content-copy">
           <p><%= data.note %></p>
         </div>
       </div>
@@ -61,7 +85,7 @@
     <% if(data.trivia) { %>
       <div class="srp-box">
         <header class="srp-box-header"><div class="text">Trivia</div></header>
-        <div class="srp-box-content">
+        <div class="srp-box-content srp-box-content-copy">
           <p><%= data.trivia %></p>
         </div>
       </div>
@@ -86,7 +110,7 @@
   const svgContainer = document.querySelector('.flag-svg')
   if(svgContainer) {
 
-    svgContainer.style.backgroundColor = '#ddd'
+    // svgContainer.style.backgroundColor = '#ddd'
     const emblemGroups = svgContainer.querySelectorAll('.srp-emblem')
     let circles = svgContainer.querySelectorAll('circle')
     let paths = svgContainer.querySelectorAll('path')

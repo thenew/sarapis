@@ -16,9 +16,9 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  align-items: center;
+  align-items: stretch;
   flex-grow: 1;
-  height: var(--fieldsetHeight);
+  min-height: var(--fieldsetHeight);
   padding: 10px;
   box-shadow: 1px 0 0 0 var(--color1),
               0 1px 0 0 var(--color1),
@@ -41,6 +41,8 @@
 }
 
 .fieldset-label {
+  display: flex;
+  align-items: center;
   font-size: 10px;
   font-weight: var(--titleFontBold);
   margin-right: 10px;
@@ -86,10 +88,10 @@
   /* max-width: 20vw; */
   max-width: calc(100% - var(--fieldsetHeight));
   font-weight: var(--titleFontNormal);
-  height: 100%;
+  height: auto;
   padding: 10px;
   background-color: transparent;
-  transform: translateY(1px);
+  /* transform: translateY(1px); */
 }
 
 .search-input::placeholder {

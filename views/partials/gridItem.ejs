@@ -1,13 +1,21 @@
 <div class="grid-item">
     <div class="ratio-box">
         <div class="ratio-box-inner">
-            <a class="item" href="/<%= key %>">
+            <% if(typeof url !== 'undefined') { %>
+                <a class="item" href="/<%= url %>">
+            <% } else { %>
+                <div class="item">
+            <% } %>
                 <div class="item-image flag-svg"><%- include('../'+flag.src) %></div>
                 <div class="item-title"><%- flag.title %></div>
                 <% if(typeof flag.ratios !== `undefined` && flag.ratios.length) { %>
                     <div class="item-note"><%- flag.ratios[0] %></div>
                 <% } %>
-            </a>
+            <% if(typeof url !== 'undefined') { %>
+                </a>
+            <% } else { %>
+                </div>
+            <% } %>
         </div>
     </div>
 </div>

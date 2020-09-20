@@ -18,6 +18,7 @@ const Home = ({ query, items: allFlags, continents = [] }) => {
     colors: [],
     numberColors: [],
     ratios: [],
+    collections: [],
     collectionTitle: ``,
   }
 
@@ -35,8 +36,10 @@ const Home = ({ query, items: allFlags, continents = [] }) => {
   const filtersGroups = params.getAll("groups");
 
   const hasFilters = filtersCategories.length || filtersColorsNames.length || filtersRatios.length || filtersNumberColors.length || filtersSearch
-  if(filtersColorsNames.length === 1 && ! filtersCategories.length && ! filtersNumberColors.length && ! filtersRatios.length && ! filtersSearch) {
-    filtersValues.collectionTitle = collectionTitles[filtersColorsNames[0]] || filtersColorsNames[0]
+  console.log('filtersColorsNames.: ', filtersColorsNames.join(''))
+  if(filtersColorsNames.length && ! filtersCategories.length && ! filtersNumberColors.length && ! filtersRatios.length && ! filtersSearch) {
+    console.log('collectionTitles[filtersColorsNames.join)]: ', collectionTitles[filtersColorsNames.join('')])
+    filtersValues.collectionTitle = collectionTitles[filtersColorsNames.join('')] || filtersColorsNames.join(' & ')
 
   } else if (filtersCategories.length === 1 && ! filtersColorsNames.length && ! filtersNumberColors.length && ! filtersRatios.length && ! filtersSearch) {
     filtersValues.collectionTitle = collectionTitles[filtersCategories[0]] || filtersCategories[0]
@@ -67,8 +70,15 @@ const Home = ({ query, items: allFlags, continents = [] }) => {
       category: flagCategory = ``,
       ratios: flagRatios = [],
       continent: flagContinent = ``,
-      groups: flagGroups = []
+      groups: flagGroups = [],
+      variantOf = false
     } = flag;
+
+    // filter out variants
+    if(variantOf) {
+      return;
+    }
+
     const flagNumberColors = flagColors.length.toString()
 
     if (hasFilters) {

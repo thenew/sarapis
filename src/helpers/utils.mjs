@@ -50,7 +50,7 @@ export const colorsObjects = {
     label: 'Red',
     mainColorCode: '#f00',
     dark: true,
-    colorsCodes: ['#f00', '#ef4135', '#CE1126', '#e40303', '#da121a', '#ED192D', '#EF3340', '#CD212A']
+    colorsCodes: ['#f00', '#ef4135', '#CE1126', '#e40303', '#da121a', '#ED192D', '#EF3340', '#CD212A', '#b0313f']
   },
   orange: {
     label: 'Orange',
@@ -87,7 +87,15 @@ export const colorsObjects = {
 export const collectionTitles = {
   white: `No war White flag`,
   black: `Back to black flag`,
+  blackwhite: `Black or White`,
+  whiteblack: `Black & White`,
+  redblack: `En Rouge Et Noir`,
+  blackred: `No Future`,
   red: `Red flag!`,
+  redblue: `Red vs. Blue`,
+  bluered: `Red vs. Blue`,
+  yellowred: `Hammer and sickle`,
+  redyellow: `Hammer and sickle`,
   orange: `Orange box`,
   yellow: `Yellow lemon`,
   green: `Super green`,

@@ -68,12 +68,6 @@
                         }) %>
                     </li>
                 <% }) %>
-                <!-- <li class="checkbox-box">
-                    <%- include('checkbox.ejs', {
-                        name: 'number-colors', id: 'all', label: 'all', labelVisible: 'all', 
-                        checked: (numberColors.includes('all') && numberColors.length === 1) || numberColors.length === 0 
-                    }) %>
-                </li> -->
             </ul>
         </div>
         <div class="fieldset">
@@ -89,6 +83,19 @@
                 <% }) %>
             </ul>
         </div>
+        <!-- <div class="fieldset">
+            <div class="fieldset-label">Collections</div>
+            <ul class="checkbox-boxes">
+                <% const collections = data.params.getAll('collections') %>
+                <% data.filtersValues.collections.forEach(collection => { %>
+                    <li class="checkbox-box">
+                        <%- include('checkbox.ejs', {
+                            name: 'collections', id: collection, label: collection, labelVisible: collection, checked: collections.includes(collection)
+                        }) %>
+                    </li>
+                <% }) %>
+            </ul>
+        </div> -->
         <div class="fieldset fieldset-search">
             <input class="search-input" type="text" title="Search a name" id="search" name="search" placeholder="Search" value="<%= data.params.get('search') %>">
             <button type="submit" class="search-submit">

@@ -3,13 +3,13 @@
 .checkbox-boxes {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: stretch;
 }
 
 .checkbox-box {
   position: relative;
-  min-width: 25px;
-  height: 16px;
+  /* min-width: 25px; */
+  min-height: 16px;
 
   --border-shadow:
     1px 0 0 0 var(--color1), 
@@ -22,8 +22,12 @@
 
 @media (max-width: 768px) {
   .checkbox-box {
-    min-width: var(--mobileButtonHeight);
-    height: var(--mobileButtonHeight);
+    /* min-width: var(--mobileButtonHeight); */
+    flex-basis: var(--mobileButtonHeight);
+    flex-grow: 1;
+    min-height: var(--mobileButtonHeight);
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -67,14 +71,16 @@
   color: var(--color1);
   text-align: center;
   font-size: 8px;
-  transform: scaleX(2.5);
+  transform: scaleX(0);
   opacity: 0;
+  transition: transform .2s var(--ease), opacity .2s var(--ease);
 }
 
 .checkbox-box .checkbox:focus ~ .label::after,
 .checkbox-box .label:focus::after,
 .checkbox-box .label:hover::after {
   opacity: 1;
+  transform: scaleX(2.5);
 }
 
 .checkbox-boxes.colors .checkbox-box .label {
@@ -94,11 +100,11 @@
   box-shadow: var(--border-shadow);
 }
 
-.checkbox-box .label-initial {
+.checkbox-box .label-visible {
   user-select: none;
 }
 
-.checkbox-box.dark .label-initial {
+.checkbox-box.dark .label-visible {
   color: #fff;
 }
 
@@ -270,7 +276,8 @@ input[type="range"]::-ms-thumb {
   height: 12px;
   margin-right: 10px;
   box-shadow: 0 0 0 1px currentColor;
-  line-height: 8px;
+  line-height: 1;
+  text-align: center;
 }
 
 .todo-item.done {

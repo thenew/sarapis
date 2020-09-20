@@ -51,7 +51,19 @@
     "groups": ["French tricolour revolution"],
     "continent": "eu",
     "sources": ["https://www.jurisquare.be/fr/book/9789089771902/"],
-    "note": "Created from the official guidelines."
+    "note": "Created from the official guidelines.",
+    "variants": ["be-normal"]
+  },
+  "be-normal": {
+    "title": "Belgium",
+    "src": "../public/flags-svg/countries-normal/be-2-3.svg",
+    "countryCode": "be",
+    "ratios": ["2:3"],
+    "colors": ["#000000", "#FDDA24", "#EF3340"],
+    "shapes": ["stripes", "vertical"],
+    "groups": ["French tricolour revolution"],
+    "continent": "eu",
+    "variantOf": "be"
   },
   "lu": {
     "title": "Luxembourg",
@@ -88,7 +100,22 @@
     "sources": [""],
     "note": "Created from the official guidelines.",
     "trivia": "The blue is just blue so you can pick any shade.",
-    "tags": ["no-official-color"]
+    "tags": ["no-official-color"],
+    "variants": ["gr-srp"]
+  },
+  "gr-srp": {
+    "title": "Greece Sarapis",
+    "src": "../public/flags-svg/countries/gr-srp.svg",
+    "countryCode": "gr",
+    "ratios": ["3:5"],
+    "colors": ["#00f", "#FFFFFF"],
+    "shapes": ["cross", "stripes", "horizontal"],
+    "continent": "eu",
+    "sources": [""],
+    "note": "Created from the official guidelines.",
+    "trivia": "The blue is just blue so you can pick any shade.",
+    "tags": ["no-official-color"],
+    "variantOf": "gr"
   },
   "ie": {
     "title": "Ireland",
@@ -111,7 +138,8 @@
     "groups": ["French tricolour revolution"],
     "continent": "eu",
     "sources": ["https://www.gouvernement.fr/drapeau-francais", "https://fr.wikipedia.org/wiki/Drapeau_de_la_France"],
-    "otherTitles": ["le drapeau tricolore"]
+    "otherTitles": ["le drapeau tricolore"],
+    "variants": ["fr-dark"]
   },
   "fr-dark": {
     "title": "France dark alternative",
@@ -122,7 +150,8 @@
     "shapes": ["stripes", "vertical"],
     "continent": "eu",
     "sources": ["https://www.gouvernement.fr/drapeau-francais", "https://fr.wikipedia.org/wiki/Drapeau_de_la_France"],
-    "otherTitles": ["le drapeau tricolore"]
+    "otherTitles": ["le drapeau tricolore"],
+    "variantOf": "fr"
   },
   "et": {
     "title": "Ethiopia",
@@ -134,7 +163,8 @@
     "groups": ["Pan-African colours"],
     "continent": "af",
     "sources": ["https://chilot.files.wordpress.com/2011/01/flag.pdf", "http://www.investethiopia.gov.et/why-ethiopia/ethiopia-at-a-glance"],
-    "trivia": "The colors shall be bright and basic."
+    "trivia": "The colors shall be bright and basic.",
+    "variants": ["et-srp"]
   },
   "et-srp": {
     "title": "Ethiopia",
@@ -146,7 +176,8 @@
     "groups": ["Pan-African colours"],
     "continent": "af",
     "sources": ["https://chilot.files.wordpress.com/2011/01/flag.pdf", "http://www.investethiopia.gov.et/why-ethiopia/ethiopia-at-a-glance"],
-    "trivia": "The colors shall be bright and basic."
+    "trivia": "The colors shall be bright and basic.",
+    "variantOf": "et"
   },
   "jp": {
     "title": "Japan",
