@@ -1,7 +1,7 @@
 <%- include('partials/header', {title: ''}) %>
-<!-- <% if( ! data.hasFilters ) { %>
+<% if( ! data.hasFilters ) { %>
   <%- include('partials/marquee') %>
-<% } %> -->
+<% } %>
 <div>
   <%- include('partials/filters.ejs', {data}); %>
   <% if(data.filtersValues.collectionTitle) { %>

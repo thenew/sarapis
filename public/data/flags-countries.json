@@ -190,6 +190,17 @@
     "sources": [""],
     "trivia": ""
   },
+  "ca": {
+    "title": "Canada",
+    "src": "../public/flags-svg/countries/ca.svg",
+    "countryCode": "ca",
+    "shapes": ["circle"],
+    "colors": ["#b0313f","#fff"],
+    "ratios": ["1:2"],
+    "continent": "am",
+    "sources": ["https://www.canada.ca/en/services/culture/canadian-identity-society/anthems-symbols/national-flag.html", "https://web.archive.org/web/20120728214522/http://www.ic.gc.ca/eic/site/pt-te.nsf/eng/00132.html", "http://www.publications.gc.ca/site/eng/9.859032/publication.html", "https://commons.wikimedia.org/wiki/User:MapGrid#/media/File:Flag_of_Canada_(construction_sheet_-_leaf_geometry).svg"],
+    "trivia": ""
+  },
   "nl": {
     "title": "Netherlands",
     "src": "../public/flags-svg/countries/nl.svg",
@@ -307,9 +318,6 @@
   },
   "bz": {
     "title": "Belize"
-  },
-  "ca": {
-    "title": "Canada"
   },
   "cc": {
     "title": "Cocos [Keeling] Islands"

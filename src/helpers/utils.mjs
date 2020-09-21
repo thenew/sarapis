@@ -50,7 +50,7 @@ export const colorsObjects = {
     label: 'Red',
     mainColorCode: '#f00',
     dark: true,
-    colorsCodes: ['#f00', '#ef4135', '#CE1126', '#e40303', '#da121a', '#ED192D', '#EF3340', '#CD212A', '#b0313f']
+    colorsCodes: ['#f00', '#ef4135', '#CE1126', '#e40303', '#da121a', '#ED192D', '#EF3340', '#CD212A', '#b0313f', '#AA151B']
   },
   orange: {
     label: 'Orange',
@@ -62,7 +62,7 @@ export const colorsObjects = {
     label: 'Yellow',
     mainColorCode: '#ff0',
     dark: false,
-    colorsCodes: ['#ff0', '#ffff00', '#ffed00', '#fcdd09', '#ffd800', '#fff433', '#FBDF21', '#FFF200', '#FDDA24']
+    colorsCodes: ['#ff0', '#ffff00', '#ffed00', '#fcdd09', '#ffd800', '#fff433', '#FBDF21', '#FFF200', '#FDDA24', '#F1BF00']
   },
   green: {
     label: 'Green',

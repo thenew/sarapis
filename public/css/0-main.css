@@ -1,9 +1,9 @@
-@import '1-base.css';
-@import '2-fonts.css';
-@import '3-ui.css';
-@import '4-layout.css';
-@import 'marquee.css';
-@import 'filters.css';
+@import "1-base.css";
+@import "2-fonts.css";
+@import "3-ui.css";
+@import "4-layout.css";
+@import "marquee.css";
+@import "filters.css";
 
 :root {
   /* abstract */
@@ -14,9 +14,9 @@
 
   --color1: #00f;
   --color1Dark: #000080;
-  --color1Light: #0D8CFF;
-  --color2: #4FFF19;
-  --color3: #910DFF;
+  --color1Light: #0d8cff;
+  --color2: #4fff19;
+  --color3: #910dff;
   --color4: #ff0;
   --colorCopy: #111;
   --colorBg: #eee;
@@ -30,7 +30,7 @@
   --bodyFont: "Gotham SSm A", "Gotham SSm B", sans-serif;
   --bodyFontNormal: 400;
 
-  --ease: cubic-bezier(.25,1,.25,1);
+  --ease: cubic-bezier(0.25, 1, 0.25, 1);
 
   --padding: 60px;
   --paddingHalf: 15px;
@@ -88,13 +88,11 @@
 .grid-item {
   flex-basis: 25%;
   /* border: 1px solid var(--color1); */
-  box-shadow: 
-    1px 0 0 0 var(--color1), 
-    0 1px 0 0 var(--color1), 
-    1px 1px 0 0 var(--color1),   /* Just to fix the corner */
-    1px 0 0 0 var(--color1) inset, 
+  box-shadow: 1px 0 0 0 var(--color1), 0 1px 0 0 var(--color1),
+    1px 1px 0 0 var(--color1),
+    /* Just to fix the corner */ 1px 0 0 0 var(--color1) inset,
     0 1px 0 0 var(--color1) inset;
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
 }
 
 @media (max-width: 768px) {
@@ -135,25 +133,25 @@
   height: 100%;
   position: relative;
   padding: 8% 12% 12% 12%;
-  transition: padding .3s var(--ease), background .5s var(--ease);
+  transition: padding 0.3s var(--ease), background 0.5s var(--ease);
 }
 
 .item:focus,
 .item:hover {
   padding: 5% 5% 10% 5%;
-  transition: padding .3s var(--ease);
+  transition: padding 0.3s var(--ease);
 }
 
 .item[href]:focus,
 .item[href]:hover {
   background-color: var(--color3);
-  transition: padding .3s var(--ease), background 100s var(--ease);
+  transition: padding 0.3s var(--ease), background 100s var(--ease);
 }
 
 .item-image {
   width: 100%;
   border: 0 solid black;
-  transition: border .1s var(--ease);
+  transition: border 0.1s var(--ease);
 }
 
 .item-title {
@@ -167,7 +165,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
   text-shadow: 1px 1px var(--colorBg);
-  transition: transform .3s var(--ease), opacity .3s var(--ease), text-shadow .3s var(--ease);
+  transition: transform 0.3s var(--ease), opacity 0.3s var(--ease),
+    text-shadow 0.3s var(--ease);
 }
 
 @media (max-width: 768px) {
@@ -178,8 +177,8 @@
 
 .item:focus .item-title,
 .item:hover .item-title {
-  opacity: .4;
-  text-shadow: 1px 1px rgba(255,255,255,0);
+  opacity: 0.4;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0);
   transform: translateY(25%);
 }
 
@@ -198,7 +197,7 @@
   /* text-shadow: 1px -1px var(--colorBg); */
   transform: rotate(90deg) translate(100%, 0%);
   transform-origin: 100% 0%;
-  transition: transform .3s var(--ease);
+  transition: transform 0.3s var(--ease);
 }
 
 @media (max-width: 768px) {
@@ -227,12 +226,10 @@
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  box-shadow: 
-    1px 0 0 0 var(--color1), 
-    0 1px 0 0 var(--color1), 
-    1px 1px 0 0 var(--color1),   /* Just to fix the corner */
-    0 1px 0 0 var(--color1) inset;
-    overflow: hidden
+  box-shadow: 1px 0 0 0 var(--color1), 0 1px 0 0 var(--color1),
+    1px 1px 0 0 var(--color1),
+    /* Just to fix the corner */ 0 1px 0 0 var(--color1) inset;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -259,7 +256,7 @@
   width: 90%;
   height: 0;
   padding-bottom: 33%;
-  opacity: .8;
+  opacity: 0.8;
   transform: translate(0%, -50%);
 }
 
@@ -288,7 +285,7 @@
     padding: 20px 10px;
     text-align: center;
   }
-  
+
   /* .page-about .page-title {
     padding: 20px 10px;
   } */
@@ -318,7 +315,8 @@
 }
 
 .single-sidebar {
-  max-width: 100%;
+  flex-basis: 45%;
+  max-width: 45%;
 }
 
 @media (min-width: 1000px) {
@@ -334,7 +332,6 @@
 }
 
 @media (max-width: 768px) {
-
   .single-layout {
     flex-wrap: wrap;
   }
@@ -342,15 +339,17 @@
   .single-layout .grid-item {
     flex-basis: 100%;
   }
+
+  .single-sidebar {
+    max-width: 100%;
+  }
 }
 
 .srp-box {
   text-align: start;
-  box-shadow: 
-    1px 0 0 0 var(--color1), 
-    0 1px 0 0 var(--color1), 
-    1px 1px 0 0 var(--color1),   /* Just to fix the corner */
-    1px 0 0 0 var(--color1) inset, 
+  box-shadow: 1px 0 0 0 var(--color1), 0 1px 0 0 var(--color1),
+    1px 1px 0 0 var(--color1),
+    /* Just to fix the corner */ 1px 0 0 0 var(--color1) inset,
     0 1px 0 0 var(--color1) inset;
 }
 
@@ -362,11 +361,9 @@
   font-size: 16px;
   line-height: 1;
   padding: 10px;
-  box-shadow: 
-    1px 0 0 0 var(--color1), 
-    0 1px 0 0 var(--color1), 
-    1px 1px 0 0 var(--color1),   /* Just to fix the corner */
-    1px 0 0 0 var(--color1) inset, 
+  box-shadow: 1px 0 0 0 var(--color1), 0 1px 0 0 var(--color1),
+    1px 1px 0 0 var(--color1),
+    /* Just to fix the corner */ 1px 0 0 0 var(--color1) inset,
     0 1px 0 0 var(--color1) inset;
 }
 
@@ -386,11 +383,9 @@
 .srp-box-content {
   padding: 20px 10px;
   word-wrap: break-word;
-  box-shadow: 
-    1px 0 0 0 var(--color1), 
-    0 1px 0 0 var(--color1), 
-    1px 1px 0 0 var(--color1),   /* Just to fix the corner */
-    1px 0 0 0 var(--color1) inset, 
+  box-shadow: 1px 0 0 0 var(--color1), 0 1px 0 0 var(--color1),
+    1px 1px 0 0 var(--color1),
+    /* Just to fix the corner */ 1px 0 0 0 var(--color1) inset,
     0 1px 0 0 var(--color1) inset;
 }
 
@@ -404,7 +399,7 @@
   padding: 0;
 }
 
-.srp-box-content-specs{
+.srp-box-content-specs {
   padding: 1px;
 }
 
@@ -444,6 +439,10 @@
   display: inline-block;
 }
 
+.spec-value-colors {
+  line-height: 0;
+}
+
 .colors-list {
   display: inline-flex;
   flex-wrap: wrap;
@@ -474,7 +473,7 @@
   margin-right: 2px;
   width: 15px;
   height: 15px;
-  transition: transform .2s var(--ease);
+  transition: transform 0.2s var(--ease);
 }
 
 .color-swatch:focus,
@@ -484,7 +483,7 @@
 
 .color-swatch:focus ~ .color-label,
 .color-swatch:hover ~ .color-label {
-  text-decoration: underline
+  text-decoration: underline;
 }
 
 .color-label {
@@ -528,8 +527,8 @@
   }
 
   .flags-all .flag svg {
-    margin-right: auto; 
-    margin-left: auto; 
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -539,7 +538,7 @@
 .flags-all path {
   fill: transparent;
   stroke-width: 1%;
-  stroke-width: .1%;
+  stroke-width: 0.1%;
 }
 
 /* Page */
@@ -577,11 +576,11 @@
   }
 }
 
-
 /* Animations */
 
+.js-animate g,
 .js-animate rect,
 .js-animate circle,
 .js-animate path {
-  transition: transform .4s var(--ease),  opacity .4s var(--ease);
+  transition: transform 0.4s var(--ease), opacity 0.4s var(--ease);
 }

@@ -1,5 +1,4 @@
 .marquee {
-  padding: 10px;
   font-family: var(--titleFont);
   font-size: 10px;
   white-space: nowrap;
@@ -7,4 +6,17 @@
   color: var(--white);
   background-color: var(--color3);
   box-shadow: 0 1px 0 0 var(--color1) inset, 0 1px 0 0 var(--color1);
+}
+
+.marquee .link {
+  color: inherit;
+}
+
+.marquee .link:focus,
+.marquee .link:hover {
+  color: var(--color2);
+}
+
+.marquee-marc {
+  padding: 10px;
 }

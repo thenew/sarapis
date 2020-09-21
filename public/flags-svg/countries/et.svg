@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1200 600" title="Flag of Ethiopia">
   <g class="srp-field">
-    <path fill="#DA121A" d="M1200 0H0v600h1200V0z"/>
-    <path fill="#FCDD09" d="M1200 0H0v400h1200V0z" />
-    <path fill="#078930" d="M1200 0H0v200h1200V0z" />
+    <path fill="#078930" d="M0,0H1200v200H0z" />
+    <path fill="#FCDD09" d="M0,200H1200v200H0z" />
+    <path fill="#DA121A" d="M0,400H1200v200H0z"/>
   </g>
   <g class="srp-emblem">
     <path fill="#0F47AF" d="M599.999 499.903c110.457 0 200-89.543 200-200s-89.543-200-200-200-200.001 89.543-200.001 200 89.544 200 200.001 200z" class="srp-circle"/>

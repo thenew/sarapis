@@ -208,6 +208,9 @@ const Home = ({ query, items: allFlags, continents = [] }) => {
 
     // stroked it
     flagSvg = flagSvg.replace(/fill="#/gi, 'stroke="#')
+    
+    // avoid id conflicts
+    flagSvg = flagSvg.replace(/id="/gi, 'id="srp-wire-')
 
     data.flagsWire.push(flagSvg)
   })
