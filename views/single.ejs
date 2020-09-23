@@ -109,7 +109,7 @@
   const svgContainer = document.querySelector('.flag-svg')
   if(svgContainer) {
 
-    const emblemGroups = svgContainer.querySelectorAll('.srp-emblem')
+    const emblems = svgContainer.querySelectorAll('.srp-emblem')
     let circles = svgContainer.querySelectorAll('circle')
     let paths = svgContainer.querySelectorAll('path')
     
@@ -128,7 +128,7 @@
       item.style.transform = 'scale(0)'
     })
 
-    emblemGroups.forEach(item => {
+    emblems.forEach(item => {
       item.style.opacity = 0
     })
 
@@ -160,7 +160,7 @@
       }, eachDelay * index);
     })
 
-    emblemGroups.forEach(item => {
+    emblems.forEach(item => {
       index++
       eachDelay -= eachDelay * .04
       setTimeout(() => {

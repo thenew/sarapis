@@ -136,14 +136,13 @@
   transition: padding 0.3s var(--ease), background 0.5s var(--ease);
 }
 
-.item:focus,
+/* .item:focus,
 .item:hover {
-  padding: 5% 5% 10% 5%;
-  transition: padding 0.3s var(--ease);
-}
+} */
 
 .item[href]:focus,
 .item[href]:hover {
+  padding: 5% 5% 10% 5%;
   background-color: var(--color3);
   transition: padding 0.3s var(--ease), background 100s var(--ease);
 }

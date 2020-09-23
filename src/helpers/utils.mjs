@@ -29,60 +29,91 @@ export const slugify = (text) =>
 
 export const colorsObjects = {
   white: {
-    label: 'White',
-    mainColorCode: '#fff',
+    label: "White",
+    mainColorCode: "#fff",
     dark: false,
-    colorsCodes: ['#fff', '#ffffff', '#F4F5F0']
+    colorsCodes: ["#fff", "#ffffff", "#F4F5F0"],
   },
   black: {
-    label: 'Black',
-    mainColorCode: '#000',
+    label: "Black",
+    mainColorCode: "#000",
     dark: true,
-    colorsCodes: ['#000', '#000000', '#2d2d2d']
+    colorsCodes: ["#000", "#000000", "#2d2d2d"],
   },
   pink: {
-    label: 'Pink',
-    mainColorCode: '#f7f',
+    label: "Pink",
+    mainColorCode: "#f7f",
     dark: false,
-    colorsCodes: ['#f5a9b8']
+    colorsCodes: ["#f5a9b8"],
   },
   red: {
-    label: 'Red',
-    mainColorCode: '#f00',
+    label: "Red",
+    mainColorCode: "#f00",
     dark: true,
-    colorsCodes: ['#f00', '#ef4135', '#CE1126', '#e40303', '#da121a', '#ED192D', '#EF3340', '#CD212A', '#b0313f', '#AA151B']
+    colorsCodes: [
+      "#f00",
+      "#ef4135",
+      "#CE1126",
+      "#e40303",
+      "#da121a",
+      "#ED192D",
+      "#EF3340",
+      "#CD212A",
+      "#b0313f",
+      "#AA151B",
+    ],
   },
   orange: {
-    label: 'Orange',
-    mainColorCode: '#f70',
+    label: "Orange",
+    mainColorCode: "#f70",
     dark: false,
-    colorsCodes: ['#ff8c00']
+    colorsCodes: ["#ff8c00"],
   },
   yellow: {
-    label: 'Yellow',
-    mainColorCode: '#ff0',
+    label: "Yellow",
+    mainColorCode: "#ff0",
     dark: false,
-    colorsCodes: ['#ff0', '#ffff00', '#ffed00', '#fcdd09', '#ffd800', '#fff433', '#FBDF21', '#FFF200', '#FDDA24', '#F1BF00']
+    colorsCodes: [
+      "#ff0",
+      "#ffff00",
+      "#ffed00",
+      "#fcdd09",
+      "#ffd800",
+      "#fff433",
+      "#FBDF21",
+      "#FFF200",
+      "#FDDA24",
+      "#F1BF00",
+    ],
   },
   green: {
-    label: 'Green',
-    mainColorCode: '#0f0',
+    label: "Green",
+    mainColorCode: "#0f0",
     dark: false,
-    colorsCodes: ['#0f0', '#008026', '#078930', '#00613C', '#008C45']
+    colorsCodes: ["#0f0", "#008026", "#078930", "#00613C", "#008C45"],
   },
   blue: {
-    label: 'Blue',
-    mainColorCode: '#00f',
+    label: "Blue",
+    mainColorCode: "#00f",
     dark: true,
-    colorsCodes: ['#00f', '#039', '#0055a4', '#002654', '#004dff', '#5bcefa', '#074EA2', '#0F47AF']
+    colorsCodes: [
+      "#00f",
+      "#039",
+      "#0055a4",
+      "#002654",
+      "#004dff",
+      "#5bcefa",
+      "#074EA2",
+      "#0F47AF",
+    ],
   },
   violet: {
-    label: 'Violet',
-    mainColorCode: '#707',
+    label: "Violet",
+    mainColorCode: "#707",
     dark: true,
-    colorsCodes: ['#750787', '#7902aa', '#9b59d0']
+    colorsCodes: ["#750787", "#7902aa", "#9b59d0"],
   },
-}
+};
 
 export const collectionTitles = {
   white: `No war White flag`,
@@ -109,4 +140,4 @@ export const collectionTitles = {
   3: `3 colors`,
   4: `4 colors`,
   5: `5 colors`,
-}
+};

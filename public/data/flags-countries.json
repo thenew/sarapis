@@ -16,7 +16,9 @@
     "ratios": ["2:3"],
     "colors": ["#AA151B", "#F1BF00"],
     "continent": "eu",
-    "sources": ["https://web.ua.es/en/protocolo/rules-doc/documents-and-legislation.html"],
+    "sources": [
+      "https://web.ua.es/en/protocolo/rules-doc/documents-and-legislation.html"
+    ],
     "note": ""
   },
   "pt": {
@@ -26,7 +28,9 @@
     "ratios": ["2:3"],
     "colors": ["#ED192D", "#00613C", "#FBDF21"],
     "continent": "eu",
-    "sources": ["http://jorgesampaio.arquivo.presidencia.pt/pt/republica/simbolos/bandeiras/"],
+    "sources": [
+      "http://jorgesampaio.arquivo.presidencia.pt/pt/republica/simbolos/bandeiras/"
+    ],
     "note": "Based on the official eps file. Fixed little visuals glitches in the sphere. Fixed the dimensions."
   },
   "it": {
@@ -38,7 +42,10 @@
     "shapes": ["stripes", "vertical"],
     "groups": ["French tricolour revolution"],
     "continent": "eu",
-    "sources": ["http://presidenza.governo.it/ufficio_cerimoniale/cerimoniale/bandiera.html", "http://presidenza.governo.it/ufficio_cerimoniale/normativa/dpcm_20060414_precedenze.pdf"],
+    "sources": [
+      "http://presidenza.governo.it/ufficio_cerimoniale/cerimoniale/bandiera.html",
+      "http://presidenza.governo.it/ufficio_cerimoniale/normativa/dpcm_20060414_precedenze.pdf"
+    ],
     "note": "Created from the official guidelines."
   },
   "be": {
@@ -137,7 +144,10 @@
     "shapes": ["stripes", "vertical"],
     "groups": ["French tricolour revolution"],
     "continent": "eu",
-    "sources": ["https://www.gouvernement.fr/drapeau-francais", "https://fr.wikipedia.org/wiki/Drapeau_de_la_France"],
+    "sources": [
+      "https://www.gouvernement.fr/drapeau-francais",
+      "https://fr.wikipedia.org/wiki/Drapeau_de_la_France"
+    ],
     "otherTitles": ["le drapeau tricolore"],
     "variants": ["fr-dark"]
   },
@@ -149,7 +159,10 @@
     "colors": ["#002654", "#fff", "#ce1126"],
     "shapes": ["stripes", "vertical"],
     "continent": "eu",
-    "sources": ["https://www.gouvernement.fr/drapeau-francais", "https://fr.wikipedia.org/wiki/Drapeau_de_la_France"],
+    "sources": [
+      "https://www.gouvernement.fr/drapeau-francais",
+      "https://fr.wikipedia.org/wiki/Drapeau_de_la_France"
+    ],
     "otherTitles": ["le drapeau tricolore"],
     "variantOf": "fr"
   },
@@ -158,11 +171,14 @@
     "src": "../public/flags-svg/countries/et.svg",
     "countryCode": "et",
     "shapes": ["stripes", "horizontal"],
-    "colors": ["#da121a","#fcdd09","#078930", "#0F47AF"],
+    "colors": ["#da121a", "#fcdd09", "#078930", "#0F47AF"],
     "ratios": ["1:2"],
     "groups": ["Pan-African colours"],
     "continent": "af",
-    "sources": ["https://chilot.files.wordpress.com/2011/01/flag.pdf", "http://www.investethiopia.gov.et/why-ethiopia/ethiopia-at-a-glance"],
+    "sources": [
+      "https://chilot.files.wordpress.com/2011/01/flag.pdf",
+      "http://www.investethiopia.gov.et/why-ethiopia/ethiopia-at-a-glance"
+    ],
     "trivia": "The colors shall be bright and basic.",
     "variants": ["et-srp"]
   },
@@ -171,11 +187,14 @@
     "src": "../public/flags-svg/countries/et-srp.svg",
     "countryCode": "et",
     "shapes": ["stripes", "horizontal"],
-    "colors": ["#da121a","#fcdd09","#078930", "#0F47AF"],
+    "colors": ["#da121a", "#fcdd09", "#078930", "#0F47AF"],
     "ratios": ["1:2"],
     "groups": ["Pan-African colours"],
     "continent": "af",
-    "sources": ["https://chilot.files.wordpress.com/2011/01/flag.pdf", "http://www.investethiopia.gov.et/why-ethiopia/ethiopia-at-a-glance"],
+    "sources": [
+      "https://chilot.files.wordpress.com/2011/01/flag.pdf",
+      "http://www.investethiopia.gov.et/why-ethiopia/ethiopia-at-a-glance"
+    ],
     "trivia": "The colors shall be bright and basic.",
     "variantOf": "et"
   },
@@ -184,7 +203,7 @@
     "src": "../public/flags-svg/countries/jp.svg",
     "countryCode": "jp",
     "shapes": ["circle"],
-    "colors": ["#b0313f","#fff"],
+    "colors": ["#b0313f", "#fff"],
     "ratios": ["7:10"],
     "continent": "as",
     "sources": [""],
@@ -194,12 +213,51 @@
     "title": "Canada",
     "src": "../public/flags-svg/countries/ca.svg",
     "countryCode": "ca",
-    "shapes": ["circle"],
-    "colors": ["#b0313f","#fff"],
+    "shapes": ["stripes", "vertical"],
+    "colors": ["#b0313f", "#fff"],
     "ratios": ["1:2"],
-    "continent": "am",
-    "sources": ["https://www.canada.ca/en/services/culture/canadian-identity-society/anthems-symbols/national-flag.html", "https://web.archive.org/web/20120728214522/http://www.ic.gc.ca/eic/site/pt-te.nsf/eng/00132.html", "http://www.publications.gc.ca/site/eng/9.859032/publication.html", "https://commons.wikimedia.org/wiki/User:MapGrid#/media/File:Flag_of_Canada_(construction_sheet_-_leaf_geometry).svg"],
-    "trivia": ""
+    "continent": "na",
+    "sources": [
+      "https://www.canada.ca/en/services/culture/canadian-identity-society/anthems-symbols/national-flag.html",
+      "https://web.archive.org/web/20120728214522/http://www.ic.gc.ca/eic/site/pt-te.nsf/eng/00132.html",
+      "http://www.publications.gc.ca/site/eng/9.859032/publication.html",
+      "https://commons.wikimedia.org/wiki/User:MapGrid#/media/File:Flag_of_Canada_(construction_sheet_-_leaf_geometry).svg"
+    ],
+    "variants": ["ca-normal", "ca-srp"]
+  },
+  "ca-srp": {
+    "title": "Canada Sarapis",
+    "src": "../public/flags-svg/countries/ca-srp.svg",
+    "countryCode": "ca",
+    "shapes": ["stripes", "vertical"],
+    "colors": ["#f00", "#fff"],
+    "ratios": ["1:2"],
+    "continent": "na",
+    "sources": [
+      "https://www.canada.ca/en/services/culture/canadian-identity-society/anthems-symbols/national-flag.html",
+      "https://web.archive.org/web/20120728214522/http://www.ic.gc.ca/eic/site/pt-te.nsf/eng/00132.html",
+      "http://www.publications.gc.ca/site/eng/9.859032/publication.html",
+      "https://commons.wikimedia.org/wiki/User:MapGrid#/media/File:Flag_of_Canada_(construction_sheet_-_leaf_geometry).svg"
+    ],
+    "tags": ["no-official-color"],
+    "variantOf": "ca"
+  },
+  "ca-normal": {
+    "title": "Canada",
+    "src": "../public/flags-svg/countries-normal/ca-2-3.svg",
+    "countryCode": "ca",
+    "shapes": ["stripes", "vertical"],
+    "colors": ["#f00", "#fff"],
+    "ratios": ["2:3"],
+    "continent": "na",
+    "sources": [
+      "https://www.canada.ca/en/services/culture/canadian-identity-society/anthems-symbols/national-flag.html",
+      "https://web.archive.org/web/20120728214522/http://www.ic.gc.ca/eic/site/pt-te.nsf/eng/00132.html",
+      "http://www.publications.gc.ca/site/eng/9.859032/publication.html",
+      "https://commons.wikimedia.org/wiki/User:MapGrid#/media/File:Flag_of_Canada_(construction_sheet_-_leaf_geometry).svg"
+    ],
+    "tags": ["no-official-color"],
+    "variantOf": "ca"
   },
   "nl": {
     "title": "Netherlands",
@@ -209,7 +267,10 @@
     "colors": ["#AE1C28", "#fff", "#21468B"],
     "shapes": ["stripes", "horizontal"],
     "continent": "eu",
-    "sources": ["https://puc.overheid.nl/mp-bundels/doc/PUC_41859_10/1/#7185c358-2968-4439-a34a-297f8a2565a3", "https://www.nen.nl/web/file?uuid=38b1aa24-c836-496a-8907-169419760b56&owner=d66d121a-91af-4036-b24e-304f0ca16197"]
+    "sources": [
+      "https://puc.overheid.nl/mp-bundels/doc/PUC_41859_10/1/#7185c358-2968-4439-a34a-297f8a2565a3",
+      "https://www.nen.nl/web/file?uuid=38b1aa24-c836-496a-8907-169419760b56&owner=d66d121a-91af-4036-b24e-304f0ca16197"
+    ]
   },
   "ad": {
     "title": "Andorra"
