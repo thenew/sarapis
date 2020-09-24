@@ -43,6 +43,15 @@
   outline: var(--color4);
 }
 
+.header .beta {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: var(--titleFontBold);
+  color: var(--color1);
+  letter-spacing: -0.8px;
+  transform: translateY(-2px);
+}
+
 .footer {
   /* border-top: 1px solid var(--color1); */
   display: flex;

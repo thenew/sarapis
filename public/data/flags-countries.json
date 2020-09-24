@@ -9,18 +9,6 @@
     "sources": ["https://europa.eu/european-union/about-eu/symbols/flag_en"],
     "note": "From the official eps file."
   },
-  "es": {
-    "title": "Spain",
-    "src": "../public/flags-svg/countries/es.svg",
-    "countryCode": "es",
-    "ratios": ["2:3"],
-    "colors": ["#AA151B", "#F1BF00"],
-    "continent": "eu",
-    "sources": [
-      "https://web.ua.es/en/protocolo/rules-doc/documents-and-legislation.html"
-    ],
-    "note": ""
-  },
   "pt": {
     "title": "Portugal",
     "src": "../public/flags-svg/countries/pt.svg",

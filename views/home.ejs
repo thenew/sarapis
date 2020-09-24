@@ -12,10 +12,15 @@
             <div class="flag">
               <%- flag %>
             </div>
-          <% }) %>  
+          <% }) %>
         </div>
       </div>
-      <h1 class="page-title"><%= data.filtersValues.collectionTitle %></h1>
+      <div class="page-title-flag-text">
+        <h1 class="page-title"><%= data.filtersValues.collectionTitle %></h1>
+        <% if(data.filtersValues.collectionLink) { %>
+          <a class="link link-bg" href="<%= data.filtersValues.collectionLink %>" target="_blank" rel="noopener noreferrer" title="Download the SVG on <%= data.filtersValues.collectionLink %>">Download the SVG folder</a>
+        <% } %>
+      </div>
     </div>
   <% } else if(Object.keys(data.flags).length < 1) { %>
     <div class="page-title-box">

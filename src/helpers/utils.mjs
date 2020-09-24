@@ -132,12 +132,18 @@ export const collectionTitles = {
   green: `Super green`,
   blue: `Blue Monday`,
   violet: `Violet Rain`,
+  countries: `Sovereign states flags`,
   maritime: `Maritime flags`,
   communities: `Communities flags`,
-  countries: `Sovereign states flags`,
   1: `Monochrome`,
   2: `2 colors`,
   3: `3 colors`,
   4: `4 colors`,
   5: `5 colors`,
+};
+
+export const collectionLinks = {
+  countries: `https://github.com/thenew/sarapis/public/flags-svg/countries/`,
+  maritime: `https://github.com/thenew/sarapis/public/flags-svg/maritime-alphabet-flags-10by8/`,
+  communities: `https://github.com/thenew/sarapis/public/flags-svg/communities/`,
 };

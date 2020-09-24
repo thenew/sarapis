@@ -1,5 +1,9 @@
 import fs from "fs";
-import { colorsObjects, collectionTitles } from "../helpers/utils.mjs";
+import {
+  colorsObjects,
+  collectionTitles,
+  collectionLinks,
+} from "../helpers/utils.mjs";
 import {} from "../helpers/config.mjs";
 
 const Home = ({ query, items: allFlags, continents = [] }) => {
@@ -61,6 +65,7 @@ const Home = ({ query, items: allFlags, continents = [] }) => {
     !filtersRatios.length &&
     !filtersSearch
   ) {
+    filtersValues.collectionLink = collectionLinks[filtersCategories[0]] || ``;
     filtersValues.collectionTitle =
       collectionTitles[filtersCategories[0]] || filtersCategories[0];
   } else if (

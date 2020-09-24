@@ -20,10 +20,9 @@
   flex-grow: 1;
   min-height: var(--fieldsetHeight);
   padding: 10px;
-  box-shadow: 1px 0 0 0 var(--color1),
-              0 1px 0 0 var(--color1),
-              1px 1px 0 0 var(--color1), /* Just to fix the corner */ 
-              0 1px 0 0 var(--color1) inset;
+  box-shadow: 1px 0 0 0 var(--color1), 0 1px 0 0 var(--color1),
+    1px 1px 0 0 var(--color1),
+    /* Just to fix the corner */ 0 1px 0 0 var(--color1) inset;
 }
 
 @media (max-width: 768px) {
@@ -147,11 +146,5 @@
   .fieldset-search .search-submit {
     width: calc(var(--mobileButtonHeight) + 20px);
     height: calc(var(--mobileButtonHeight) + 20px);
-  }
-}
-
-@media (min-width: 1400px) {
-  .search-input {
-    max-width: 200px;
   }
 }

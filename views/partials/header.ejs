@@ -32,7 +32,7 @@
       <header class="header">
         <a class="header-link" href="/">
           <span class="sr-only">Sarapis</span>
-          <svg class="logo js-svg-dx" width="175" height="16" viewBox="0 0 175 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="logo js-svg-dx" width="150" height="16" viewBox="0 0 175 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path style="transform: translateX(125px)" d="M00,00h25v16h-25z" fill="#0000FF"/>
             <path style="transform: translateX(100px)" d="M00,00h25v16h-25z" fill="#480CE8"/>
             <path style="transform: translateX(75px)"  d="M00,00h25v16h-25z" fill="#910DFF"/>
@@ -43,15 +43,7 @@
           <script>
             const svgDx = document.querySelector('.js-svg-dx')
             svgDx.addEventListener('mouseover', () => {
-              console.log('%c mouseover ', 'background: #000; color: #ffff00; padding: 1px 0;')
               let paths = [...svgDx.querySelectorAll('.js-svg-dx path')].reverse().forEach((path, index) => {
-
-                // TODO automate
-                // Mxx,00h25v16h-25z
-                // Mxx,00h50l-25,16h-25z
-                // Mxx,00h50v16h-50z
-                // M25,00h25v16h-50z
-                // M25,00h25v16h-25z
 
                 const d = path.getAttribute('d')
                 const d1 = d.replace('h25v16', 'h50l-25,16')
@@ -69,5 +61,6 @@
             })
           </script>
         </a>
+        <span class="beta">beta</span>
       </header>
       <div class="app-content">

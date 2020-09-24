@@ -1,5 +1,4 @@
 @import "1-base.css";
-@import "2-fonts.css";
 @import "3-ui.css";
 @import "4-layout.css";
 @import "marquee.css";
@@ -25,8 +24,6 @@
   --titleFontLight: 400;
   --titleFontNormal: 600;
   --titleFontBold: 800;
-  /* --bodyFont: "Noto Serif", sans-serif; */
-  /* --bodyFont: "Decimal A", "Decimal B", sans-serif; */
   --bodyFont: "Gotham SSm A", "Gotham SSm B", sans-serif;
   --bodyFontNormal: 400;
 
@@ -65,13 +62,25 @@
   font-weight: var(--titleFontLight);
   text-decoration: underline;
   text-underline-offset: 3px;
-  /* text-decoration-color: inherit; */
+  transition: color 0.2s var(--ease), background 0.2s var(--ease);
 }
 
 .link:focus,
 .link:hover {
   color: var(--color1Light);
   text-underline-offset: 2px;
+}
+
+.link-bg {
+  padding: 0px 5px 1px;
+  color: var(--white);
+  background-color: var(--color1);
+}
+
+.link-bg:focus,
+.link-bg:hover {
+  color: var(--black);
+  background-color: var(--color2);
 }
 
 /* Grid */
@@ -257,6 +266,7 @@
   padding-bottom: 33%;
   opacity: 0.8;
   transform: translate(0%, -50%);
+  pointer-events: none;
 }
 
 @media (max-width: 768px) {
@@ -267,6 +277,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+}
+
+.page-title-flag-text {
+  position: relative;
+  max-width: 100%;
+  padding: 10px 30px;
 }
 
 .page-title {
@@ -288,6 +304,15 @@
   /* .page-about .page-title {
     padding: 20px 10px;
   } */
+}
+
+.page-title-flag-text .page-title {
+  padding: 0;
+}
+
+.page-title-flag-text .link {
+  display: inline-block;
+  margin-top: 5px;
 }
 
 .no-content {
@@ -341,6 +366,7 @@
 
   .single-sidebar {
     max-width: 100%;
+    flex-basis: auto;
   }
 }
 
@@ -436,6 +462,16 @@
 
 .spec-value {
   display: inline-block;
+  flex-basis: 80%;
+  overflow: hidden;
+}
+
+.spec-value .link {
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .spec-value-colors {

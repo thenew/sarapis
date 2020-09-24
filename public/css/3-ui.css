@@ -10,13 +10,11 @@
   position: relative;
   /* min-width: 25px; */
   min-height: 16px;
-
-  --border-shadow:
-    1px 0 0 0 var(--color1), 
-    0 1px 0 0 var(--color1), 
-    1px -1px 0 0 var(--color1),   /* Just to fix the corner */
-    1px 1px 0 0 var(--color1),   /* Just to fix the corner */
-    1px 0 0 0 var(--color1) inset, 
+  font-weight: var(--titleFontNormal);
+  --border-shadow: 1px 0 0 0 var(--color1), 0 1px 0 0 var(--color1),
+    1px -1px 0 0 var(--color1),
+    /* Just to fix the corner */ 1px 1px 0 0 var(--color1),
+    /* Just to fix the corner */ 1px 0 0 0 var(--color1) inset,
     0 -1px 0 0 var(--color1);
 }
 
@@ -58,11 +56,11 @@
   .checkbox-box .label {
     padding: 5px 10px;
     min-width: 40px;
-  } 
+  }
 }
 
 .label::after {
-  content: '^';
+  content: "^";
   display: block;
   position: absolute;
   top: calc(100% + 1px);
@@ -73,7 +71,7 @@
   font-size: 8px;
   transform: scaleX(0);
   opacity: 0;
-  transition: transform .2s var(--ease), opacity .2s var(--ease);
+  transition: transform 0.2s var(--ease), opacity 0.2s var(--ease);
 }
 
 .checkbox-box .checkbox:focus ~ .label::after,
@@ -87,9 +85,18 @@
   box-shadow: none;
 }
 
-.checkbox-boxes.colors .checkbox-box .checkbox:not(:checked):focus ~ .label::after,
-.checkbox-boxes.colors .checkbox-box .checkbox:not(:checked) ~ .label:focus::after,
-.checkbox-boxes.colors .checkbox-box .checkbox:not(:checked) ~ .label:hover::after {
+.checkbox-boxes.colors
+  .checkbox-box
+  .checkbox:not(:checked):focus
+  ~ .label::after,
+.checkbox-boxes.colors
+  .checkbox-box
+  .checkbox:not(:checked)
+  ~ .label:focus::after,
+.checkbox-boxes.colors
+  .checkbox-box
+  .checkbox:not(:checked)
+  ~ .label:hover::after {
   opacity: 0;
 }
 
@@ -234,7 +241,7 @@ input[type="range"]::-ms-thumb {
   input[type="range"] {
     height: var(--mobileButtonHeight);
   }
-  
+
   input[type="range"]::-webkit-slider-thumb {
     width: 15px;
     height: 15px;
@@ -270,7 +277,7 @@ input[type="range"]::-ms-thumb {
 }
 
 .todo-item::before {
-  content: ' ';
+  content: " ";
   display: block;
   width: 12px;
   height: 12px;
@@ -285,6 +292,6 @@ input[type="range"]::-ms-thumb {
 }
 
 .todo-item.done::before {
-  content: '✓';
+  content: "✓";
   /* background-color: currentColor; */
 }
