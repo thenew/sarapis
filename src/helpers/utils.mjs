@@ -143,7 +143,7 @@ export const collectionTitles = {
 };
 
 export const collectionLinks = {
-  countries: `https://github.com/thenew/sarapis/public/flags-svg/countries/`,
-  maritime: `https://github.com/thenew/sarapis/public/flags-svg/maritime-alphabet-flags-10by8/`,
-  communities: `https://github.com/thenew/sarapis/public/flags-svg/communities/`,
+  countries: `https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/thenew/sarapis/tree/master/public/flags-svg/countries&fileName=sarapis-svg-countries&rootDirectory=false`,
+  maritime: `https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/thenew/sarapis/tree/master/public/flags-svg/maritime&fileName=sarapis-svg-maritime-alphabet&rootDirectory=false`,
+  communities: `https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/thenew/sarapis/tree/master/public/flags-svg/communities&fileName=sarapis-svg-communities&rootDirectory=false`,
 };

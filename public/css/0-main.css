@@ -1,7 +1,6 @@
 @import "1-base.css";
 @import "3-ui.css";
 @import "4-layout.css";
-@import "marquee.css";
 @import "filters.css";
 
 :root {
@@ -83,6 +82,36 @@
   background-color: var(--color2);
 }
 
+/* Marquee */
+
+.marquee {
+  font-family: var(--titleFont);
+  font-size: 10px;
+  white-space: nowrap;
+  overflow-x: hidden;
+  color: var(--black);
+  background-color: var(--color4);
+  box-shadow: 0 1px 0 0 var(--color1) inset, 0 1px 0 0 var(--color1);
+}
+
+.marquee-item {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.marquee .link {
+  color: inherit;
+}
+
+.marquee .link:focus,
+.marquee .link:hover {
+  color: var(--color3);
+}
+
+.marquee-marc {
+  padding: 10px;
+}
+
 /* Grid */
 
 .grid {
@@ -90,7 +119,7 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  width: calc(100% - 1px);
+  margin-left: -1px;
   font-family: var(--titleFont);
 }
 
