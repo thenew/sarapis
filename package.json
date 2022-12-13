@@ -12,7 +12,7 @@
     "svgmin": "./scripts/svgo.sh"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^15.0.0",
